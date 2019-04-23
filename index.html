@@ -3,11 +3,16 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
+  /*agregar color oscuro para el fondo*/
+  background: #f1f1f1;
 }
-/* Header/Logo Title */
+  /* Header/Logo Title */
 .header {
   padding: 30px;
   text-align: center;
@@ -66,6 +71,14 @@ div.content {
     float: none;
   }
 }
+  .card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+   margin-left: 230px;
+   margin-right:30px;
+   box-shadow: 5px 6px #888888;
+}
 </style>
 </head>
 <body>
@@ -88,11 +101,17 @@ div.content {
   <p> Group leader: Dr. David Ramírez</p>
 </div>
   
-<div class="content">
-  <h2>Drug design targeting membrane proteins</h2>
-  <p>Computational biophysics and drug design.</p>
-  <h3>Resize the browser window to see the effect.</h3>
-  
+<div class="card">
+  <h2>Welcome to the Computational Biophysics, Bioinformatics and drug design group in the Biomedical Science Institute at Universidad Autónoma de Chile.</h2>
+  <p align="justify">We are a multidisciplinary group focusing in the study of biomolecular systems using both, computational and experimental approaches. Our goal is to use computational methods to expand the way with which molecular processes are described, and then to combine and use these methods in the drug design and development process, involving collaboration with medicinal chemists, biochemists and biologists.</p>
+    
+</div>
+<div class="card">
+  <h2>Active research areas:</h2>
+  <li><p align="justify"> <strong>Computer Aided Drug Design (CADD):</strong> We apply computational software and molecular simulation techniques to identify new hits or leads against selected therapeutic targets, as well as to support lead optimization processes in medicinal chemistry. CADD methods increase the probabilities of identifying compounds with desirable physicochemical and pharmacokinetic characteristics, accelerating the hit-to-lead process. <strong>Structural biology:</strong> We are focused in unravel the physical basis and machinery of biological processes at the molecular level. It is necessary to understand the dynamics of biological processes, so we focus on understanding how to move from Sequence to Structure and Function via:
+Sequence ---> Structure --->  Dynamics --->  Function</p></li>
+  <li><p align="justify">Molecular modeling of membrane protein function</p></li>
+  <li><p align="justify">Disclosing molecular determinants of cell transport mechanisms</p></li>
 </div>
 
   
