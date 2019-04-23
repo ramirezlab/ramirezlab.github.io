@@ -88,7 +88,7 @@ div.content {
 var map;
 var mapLat = -33.480295;
 var mapLng = -70.648840;
-var mapDefaultZoom = 17;
+var mapDefaultZoom = 16;
 function initialize_map() {
 map = new ol.Map({
 target: "map",
@@ -148,9 +148,10 @@ map.addLayer(vectorLayer);
   <h2>contactos</h2>
   <p>adress biophysics and drug design.</p>
   <h3>Resize the browser window to see the effect.</h3>
+  <div id="map" style="width: 650px; height: 400px;"></div>
   
 </div>
-<div class="card"><div id="map" style="width: 700px; height: 400px;"></div></div>
+<div class="card"><div id="map" style="width: 500px; height: 400px;"></div></div>
   
 
 </body>
