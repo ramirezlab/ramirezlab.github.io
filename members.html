@@ -3,15 +3,20 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
+  /*agregar color oscuro para el fondo*/
+  background: #f1f1f1;
 }
-/* Header/Logo Title */
+  /* Header/Logo Title */
 .header {
   padding: 30px;
   text-align: center;
-  background: #1abc9c;
+  background: linear-gradient(to bottom, #990000 17%, #ff0000 100%);
   color: white;
   font-size: 30px;
   margin-left: 200px;
@@ -34,7 +39,7 @@ body {
 }
  
 .sidebar a.active {
-  background-color: #1abc9c;
+  background-color: #990000;
   color: white;
 }
 .sidebar a:hover:not(.active) {
@@ -61,33 +66,101 @@ div.content {
     float: none;
   }
 }
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 10%;
+}
+img {
+border-radius: 100%;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
 </style>
 </head>
 <body>
 
+  
 <div class="sidebar">
   <img src="/test.jpg" alt="Logo" style="width:100%;">
-  <a href="/index">Home</a>
-  <a href="/about">About</a>
+  <a href="/home">Home</a>
   <a class="active" href="#members">Members</a>
   <a href="/work_wu">Work with us</a>
   <a href="/publications">Publications</a>  
   <a href="/projects">Projects</a>
   <a href="/events">Events</a>
   <a href="/contact">Contact</a>
-</div>  
+</div>
   
 <div class="header">
-  <h1>  Members</h1>
-  <p> Computational biophysics and drug design</p>
+  <p>Members</p>
 </div>
   
-<div class="content">
-  <h2>papers</h2>
-  <p>Computational biophysics and drug design.</p>
-  <h3>Resize the browser window to see the effect.</h3>
-  
+<h2>Responsive Column Cards</h2>
+<p>Resize the browser window to see the effect.</p>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+  <img src="img_avatar.png" alt="Avatar" style="width:100%" border-radius="5%">
+  <div class="container">
+    <h4><b>David Ramirez</b></h4> 
+    <p>Group Leader</p>
+    <p>Dr.</p>
+  </div>
 </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3>Carlos Peña</h3>
+      <p>Research assistant</p>
+      <p>Bioinformatics Engineer</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3>Card 3</h3>
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+  
+<div class="column">
+    <div class="card">
+      <h3>Card 3</h3>
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div><br>
 
   
 
