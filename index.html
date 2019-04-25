@@ -13,6 +13,39 @@ body {
   background: #f1f1f1;
 }
   /* Header/Logo Title */
+.bg-image {
+  /* The image used */
+  background-image: url("bg.pdf");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
 .header {
   padding: 30px;
   text-align: center;
@@ -99,6 +132,7 @@ div.content {
 <div class="header">
   <h1>  Ramirez Lab </h1>
   <p> Computational Biophysics, Bioinformatics & Drug Design</p>
+  <div class="bg-image"></div>
 </div>
   
 <div class="card">
@@ -118,8 +152,5 @@ Sequence ---> Structure --->  Dynamics --->  Function</li><br>
   <h2>Founding</h2>
   <p>FONDECYT No. 11180604: Structural insights into the substrate specificity and transport mechanisms in the Nitrate/Peptide Transporter (NPF) Family.</p>
 </div>  
-
-  
-
 </body>
 </html>
