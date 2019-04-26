@@ -78,7 +78,19 @@ div.content {
 .text_side{
   margin-left: 200px;
 }
-  
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+   border: 8px solid #990000;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}  
 </style>
 </head>
 <body>
@@ -98,12 +110,15 @@ div.content {
   <h1>Research</h1>
   </div>
   
-<div class="card">
-  <img src="/1_NPF.jpg" width="180" height="150";">
+  <div class="card">
+  <div class="row">
+  <div class="column">
+    <img src="/1_NPF.jpg" width="180" height="150";">
   <div class="text_side">
   <h2>Structural insights into the substrate specificity and transport mechanisms in the Nitrate/Peptide Transporter (NPF) Family</h2>
   <p align="justify">We are using glucosinolate defense compounds as a model system to unravel the transport mechanism mediated by the glucosinolate symporters GTR1, GTR2 and GTR3, members of the Nitrate/peptide family (NPF), which exhibit glucosinolate specificity (GTR3 transports tryptophan but not methionine-derived glucosinolates, whereas GTR1 and GTR2 transport both).</p>
-  </div>
+  </div></column></row>
+                    
 </div>
   <div class="card">
   <h2>Targeting cancer polypharmacology</h2>
