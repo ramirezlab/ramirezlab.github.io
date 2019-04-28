@@ -46,6 +46,22 @@ body {
   padding: 20px;
   text-align: center;
 }
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.container img {vertical-align: middle;}
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+} 
+  
 .header {
   padding: 1px;
   text-align: center;
@@ -125,12 +141,16 @@ div.content {
   <a href="/contact">Contact</a>
 </div>
   
-<div class="header">
-  <h1>Ramírez Lab </h1>
-  <p>Computational Biophysics, Bioinformatics & Drug Design</p>
+<div class="container">
+  <img src="bg.jpg" alt="NPF_transporters" style="width:100%;">
+  <div class="content">
+	<div class="header">
+  		<h1>Ramírez Lab </h1>
+  		<p>Computational Biophysics, Bioinformatics & Drug Design</p>
+  	</div>
   </div>
+</div>
 
-<div class="bg-image"></div>
 
 <div class="card">
   <h2>Welcome to the Ramírez Lab</h2>
