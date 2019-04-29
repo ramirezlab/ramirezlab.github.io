@@ -78,18 +78,23 @@ div.content {
 .text_side{
   margin-left: 510px;
 }
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+.some-page-wrapper {
+  margin: 15px;
+  background-color: red;
 }
 
-/* Clear floats after the columns */
 .row {
-  margin-left:200px;
   display: flex;
-  margin-bottom: 10px; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 .img_research{
   display: block;
