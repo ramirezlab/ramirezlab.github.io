@@ -84,18 +84,17 @@ div.content {
 }
 .column {
   float: left;
-  width: 500px;
-  padding: 5px;
-  #border: 8px solid #cc7000;
-  #border-radius: 10px;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
 }
 
-/* Clearfix (clear floats) */
-.row::after {
+/* Clear floats after the columns */
+.row:after {
   content: "";
-  clear: both;
   display: table;
-}  
+  clear: both;
+} 
 </style>
 </head>
 <body>
