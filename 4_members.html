@@ -1,34 +1,122 @@
-f7e08733f162d2d9f2bdc0a9ff19761786ae7c8b
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+  position: relative;
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  /*agregar color oscuro para el fondo*/
+  background: #f1f1f1;
+}
+  /* Header/Logo Title */
+.header {
+  padding: 1px;
+  text-align: center;
+  background: linear-gradient(to bottom, 	#254666 30%, #4d667f 100%);
+  color: white;
+  font-size: 20px;
+  margin-left: 200px;
+} 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}   
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #FFFFFF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+} 
+.sidebar a.active {
+  background-color: #294e71;
+  color: white;
+}
+.sidebar a:hover:not(.active) {
+  background-color: #4d667f;
+  color: white;
+}
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+/* Style the counter cards */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 10px;
+   margin-left: 0px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   box-shadow: 5px 5px 5px #888888;
+}
+.minicard {
+   background-color: white;
+   padding: 20px;
+   margin-top: 10px;
+   margin-left: 0px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   box-shadow: 5px 5px 5px #888888;
+   border-radius:5px;
+}
+.img-circle {
+border-radius: 50%;
+}
 .marco{
 margin-left: 210px;
 margin-top:10px;
 }
-
 /* Float four columns side by side */
 .column {
   float: left;
   width: 25%;
   padding: 0 10px;
 }
-
 /* Remove extra left and right margins, due to padding */
 .row {margin: 0 -5px;
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 /* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #FFFFFF;
 }
-
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
@@ -41,19 +129,16 @@ margin-top:10px;
   font-size: 17px;
   color: black;
 }
-
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #4d667f;  
   color:white;
 }
-
 /* Create an active/current tablink class */
 .tab button.active {
   background-color: #254666;
   color:white;
 }
-
 /* Style the tab content */
 .tabcontent {
   display: none;
@@ -61,18 +146,15 @@ margin-top:10px;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
 }
-
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-
 .tittle {
   padding: 1px 6px;
   background-color: #254666;
@@ -80,14 +162,12 @@ margin-top:10px;
 }
 .mySlides {display: none;}
 img {vertical-align: middle;}
-
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100px;
+  max-width: 400px;
   position: relative;
   margin: auto;
 }
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -98,7 +178,6 @@ img {vertical-align: middle;}
   width: 100%;
   text-align: center;
 }
-
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -107,7 +186,6 @@ img {vertical-align: middle;}
   position: absolute;
   top: 0;
 }
-
 /* The dots/bullets/indicators */
 .dot {
   height: 0px;
@@ -118,11 +196,9 @@ img {vertical-align: middle;}
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .active {
   background-color: #717171;
 }
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -130,17 +206,14 @@ img {vertical-align: middle;}
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
-
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
@@ -263,7 +336,6 @@ function openTAB(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
@@ -271,7 +343,6 @@ document.getElementById("defaultOpen").click();
 <script>
 var slideIndex = 0;
 showSlides();
-
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -292,4 +363,3 @@ function showSlides() {
 
 </body>
 </html>
-
