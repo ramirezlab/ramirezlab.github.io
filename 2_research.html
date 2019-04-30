@@ -10,10 +10,9 @@
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
-  /*agregar color oscuro para el fondo*/
   background: #f1f1f1;
 }
-  /* Header/Logo Title */
+/* Header/Logo Title */
 .header {
   padding: 1px;
   text-align: center;
@@ -27,7 +26,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}   
+}  
 .sidebar {
   margin: 0;
   padding: 0;
@@ -71,159 +70,107 @@ div.content {
     float: none;
   }
 }
-/* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: white;
-  border-radius: 10%;
+   background-color: white;
+   padding: 20px;
+   box-shadow: 5px 5px 5px #888888;
+   margin: 10px;
+   margin-left:30px;
 }
-.img-circle {
-border-radius: 50%;
+.text_side{
+  margin-left: 510px;
 }
-.marco{
-margin-left: 210px;
-margin-top:10px;
+.some-page-wrapper {
+  margin: 15px;
+  margin-left:200px;
 }
-
-/* Float four columns side by side */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
-
-/* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;
-margin-left:200px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.img_research{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 25px;
+  border: 5px solid #cc7000;
 }
-
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #FFFFFF;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-  color: black;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #cc7000;  
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #254666;
-  color:white;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  -webkit-animation: fadeEffect 1s;
-  animation: fadeEffect 1s;
-}
-
-/* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
+ 
 </style>
 </head>
 <body>
 
-  
 <div class="sidebar">
   <br>
   <img src="/media/Logo.jpg" alt="Logo" style="width:90%;max-width:500px" class="center">
   <a href="/1_about_us">About us</a>
-  <a href="/2_research">Research</a>
+  <a class="active" href="#2_research">Research</a>
   <a href="/3_publications">Publications</a>
-  <a class="active" href="#4_members">Members</a>
+  <a href="/4_members">Members</a>
   <a href="/5_join_us">Join us</a>
   <a href="/6_events">Events</a>
   <a href="/7_contact">Contact</a>
-</div>
+</div> 
   
 <div class="header">
-  <h1>Members</h1>
+  <h1>Research</h1>
   <p>Computational Biophysics, Bioinformatics & Drug Design</p>
 </div>
-  
-<div class="marco">
-  <div class="tab">
-  <button class="tablinks" onclick="openTAB(event, 'Members')" id="defaultOpen">Members</button>
-  <button class="tablinks" onclick="openTAB(event, 'National')">National</button>
-  <button class="tablinks" onclick="openTAB(event, 'International')">International</button>
-</div>
-
-<div id="Members" class="tabcontent">
-  <div class="card">
-  <h3>Members</h3>
-  <p>London is the capital city of England.</p>
+<div class="some-page-wrapper">
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h2>Structural insights into the substrate specificity and transport mechanisms in the Nitrate/Peptide Transporter (NPF) Family</h2>
+        <img src="/media/1_NPF.jpg" style="width:100%;max-width:500px" class="img_research">
+        <p align="justify">We are using glucosinolate defense compounds as a model system to unravel the transport mechanism mediated by the glucosinolate symporters GTR1, GTR2 and GTR3, members of the Nitrate/peptide family (NPF), which exhibit glucosinolate specificity (GTR3 transports tryptophan but not methionine-derived glucosinolates, whereas GTR1 and GTR2 transport both).</p>
+      </div>
+     </div>
+    <div class="column">
+      <div class="card">
+        <img src="/media/2_3-Cancer_Neuro.jpg" style="width:100%;max-width:500px" class="img_research">
+        <h2>Targeting cancer polypharmacology</h2>
+        <p align="justify">Our main goal is to recognize, clarify and characterize novel polypharmacological mechanisms to target cancer. Our research idea relies on the principle that promiscuous drugs are not necessarily more toxic and could provide great chances for drug repurposing through simultaneous blockade of multiple targets, overcoming or avoiding inherent or adaptive drug resistance. </p>
+        <h2>Promiscuous-drug design of molecules targeting neurodegenerative diseases</h2>
+        <p align="justify">We are actively working on the search for effective drugs for the treatment of neurodegenerative diseases, applying different strategies in medical chemistry, molecular biology and chemoinformatics.</p>
+      </div>
+    </div>  
+  </div>                  
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h2>Ion occupancy in potassium channels</h2>
+        <img src="/media/4_Ion_Occupancy.jpg" style="width:100%;max-width:500px" class="img_research">
+        <p align="justify">K<sup>+</sup> channels transport K<sup>+</sup> ions across cell membranes while blocking Na<sup>+</sup>, but how these two effects are achieved simultaneously has remained unclear. In addition, it is not clear whether K<sup>+</sup> ions are transported alone (dehydrated) or conjugated with water molecules (partially hydrated). We are using Quantum Mechanics to describe K<sup>+</sup> selectivity and occupancy.</p>
+      </div>
+     </div>
+    <div class="column">
+      <div class="card">
+      <h2>Unraveling the role of the side-fenestration in ion channels gating</h2>
+      <img src="/media/5_Fenestrations.jpg" style="width:100%;max-width:500px" class="img_research">
+      <p align="justify">Side-fenestrations are open lateral passages connecting the pore with the lipid bilayer inner leaflet. It remains unknown what is the role of those lateral fenestration in ion channels gating. We are using K<sub>2P</sub> channels as system model, and ion channel blockers such as Bupivacaine, A1899 and PK-THPP as molecular tools to understand how the lateral fenestrations affects the binding affinity of know K<sub>2P</sub> channels blockers. This will allow us to later understand how these cavities modulate ion channels gating.</p>
+    </div>
+    </div>  
   </div>
-</div>
-
-<div id="National" class="tabcontent">
-  <h3>National</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="International" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-</div>
-
-  
-  <script>
-function openTAB(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
-  
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h2>Understanding the binding mechanisms of endo and phytocannabinoids into the human CB1 receptor</h2>
+        <img src="/media/6_Cannabnoids.jpg" style="width:100%;max-width:500px" class="img_research">
+        <p align="justify">We would like to understand why structurally different compounds such endo and phytocannabinoids interact with the same cannabinoid (CB1) receptor apparently at the same binding site. Endo- and phytocannabinoids are of great importance and understanding the mechanism by which human cannabinoid receptors  are modulated will open up new avenues for drug development targeting these receptors.</p>
+        <p>Figure taken and adapted from Hua, T. et al. Cell <strong>2016</strong>, 167, 750–762.</p>
+       </div>
+     </div>
+   </div> 
+  </div>   
 
 </body>
 </html>
