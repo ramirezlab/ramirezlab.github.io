@@ -82,7 +82,8 @@ div.content {
 border-radius: 50%;
 }
 .marco{
-margin-left: 200px;
+margin-left: 210px;
+margin-top:10px;
 }
 
 /* Float four columns side by side */
@@ -93,7 +94,8 @@ margin-left: 200px;
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+.row {margin: 0 -5px;
+margin-left:200px;}
 
 /* Clear floats after the columns */
 .row:after {
@@ -102,13 +104,53 @@ margin-left: 200px;
   clear: both;
 }
 
-/* Responsive columns */
-@media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #FFFFFF;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #FFFFFF;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
 </style>
 </head>
@@ -132,27 +174,52 @@ margin-left: 200px;
   <p>Computational Biophysics, Bioinformatics & Drug Design</p>
 </div>
   
-
 <div class="marco">
-<div class="row">
-  <div class="column">
-    <div class="card">
-  <img class="img-circle" src="DavidR-1.png" alt="Avatar" style="width:100%" border-radius="5%">
-  <div class="container">
-    <h4><b>David Ramírez PhD</b></h4> 
-    <p>Group Leader</p>
-    </div>
+  <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Members</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">National</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">international</button>
 </div>
-  </div>
 
-  <div class="column">
-    <div class="card">
-      <h3>Carlos Peña</h3>
-      <p>Research assistant</p>
-      <p>Bioinformatics Engineer</p>
-    </div>
+<div id="London" class="tabcontent">
+  <div class="card">
+  <h3>Members</h3>
+  <p>London is the capital city of England.</p>
   </div>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>National</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+</div>
+
   
+  <script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
   
 
 </body>
