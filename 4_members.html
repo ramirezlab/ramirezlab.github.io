@@ -72,11 +72,23 @@ div.content {
 }
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: white;
-  border-radius: 10%;
+   background-color: white;
+   padding: 20px;
+   margin-top: 10px;
+   margin-left: 0px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   box-shadow: 5px 5px 5px #888888;
+}
+.minicard {
+   background-color: white;
+   padding: 20px;
+   margin-top: 10px;
+   margin-left: 0px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   box-shadow: 5px 5px 5px #888888;
+   border-radius:5px;
 }
 .img-circle {
 border-radius: 50%;
@@ -95,7 +107,7 @@ margin-top:10px;
 
 /* Remove extra left and right margins, due to padding */
 .row {margin: 0 -5px;
-margin-left:200px;}
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -136,6 +148,14 @@ margin-left:200px;}
   color:white;
 }
 
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
@@ -171,33 +191,49 @@ margin-left:200px;}
   
 <div class="marco">
   <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Members</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">National</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">international</button>
+  <button class="tablinks" onclick="openTAB(event, 'Members')" id="defaultOpen">Members</button>
+  <button class="tablinks" onclick="openTAB(event, 'National')">National Collaborations</button>
+  <button class="tablinks" onclick="openTAB(event, 'International')">International Collaborations</button>
 </div>
 
-<div id="London" class="tabcontent">
+<div id="Members" class="tabcontent">
+  <div class="row">
+  	<div class="column">
+   		<div class="minicard">
+    		<p>London is the capital city of England.</p>
+        </div>
+  	</div>
+  </div>
+
+<div id="National" class="tabcontent">
   <div class="card">
-  <h3>Members</h3>
-  <p>London is the capital city of England.</p>
+  <h3>National Colaborators</h3>
+  <li>Ximena Zarate (Universidad Autónoma de Chile)</li> 
+  <li>Wendy González (Universidad de Talca)</li>
+  <li>Julio Caballero (Universidad de Talca)</li>
+  <li>Ingo Dreyer (Universidad de Talca)</li>
+  <li>Ariela Vergara (Universidad de Talca)</li>
+  <li>Eduardo Schott (Pontificia Universidad Católica de Chile)</li>
   </div>
 </div>
 
-<div id="Paris" class="tabcontent">
-  <h3>National</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="International" class="tabcontent">
+  <div class="card">
+  <h3>International Collaborators</h3>
+  <li>Niels Decher (Philipps-Universität Marburg, Germany)</li> 
+  <li>Hussam Nour-Eldin (University of Copenhagen, Denmark)</li>
+  <li>José Argüello (Worcester polytechnic Institute, USA)</li>
+  <li>Janneth González (Pontificia Universdad Javeriana, Colombia)</li>
+  <li>Karina Vargas (Universidad Antonio Nariño, Colombia)</li>
+  <li>Gian Pietro (Universidad de los Andes, Colombia)</li>
+  </div>
 </div>
 
 </div>
 
   
   <script>
-function openCity(evt, cityName) {
+function openTAB(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -207,7 +243,7 @@ function openCity(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 
@@ -219,3 +255,4 @@ document.getElementById("defaultOpen").click();
 
 </body>
 </html>
+
