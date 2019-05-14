@@ -371,11 +371,12 @@ function carousel() {
   } 
   
   myIndex++;
+  myindex2++;
    
  if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";
- if (myIndex > y.length) {myIndex = 1}    
-  y[myIndex-1].style.display = "block";
+ if (myIndex2 > y.length) {myIndex2 = 1}    
+  y[myIndex2-1].style.display = "block";
   setTimeout(carousel, 4000); // Change image every 2 seconds
   
   
