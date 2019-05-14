@@ -44,6 +44,52 @@
   background-color: #294e71;
   color: white;
 }
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+ body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  /*agregar color oscuro para el fondo*/
+  background: #f1f1f1;
+}
+  /* Header/Logo Title */
+.header {
+  padding: 1px;
+  text-align: center;
+  background: linear-gradient(to bottom, 	#254666 30%, #4d667f 100%);
+  color: white;
+  font-size: 20px;
+  margin-left: 200px;
+} 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}   
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #FFFFFF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+} 
+.sidebar a.active {
+  background-color: #294e71;
+  color: white;
+}
 .sidebar a:hover:not(.active) {
   background-color: #4d667f;
   color: white;
@@ -247,8 +293,7 @@ margin-top:10px;
 <div class="marco">
   <div class="tab">
   <button class="tablinks" onclick="openTAB(event, 'Members')" id="defaultOpen">Current</button>
-  <button class="tablinks" onclick="openTAB(event, 'Collaborators')">National</button>
-  <button class="tablinks" onclick="openTAB(event, 'International')">International</button> 
+  <button class="tablinks" onclick="openTAB(event, 'Collaborators')">Collaborators</button>
 </div>
 
 <div id="Members" class="tabcontent">
@@ -272,18 +317,33 @@ margin-top:10px;
 </div>
 <div id="Collaborators" class="tabcontent">
   <div class="minicard">
-  <div class="tittle">
-  <h3>National Collaborators</h3></div><br>
-  <div class="margen">  
-  <li>Ximena Zarate (<a href="http://scivisionltda.wix.com/zarategroup">Universidad Autónoma de Chile</a>)</li><br> 
-  <li>Wendy González (<a href="https://cbsm.utalca.cl/?page_id=27">Universidad de Talca</a>)</li><br>
-  <li>Julio Caballero (<a href="https://cbsm.utalca.cl/?page_id=27">Universidad de Talca</a>)</li><br>
-  <li>Ingo Dreyer (<a href="https://cbsm.utalca.cl/?page_id=27">Universidad de Talca</a>)</li><br>
-  <li>Ariela Vergara (<a href="https://cbsm.utalca.cl/?page_id=27">Universidad de Talca</a>)</li><br>
-  <li>Eduardo Schott (<a href="http://quimica.uc.cl/es/academicos/54-schott-verdugo-eduardo">Pontificia Universidad Católica de Chile</a>)</li><br>
-  </div>  
+  	<div class="tittle">
+  		<h3>National</h3></div><br>
+  	<div class="margen">  
+      <li>Ximena Zarate (<a href="http://scivisionltda.wix.com/zarategroup">Universidad Autónoma de Chile</a>)</li><br> 
+      <li>Wendy González (<a href="https://cbsm.utalca.cl/?page_id=27">Universidad de Talca</a>)</li><br>
+      <li>Julio Caballero (<a href="https://cbsm.utalca.cl/?page_id=27">Universidad de Talca</a>)</li><br>
+      <li>Ingo Dreyer (<a href="https://cbsm.utalca.cl/?page_id=27">Universidad de Talca</a>)</li><br>
+      <li>Ariela Vergara (<a href="https://cbsm.utalca.cl/?page_id=27">Universidad de Talca</a>)</li><br>
+      <li>Eduardo Schott (<a href="http://quimica.uc.cl/es/academicos/54-schott-verdugo-eduardo">Pontificia Universidad Católica de Chile</a>)</li><br>
+ 	</div>  
  
- </div>
+  </div>
+  
+  <div class="minicard">
+    <div class="tittle">
+    <h3>International</h3></div><br>
+    <div class="margen">
+    <li>Niels Decher (<a href="https://www.uni-marburg.de/fb20/physiologie/ags/decher">Philipps-Universität Marburg</a>, Germany)</li><br> 
+    <li>Hussam Nour-Eldin (<a href="https://dynamo.ku.dk/people/nour-eldin/">University of Copenhagen</a>, Denmark)</li><br>
+    <li>José Argüello (<a href="http://arguellolab.net/">Worcester polytechnic Institute</a>, USA)</li><br>
+    <li>Janneth González (<a href="https://www.javeriana.edu.co/tercelmol/?page_id=127">Pontificia Universdad Javeriana</a>, Colombia)</li><br>
+    <li>Karina Vargas (<a href="http://www.uan.edu.co/">Universidad Antonio Nariño</a>, Colombia)</li><br>
+    <li>Cristian Buendia (<a href="http://www.uan.edu.co/">Universidad Antonio Nariño</a>, Colombia)</li><br>
+    <li>Gian Pietro (<a href="http://cobo.uniandes.edu.co/">Universidad de los Andes</a>, Colombia)</li>
+    </div>
+    </div>
+  
    <div class="slideshow-container">
 
 <div class="mySlides fade">
@@ -307,44 +367,26 @@ margin-top:10px;
   <span class="dot"></span> 
 </div>
 
- </div>  
 
-<div id="International" class="tabcontent">
-  <div class="minicard">
-    <div class="tittle">
-    <h3>International Collaborators</h3></div><br>
-    <div class="margen">
-    <li>Niels Decher (<a href="https://www.uni-marburg.de/fb20/physiologie/ags/decher">Philipps-Universität Marburg</a>, Germany)</li><br> 
-    <li>Hussam Nour-Eldin (<a href="https://dynamo.ku.dk/people/nour-eldin/">University of Copenhagen</a>, Denmark)</li><br>
-    <li>José Argüello (<a href="http://arguellolab.net/">Worcester polytechnic Institute</a>, USA)</li><br>
-    <li>Janneth González (<a href="https://www.javeriana.edu.co/tercelmol/?page_id=127">Pontificia Universdad Javeriana</a>, Colombia)</li><br>
-    <li>Karina Vargas (<a href="http://www.uan.edu.co/">Universidad Antonio Nariño</a>, Colombia)</li><br>
-    <li>Cristian Buendia (<a href="http://www.uan.edu.co/">Universidad Antonio Nariño</a>, Colombia)</li><br>
-    <li>Gian Pietro (<a href="http://cobo.uniandes.edu.co/">Universidad de los Andes</a>, Colombia)</li>
-    </div>
-    </div>
-    </div>
-  </div>
-    
 
-   
+ 
   <script>
-function openTAB(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+    function openTAB(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
 
 <script>
 var slideIndex = 0;
