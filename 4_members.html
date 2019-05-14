@@ -360,19 +360,22 @@ carousel();
 function carousel() {
   var i;
   var j;
-  var x = document.getElementsByClassName("mySlides");
+ 
+ var y = document.getElementsByClassName("mySlides2");
+  for (j = 0; j < y.length; j++) {
+    y[j].style.display = "none";  
+  } 
+ var x = document.getElementsByClassName("mySlides");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
-  var y = document.getElementsByClassName("mySlides2");
-  for (j = 0; j < y.length; j++) {
-    y[j].style.display = "none";  
-  }
+  
   myIndex++;
+  
+  if (myIndex > y.length) {myIndex = 1}    
+  y[myIndex-1].style.display = "block";
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";
-  if (myIndex > y.length) {myIndex = 1}    
-  y[myIndex-1].style.display = "block";  
   setTimeout(carousel, 4000); // Change image every 2 seconds
   
   
