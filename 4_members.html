@@ -165,173 +165,6 @@ margin-top:10px;
 .tittle {
   padding: 1px 6px;
   background-color: #254666;
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box;}
- body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-  /*agregar color oscuro para el fondo*/
-  background: #f1f1f1;
-}
-  /* Header/Logo Title */
-.header {
-  padding: 1px;
-  text-align: center;
-  background: linear-gradient(to bottom, 	#254666 30%, #4d667f 100%);
-  color: white;
-  font-size: 20px;
-  margin-left: 200px;
-} 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}   
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #FFFFFF;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
-.sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-} 
-.sidebar a.active {
-  background-color: #294e71;
-  color: white;
-}
-.sidebar a:hover:not(.active) {
-  background-color: #4d667f;
-  color: white;
-}
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-}
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
-/* Style the counter cards */
-.card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 10px;
-   margin-left: 0px;
-   margin-right: 10px;
-   margin-bottom: 10px;
-   box-shadow: 5px 5px 5px #888888;
-}
-.minicard {
-   background-color: white;
-   padding: 20px;
-   margin-top: 10px;
-   margin-left: 0px;
-   margin-right: 10px;
-   margin-bottom: 10px;
-   box-shadow: 5px 5px 5px #888888;
-   border-radius:5px;
-}
-.img-circle {
-border-radius: 50%;
-}
-.marco{
-margin-left: 210px;
-margin-top:10px;
-}
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-}
-.left {
-  width: 80%;
-}
-
-.right {
-  width: 20%;
-}
-.
-/* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #FFFFFF;
-}
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-  color: black;
-}
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #4d667f;  
-  color:white;
-}
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #254666;
-  color:white;
-}
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  -webkit-animation: fadeEffect 1s;
-  animation: fadeEffect 1s;
-}
-/* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-.tittle {
-  padding: 1px 6px;
-  background-color: #254666;
   color:white;
 }
 .mySlides {display: none;}
@@ -394,7 +227,7 @@ margin-top:10px;
 }
   
 .margen {
-  margin-left: 70px;
+  margin-left: 30px;
 }
 
 
@@ -449,7 +282,7 @@ margin-top:10px;
 <div id="Collaborators" class="tabcontent">
   <div class="minicard">
   	<div class="tittle">
-  		<h3> National</h3></div><br>
+  		<h3>National</h3></div><br>
   	<div class="margen">
       <div class= "row">
         <div class= "column left"> 
@@ -465,15 +298,15 @@ margin-top:10px;
         	<div class="slideshow-container">
 
                 <div class="mySlides fade">
-                  <img class="img_banner" src="media/ua.png" style="width:80%">
+                  <img class="img_banner" src="media/ua.png" style="width:60%">
                   </div>
 
                 <div class="mySlides fade">
-                  <img class="img_banner" src="media/utalca.png" style="width:80%">
+                  <img class="img_banner" src="media/utalca.png" style="width:60%">
                   </div>
 
                 <div class="mySlides fade">
-                  <img class="img_banner" src="media/ucato.png" style="width:80%">
+                  <img class="img_banner" src="media/ucato.png" style="width:60%">
                  </div>
 
                 </div>
@@ -495,17 +328,13 @@ margin-top:10px;
     <div class="tittle">
     <h3>International</h3></div><br>
     <div class="margen">
-     <div class="row">
-      <div class="column left">
-        <li>Niels Decher (<a href="https://www.uni-marburg.de/fb20/physiologie/ags/decher">Philipps-Universität Marburg</a>, Germany)</li><br> 
-        <li>Hussam Nour-Eldin (<a href="https://dynamo.ku.dk/people/nour-eldin/">University of Copenhagen</a>, Denmark)</li><br>
-        <li>José Argüello (<a href="http://arguellolab.net/">Worcester polytechnic Institute</a>, USA)</li><br>
-        <li>Janneth González (<a href="https://www.javeriana.edu.co/tercelmol/?page_id=127">Pontificia Universdad Javeriana</a>, Colombia)</li><br>
-        <li>Karina Vargas (<a href="http://www.uan.edu.co/">Universidad Antonio Nariño</a>, Colombia)</li><br>
-        <li>Cristian Buendia (<a href="http://www.uan.edu.co/">Universidad Antonio Nariño</a>, Colombia)</li><br>
-        <li>Gian Pietro (<a href="http://cobo.uniandes.edu.co/">Universidad de los Andes</a>, Colombia)</li>
-       </div>
-      </div>
+    <li>Niels Decher (<a href="https://www.uni-marburg.de/fb20/physiologie/ags/decher">Philipps-Universität Marburg</a>, Germany)</li><br> 
+    <li>Hussam Nour-Eldin (<a href="https://dynamo.ku.dk/people/nour-eldin/">University of Copenhagen</a>, Denmark)</li><br>
+    <li>José Argüello (<a href="http://arguellolab.net/">Worcester polytechnic Institute</a>, USA)</li><br>
+    <li>Janneth González (<a href="https://www.javeriana.edu.co/tercelmol/?page_id=127">Pontificia Universdad Javeriana</a>, Colombia)</li><br>
+    <li>Karina Vargas (<a href="http://www.uan.edu.co/">Universidad Antonio Nariño</a>, Colombia)</li><br>
+    <li>Cristian Buendia (<a href="http://www.uan.edu.co/">Universidad Antonio Nariño</a>, Colombia)</li><br>
+    <li>Gian Pietro (<a href="http://cobo.uniandes.edu.co/">Universidad de los Andes</a>, Colombia)</li>
     </div>
     </div>
   
