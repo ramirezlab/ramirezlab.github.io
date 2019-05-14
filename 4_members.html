@@ -294,9 +294,31 @@ margin-top:10px;
             <li>Eduardo Schott (<a href="http://quimica.uc.cl/es/academicos/54-schott-verdugo-eduardo">Pontificia Universidad Católica de Chile</a>)</li><br>
         </div>
         <div class= "column right">
-       <img class="mySlides fade" src="media/ua.png" style="width:100%">
-       <img class="mySlides fade" src="media/utalca.png" style="width:100%">  
-        	
+       
+        	<div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img class="img_banner" src="media/ua.png" style="width:60%">
+                  </div>
+
+                <div class="mySlides fade">
+                  <img class="img_banner" src="media/utalca.png" style="width:60%">
+                  </div>
+
+                <div class="mySlides fade">
+                  <img class="img_banner" src="media/ucato.png" style="width:60%">
+                 </div>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+        
+        </div>
       </div>  
  	</div>  
  
@@ -317,6 +339,7 @@ margin-top:10px;
           <li>Gian Pietro (<a href="http://cobo.uniandes.edu.co/">Universidad de los Andes</a>, Colombia)</li>
         </div>
         <div class= "column right">
+        <img class="mySlides fade" src="media/ua.png" style="width:100%">
         	<div class="slideshow-container">
 
                 <div class="mySlides fade">
@@ -349,7 +372,25 @@ margin-top:10px;
 
 
  
- <script>
+  <script>
+    function openTAB(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+<script>
 var myIndex = 0;
 carousel();
 
@@ -371,28 +412,8 @@ function carousel() {
   y[myIndex-1].style.display = "block";  
   setTimeout(carousel, 2000); // Change image every 2 seconds
   
+  
 }
-  <script>
- <script>
-    function openTAB(evt, tabName) {
-var myIndex = 0;
-      var i, tabcontent, tablinks;
-carousel();
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-  </script>
-
 </script>
 
 </body>
