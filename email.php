@@ -1,11 +1,11 @@
 <?php
-$name = $_POST['name']; 
-$lastname = $_POST['lastname']; 
+$Name = $_POST['Name']; 
+$Last name = $_POST['Last name']; 
 $email= $_POST['email']; 
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-echo $name. "has said: <br/>".$message;
+echo $Name. "has said: <br/>".$message;
 if (mail('david.ramirez@uautonoma.cl', $subject, $message)){
   echo "email sent";
 }else{
