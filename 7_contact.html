@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +5,10 @@
 <style>
 * {
   box-sizing: border-box;
+}
+label {
+	width: 150px;
+	display: inline-block;
 }
 body {
   margin: 0;
@@ -146,7 +149,7 @@ map.addLayer(vectorLayer);
 </div>  
   
 <div class="header">
-  <h1>Contact</h1>
+  <h1>Contact us</h1>
   <p> Computational Biophysics, Bioinformatics & Drug Design</p>
 </div>
   
@@ -161,6 +164,26 @@ map.addLayer(vectorLayer);
   <p>e-mail: david.ramirez@uautonoma.cl</p>
   <a href="https://www.google.com/maps/place/Universidad+Aut%C3%B3noma+de+Chile/@-33.4803129,-70.6501275,17z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzPCsDI4JzQ5LjEiUyA3MMKwMzgnNTUuOCJX!3b1!8m2!3d-33.480295!4d-70.64884!3m4!1s0x9662c53702d56eaf:0xd4c04fc4e9e40cc7!8m2!3d-33.4805458!4d-70.6491615"><div id="map" style="width: 500px; height: 350px;"></div>
   </a>
+	<form action="email.php">
+		<label for="name">name:</label>
+		<input type="text" name="name" id="name"><br>
+		
+		<label for="lastname">lastname:</label>
+		<input type="text" lastname="lastname" id="lastname"><br>
+		
+		<label for="email">email:</label>
+		<input type="text" email="email" id="email"><br>
+		
+		<label for="subject">subject:</label>
+		<input type="text" subject="subject" id="subject"><br>
+		
+		<label for="message">message:</label>
+		<input type="text" message="message" id="message"><br>
+		
+		<input type="Submit">
+	</form>
+		
+		
 </div>
 	
 </body>
