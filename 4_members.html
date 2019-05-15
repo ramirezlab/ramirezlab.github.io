@@ -147,6 +147,7 @@ margin-top:10px;
 }
 /* Create an active/current tablink class */
 .tab button.active {
+  font-size: 20px;
   background-color: #254666;
   color:white;
 }
@@ -167,6 +168,7 @@ margin-top:10px;
   to {opacity: 1;}
 }
 .tittle {
+  
   padding: 1px 6px;
   background-color: #254666;
   color:white;
@@ -300,16 +302,16 @@ margin-top:10px;
   
 <div class="marco">
   <div class="tab">
-  <button class="tablinks" onclick="openTAB(event, 'Members')" id="defaultOpen"><b>Current</b></button>
-  <button class="tablinks" onclick="openTAB(event, 'Collaborators')"><b>Collaborators</b></button>
+  <button class="tablinks" onclick="openTAB(event, 'Members')" id="defaultOpen">Current></button>
+  <button class="tablinks" onclick="openTAB(event, 'Collaborators')">Collaborators</button>
 </div>
 
 <div id="Members" class="tabcontent">
   <div class="row">
   	<div class="column">
    		<div class="minicard">
-    	  	<a href=media/CV_2019-1page.pdf download><button class="button" style="vertical-align:middle" ><span>CV</span></button></a>
-        <img class="img-circle center" src="media/DavidR-1.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+    	  	<img class="img-circle center" src="media/DavidR-1.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+        <a href=media/CV_2019-1page.pdf download><button class="button" style="vertical-align:middle" ><span>CV</span></button></a>  
         <h3 align=center><b>David Ramírez PhD</b></h3> 
         <p>Group Leader</p>
         <p>e-mail:david.ramirez@uautonoma.cl</p><br>
@@ -319,8 +321,8 @@ margin-top:10px;
   	</div>
     <div class ="column">
     <div class="minicard">
-     	  <a href=media/CV_cpena_2019.pdf download><button class="button" style="vertical-align:middle" ><span>CV</span></button></a>
-        <img class="img-circle center" src="media/cpena_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+     	  <img class="img-circle center" src="media/cpena_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+        <a href=media/CV_cpena_2019.pdf download><button class="button" style="vertical-align:middle" ><span>CV</span></button></a>
         <h3 align=center>Carlos Peña</h3>     
         <p >Research assistant</p>
         <p >Bioinformatics Engineer</p>
