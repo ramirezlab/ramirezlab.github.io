@@ -81,13 +81,13 @@ div.content {
    box-shadow: 5px 5px 5px #888888;
  }
 .minicard {
-   background-color: white;
+    background-color: white;
    box-sizing: content-box;  
    max-weidth:160px;
-   padding: 5px;
-   margin-top: 10px;
-   margin-left: 0px;
-   margin-right: 10px;
+   padding: 15px;
+   margin-top: 5px;
+   margin-left: 10px;
+   margin-right: 5px;
    margin-bottom: 10px;
    box-shadow: 5px 5px 5px #888888;
    border-radius:5px;
@@ -278,12 +278,16 @@ margin-top:10px;
   right: 0;
 }
 .btn-group button {
-  background-color: white; /* Green background */
-  color: white; /* White text */
-  padding: -2px 0px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: center; /* Float the buttons side by side */
-  margin:-2;
+  background-color: white; /* Green */
+  border: none;
+  color: white;
+  padding: 0px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: center;
 }
 
 /* Clear floats (clearfix hack) */
@@ -292,11 +296,9 @@ margin-top:10px;
   clear: both;
   display: table;
 }
-
 .btn-group button:not(:last-child) {
   border-right: none; /* Prevent double borders */
 }
-
 /* Add a background color on hover */
 .btn-group button:hover {
   background-color: #4d667f;
