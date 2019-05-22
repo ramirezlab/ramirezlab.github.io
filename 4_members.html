@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
- 
+<link rel="stylesheet" href="/path/to/folder/css/academicons.min.css"/>
 <style>
 * {box-sizing: border-box;}
  body {
@@ -270,7 +270,31 @@ margin-top:10px;
   opacity: 1;
   right: 0;
 }
+.btn-group button {
+  background-color: white; /* Green background */
+  border: 1px; /* Green border */
+  color: white; /* White text */
+  padding: 2px 4px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
 
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #4d667f;
+  border-radius:6px;
+}
   
 </style>
 </head>
@@ -311,7 +335,7 @@ margin-top:10px;
         <div class="btn-group">
            <button style='font-size:24px;color:#254666;font-size:36px'><i class='fas fa-address-card'></i></button>
            <button style='font-size:24px;color:#00D0AF;font-size:36px'><i class='fab fa-researchgate'></i></button>
-           <button style='font-size:24px;color:#00D0AF;font-size:36px'><i class='fab fa-researchgate'></i></button>  
+           <button style='font-size:24px;color:#00D0AF;font-size:36px'><i class='ai ai-google-scholar'></i></button>  
          </div>
         
         </div>
