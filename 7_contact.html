@@ -16,6 +16,45 @@ body {
   background: #f1f1f1;
 }
 /* Header/Logo Title */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #294e71;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
 .header {
   padding: 1px;
   text-align: center;
@@ -170,20 +209,25 @@ map.addLayer(vectorLayer);
 <div class="row">
 <div class="column">
   <h2>Contact information</h2>
-  <p><strong>David Ramírez, PhD</strong></p>
-  <p>Assistant Professor</p>
-  <p>Computational Biophysics, Bioinformatics & Drug Desig Lab</p>
-  <p>Institute of Biomedical Sciences, Faculty of Health Sciences, Universidad Autónoma de Chile</p>
-  <p>Llano Subercaseaux 2805 - piso 6, Santiago, Chile</p>
-  <p>Phone: (+56) 934211932</p>
-  <p>e-mail: david.ramirez@uautonoma.cl</p>
-<form action="https://formspree.io/david.ramirez@uautonoma.cl" method="POST">
-  e-mail   <input type="email" name="From"><br>
-  Name     <input type="text" name="name"><br>
-  Subject     <input type="text" name="Text"><br>
-  Your message     <input type="text" name="Text"><br>
-  <input type="submit" value="Send">
-</form>
+  <p><b>Address</b><br/>
+  Universidad Autónoma de Chile<br/>
+  Institute of Biomedical Sciences<br/>
+  Llano Subercaseaux 2805 - piso 6<br/> 
+  Santiago, Chile<br/><p/>
+  <p><b>Phone: </b>(+56) 934211932<br/>
+  <b>e-mail: </b>david.ramirez@uautonoma.cl</p>
+</div>
+
+<div class="column">
+<div class="container">
+  <form action="https://formspree.io/david.ramirez@uautonoma.cl" method="POST">
+    <input type="text" id="fname" name="Name" placeholder="Your name">
+    <input type="text" id="subject" name="subject" placeholder="Subject">
+    <input type="email" id="email" name="From" placeholder="your@email.com">
+    <textarea id="subject" name="message" placeholder="Your message" style="height:200px"></textarea>
+    <input type="submit" value="Submit">
+  </form>
+</div>
 </div>
 <div class="column">
   <a href="https://www.google.com/maps/place/Universidad+Aut%C3%B3noma+de+Chile/@-33.4803129,-70.6501275,17z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzPCsDI4JzQ5LjEiUyA3MMKwMzgnNTUuOCJX!3b1!8m2!3d-33.480295!4d-70.64884!3m4!1s0x9662c53702d56eaf:0xd4c04fc4e9e40cc7!8m2!3d-33.4805458!4d-70.6491615"><div id="map" style="width: 100%; height: 300px;"></div></a>
