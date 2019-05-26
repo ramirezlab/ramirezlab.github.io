@@ -18,7 +18,7 @@ body {
 /* Header/Logo Title */
 input[type=text], select, textarea {
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -28,7 +28,7 @@ input[type=text], select, textarea {
 }
 input[type=email], select, textarea {
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -125,8 +125,12 @@ div.content {
 .column {
   float: left;
   padding: 5px;
-  width: 33.3333%;
-  height: 380px;
+}
+.left, .middle {
+  width: 30%;
+}
+.right {
+  width: 40%;
 }
 /* Remove extra left and right margins, due to padding */
 .row {margin: 0 -5px;
@@ -208,8 +212,7 @@ map.addLayer(vectorLayer);
 
 <div class="card">
 <div class="row">
-<div class="column">
-  <h2>Contact information</h2>
+<div class="column left">
   <p><b>Address</b><br/>
   Universidad Autónoma de Chile<br/>
   Institute of Biomedical Sciences<br/>
@@ -219,7 +222,7 @@ map.addLayer(vectorLayer);
   <b>e-mail: </b>david.ramirez@uautonoma.cl</p>
 </div>
 
-<div class="column">
+<div class="column middle">
 <div class="container">
   <form action="https://formspree.io/david.ramirez@uautonoma.cl" method="POST">
     <input type="text" id="fname" name="Name" placeholder="Your name">
@@ -230,7 +233,7 @@ map.addLayer(vectorLayer);
   </form>
 </div>
 </div>
-<div class="column">
+<div class="column right">
   <a href="https://www.google.com/maps/place/Universidad+Aut%C3%B3noma+de+Chile/@-33.4803129,-70.6501275,17z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzPCsDI4JzQ5LjEiUyA3MMKwMzgnNTUuOCJX!3b1!8m2!3d-33.480295!4d-70.64884!3m4!1s0x9662c53702d56eaf:0xd4c04fc4e9e40cc7!8m2!3d-33.4805458!4d-70.6491615"><div id="map" style="width: 100%; height: 300px;"></div></a>
 </div>
 </div>
