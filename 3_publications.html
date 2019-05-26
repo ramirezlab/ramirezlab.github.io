@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-/*AGREGAR*/
-* {
-  box-sizing: border-box;
-}
-body {
+* {box-sizing: border-box;}
+ body {
   margin: 0;
   font-family: "Lato", sans-serif;
   /*agregar color oscuro para el fondo*/
   background: #f1f1f1;
 }
-/* Header/Logo Title */
-.city {
-  text-align: left;
-  background-color: #cc7000;
-  color: white;
-  padding: 5px;
-  font-size: 22px;
-  margin-left: 230px;
-  margin-right: 30px;
-  box-shadow: 5px 5px 5px #888888;
-}
+  /* Header/Logo Title */
 .header {
   padding: 1px;
   text-align: center;
@@ -30,7 +20,7 @@ body {
   color: white;
   font-size: 20px;
   margin-left: 200px;
-}
+} 
 .center {
   display: block;
   margin-left: auto;
@@ -80,7 +70,12 @@ div.content {
     float: none;
   }
 }
-/* Add a card effect for articles */
+/* Style the counter cards */
+.marco{
+margin-left: 210px;
+margin-top:10px;
+}
+/* Float four columns side by side */
 .card {
    background-color: white;
    padding: 20px;
@@ -101,10 +96,194 @@ div.content {
 .right {
   width: 20%;
 }
-.
 /* Remove extra left and right margins, due to padding */
 .row {margin: 0 -5px;
 }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #FFFFFF;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: black;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #4d667f;  
+  color:white;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #254666;
+  color:white;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.tittle {
+  
+  padding: 1px 6px;
+  background-color: #254666;
+  color:white;
+}
+.mySlides {display: none;}
+.img_banner {vertical-align: middle;}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 0px;
+  width: 0px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+  
+.margen {
+  margin-left: 30px;
+}
+.button {
+  position: relative;
+  bottom:-230px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4d667f;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 8px;
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px -5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.btn-group button {
+  background-color: white; /* Green */
+  border: none;
+  color: white;
+  padding: 0px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: center;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #4d667f;
+  border-radius:6px;
+} 
+</style>
+</head>
+<body>
   
   
 </style>
@@ -127,416 +306,46 @@ div.content {
   <h1>Publications</h1>
   <p>Computational Biophysics, Bioinformatics & Drug Design</p>
 </div>
-
-<h2 class="city">2019</h2>
-  
-  
   <div class="card">
- 
-        <h2><a href="https://www.mdpi.com/1422-0067/20/9/2252">Structure/Activity Analysis of TASK-3 Channel Antagonists Based 
-             on a 5,6,7,8 tetrahydropyrido[4,3-d]pyrimidine</a></h2>
-        <h5>David Ramírez, Mauricio Bedoya, Aytug K. Kiper, Susanne Rinné,Samuel Morales-Navarro, Erix W. Hernández-Rodríguez, 
-             Francisco V. Sepúlveda, Niels Decher, and Wendy González</h5>
-        <p>international Journal of Molecular Sciences, 2019, doi: 10.3390/ijms20092252</p
-        <p align="justify">TASK-3 potassium (K<sup>+</sup>) channels are highly expressed in the central nervous system, regulating the membrane 
-             potential of excitable cells. TASK-3 is involved in neurotransmitter action and has been identified as an oncogenic K<sup>+</sup> 
-             channel. For this reason, the understanding of the action mechanism of pharmacological modulators of these channels is 
-             essential to obtain new therapeutic strategies. In this study we describe the binding mode of the potent antagonist 
-             PK-THPP into the TASK-3 channel. PK-THPP blocks TASK-1, the closest relative channel of TASK-3, with almost nine-times 
-             less potency. Our results confirm that the binding is influenced by the fenestrations state of TASK-3 channels and 
-             occurs when they are open. The binding is mainly governed by hydrophobic contacts between the blocker and the residues 
-             of the binding site. These interactions occur not only for PK-THPP, but also for the antagonist series based on 5,6,7,8 
-             tetrahydropyrido[4,3-d]pyrimidine scaffold (THPP series). However, the marked difference in the potency of THPP series 
-             compounds such as 20b, 21, 22 and 23 (PK-THPP) respect to compounds such as 17b, inhibiting TASK-3 channels in the 
-             micromolar range is due to the presence of a hydrogen bond acceptor group that can establish interactions with the 
-             threonines of the selectivity filter.</p>
-    
-  </div>
+  	<h2>2019</h2>
+    <p>Ramírez, D.; Bedoya, M.; Kiper, A. K.; Rinné, S.; Morales-Navarro, S.; Hernández-Rodríguez, E. W.; Sepúlveda, F. V; Decher, N.; González, W. Structure / Activity Analysis of TASK-3 tetrahydropyrido [4,3-d] pyrimidine. International Journal of Molecular Sciences. 20(9), 2252. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Rinné, S., Kiper, A., Vowinkel, K., Ramírez, D., Schewe, M., Bedoya, M., Aser, D., Gensler, I., Netter, M., Stansfeld, P., Baukrowitz, T., Gonzalez, W., and Decher, N. The molecular basis for an allosteric inhibition of K<sup>+</sup>-flux gating in K<sub>2P</sub> channels. eLife 8:e39476. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Novoa-Aponte, L., Ramírez, D., and Argüello, J. The interplay of the metallosensor CueR with two distinct CopZ chaperones defines copper homeostasis in Pseudomonas aeruginosa. Journal of Biological Chemistry, 294(13), 4934-4945.
+ <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+</div>
+
 <div class="card">
-       <h2><a href="http://www.jbc.org/content/294/13/4934.short">The interplay of the metallosensor CueR with two distinct CopZ chaperones defines copper homeostasis in Pseudomonas aeruginosa</a></h2>
-       <h5>Lorena Novoa-Aponte, David Ramírez, José M Argüello</h5>
-   <p>Journal of Biological Chemistry, 2019, doi: 10.1074/jbc.RA118.006316</p>
-   <p align="justify">Copper homeostasis in pathogenic bacteria is critical for cuproprotein assembly and virulence. 
-        However, <i>in vivo</i> biochemical analyses of these processes are challenging, which has prevented defining and 
-        quantifying the homeostatic interplay between Cu<sup>+</sup>-sensing transcriptional regulators, chaperones, and 
-        sequestering molecules. The cytoplasm of <i>Pseudomonas aeruginosa</i> contains a Cu<sup>+</sup>-sensing 
-        transcriptional regulator, CueR, and two homologous metal chaperones, CopZ1 and CopZ2, forming a unique system for 
-        studying Cu<sup>+</sup> homeostasis. We found here that both chaperones exchange Cu<sup>+</sup>, albeit at a slow rate, 
-        reaching equilibrium after 3 h, a time much longer than <i>P. aeruginosa</i> duplication time. Therefore, they appeared 
-        as two separate cellular Cu<sup>+</sup> pools. Although both chaperones transferred Cu<sup>+</sup> to CueR 
-        <i>in vitro</i>, experiments <i>in vivo</i> indicated that CopZ1 metallates CueR, eliciting the translation of 
-        Cu<sup>+</sup> efflux transporters involved in metal tolerance. Although this observation was consistent with the 
-        relative Cu<sup>+</sup> affinities of the three proteins (CopZ1 < CueR < CopZ2), <i>in vitro</i> and <i>in silico</i> 
-        analyses also indicated a stronger interaction between CopZ1 and CueR that was independent of Cu<sup>+</sup>. 
-        In contrast, CopZ2 function was defined by its distinctly high abundance during Cu2<sup>+</sup> stress. 
-        Under resting conditions, CopZ2 remained largely in its <i>apo</i> form. Metal stress quickly induced CopZ2 expression, 
-        and its <i>holo</i> form predominated, reaching levels commensurate with the cytoplasmic Cu<sup>+</sup> levels. 
-        In summary, these results show that CopZ1 acts as chaperone delivering Cu<sup>+</sup> to the CueR sensor, whereas CopZ2 
-        functions as a fast-response Cu<sup>+</sup>-sequestering storage protein. We propose that equivalent proteins likely 
-        play similar roles in most bacterial systems.</p>
-  </div>
-  
+  	<h2>2018</h2>
+    <p>Forero-Doria, O., Castro, R., Guitierrez, M., González-Valenzuela, D., Santos, L., Ramírez, D., & Guzman, L. Synthesis of ionic liquids as a new antibacterial alternative to pathogens of the skin and soft tissues. Molecules, 23, 2354. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Ramirez, D., Zuñiga, R., Concha, G., & Zuñiga, L. HCN channels: New therapeutic targets for pain treatment. Molecules, 23, 2094. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Parmar, J., Quintana, J., Ramírez, D., Laubenbacher, R., Argüello, & Mendes, P. An important role for periplasmic storage in Pseudomonas aeruginosa copper homeostasis revealed by a combined experimental and computational modeling study. Molecular microbiology, 00, 1-13. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Ramirez, D., Caballero, J. Is it reliable to take the molecular docking top first scoring position as the best solution without considering available structural data? Molecules, 23, 1038. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+</div>
 <div class="card">
-       <h2><a href="https://cdn.elifesciences.org/articles/39476/elife-39476-v1.pdf">The molecular basis for an allosteric inhibition of K<sup>+</sup>-flux gating in K<sub>2P</sub> channels</a></h2>
-       <h5>Susanne Rinne, Aytug K Kiper, Kirsty S Vowinkel, David Ramirez, Marcus Schewe, Mauricio Bedoya, Diana Aser, Isabella Gensler, Michael F Netter, Phillip J Stansfeld, Thomas Baukrowitz, Wendy Gonzalez, Niels Decher</h5>
-   <p>eLife, 2019, doi: 10.7554/eLife.39476.001</p>
-   <p align="justify">Two-pore-domain potassium (K<sub>2P</sub>) channels are key regulators of many physiological
-and pathophysiological processes and thus emerged as promising drug targets. As for other
-potassium channels, there is a lack of selective blockers, since drugs preferentially bind to a
-conserved binding site located in the central cavity. Thus, there is a high medical need to identify novel drug-binding sites 
-       outside the conserved lipophilic central cavity and to identify new allosteric mechanisms of channel inhibition. 
-        Here, we identified a novel binding site and allosteric inhibition mechanism, disrupting the recently proposed 
-        K<sup>+</sup>-flux gating mechanism of K<sub>2P</sub> channels, which results in an unusual voltage-dependent block of 
-        leak channels belonging to the TASK subfamily. The new binding site and allosteric mechanism of inhibition provide 
-        structural and mechanistic insights into the gating of TASK channels and the basis for the drug design of a new class 
-        of potent blockers targeting specific types of K<sub>2P</sub> channels.</p>
+<h2>2017</h2>
+<p>Ramirez, D., González, W., Fissore, R., & Carvacho, I. Conotoxins as Tools to Understand the Physiological Function of Voltage-Gated Calcium (Ca<sub>V</sub>) Channels. Marine drugs, 15, 313. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Ojeda, P. G., Ramírez, D., Alzate-morales, J., Caballero, J., Kaas, Q., & González, W. Computational Studies of Snake Venom Toxins. Toxins, 10(8), 1–24. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Ramirez, D., Arévalo, B., Martínez, G., Rinné, S., Sepúlveda, F., Decher, N. & González, W. Side fenestration provide and ‘anchor’ for stable binding of A1899 to the pore of TASK-1 potassium channel. Molecular Pharmaceutics, 14(7):2197–2208. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Jørgensen, M., Xu, D., Crocoll, C., Ramírez, D., Motawia, M., Olsen, C., Nour-Eldin, H., & Halkier, B. Origin and evolution of a transporter substrate specificity. eLife, 6:e19466. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Resende, L., Ramos, R., Collaço, R., Simioni, L., Ramirez, D., Gonzalez, W., Soares, A., Calderon, L., Marangoni, S., and Da Silva, D. Exploring and understanding the functional role, and biochemical and structural characteristics of an acidic phospholipase A2, AplTx-I, purified from Agkistrodon piscivorus leucostoma snake venom. Toxicon, 127:22-36. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
 </div>
-
-
-<h2 class="city">2018</h2> 
 <div class="card">
-      <h2><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/mmi.14086">An important role for periplasmic storage in <i>Pseudomonas aeruginosa</i> copper homeostasis revealed by a combined experimental and computational modeling study</a></h2>
-      <h5>Jignesh H Parmar, Julia Quintana, David Ramírez, Reinhard Laubenbacher, José M Argüello, Pedro Mendes</h5>
-  <p>Molecular Microbiology, 2018, doi: 10.1111/mmi.14086</p>
-  <p align="justify">Biological systems require precise copper homeostasis enabling metallation of cuproproteins while preventing 
-    metal toxicity. In bacteria, sensing, transport, and storage molecules act in coordination to fulfill these roles. 
-    However, there is not yet a kinetic schema explaining the system integration. Here, we report a model emerging from 
-    experimental and computational approaches that describes the dynamics of copper distribution in <i>Pseudomonas aeruginosa</i>. 
-    Based on copper uptake experiments, a minimal kinetic model describes well the copper distribution in the wild‐type 
-    bacteria but is unable to explain the behavior of the mutant strain lacking CopA1, a key Cu<sup>+</sup> efflux ATPase. The model was 
-    expanded through an iterative hypothesis‐driven approach, arriving to a mechanism that considers the induction of 
-    compartmental pools and the parallel function of CopA and Cus efflux systems. Model simulations support the presence of a 
-    periplasmic copper storage with a crucial role under dyshomeostasis conditions in <i>P. aeruginosa</i>. Importantly, the model 
-    predicts not only the interplay of periplasmic and cytoplasmic pools but also the existence of a threshold in the 
-    concentration of external copper beyond which cells lose their ability to control copper levels.
-</p>
+<h2>2016</h2>
+<p>Almeida, J., Lancellotti, M., Soares, A., Calderon, L., Ramírez, D., González, W., Marangoni, S., and Da Silva, S. CoaTx-II, a new dimeric Lys49 phospholipase A2 from Crotalus oreganus abyssus snake venom with bactericidal potential: Insights into its structure and biological roles.  Toxicon, 120:147-158. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Rodríguez Y., Gutiérrez M., Ramírez D., Alzate-Morales J., Bernalc C., Güizac F., Romero A. Novel N-allyl/propargyl tetrahydroquinolines: Synthesis via three-component cationic imino Diels- Alder reaction, binding prediction and evaluation as cholinesterase inhibitors. Chemical Biology & Drug Design, 88(4), 498-510. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Ramírez D., Caballero J. Is it reliable the use of common molecular docking methods to compare the binding affinities of pair of enantiomers to their protein target? International Journal of Molecular Sciences, 17, 4. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Ramírez D. Computational methods applied to rational drug design. The Open Medical Chemistry Journal, 10:35-48. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
+<p>Goldstein1 M., Rinné S., Kiper A., Ramírez D., Netter M., Bustos D., Ortiz-Bonnin D., González W., Decher N. Functional mutagenesis screens reveal the ‘cap structure’ formation in disulfide-bridge free TASK channels. Scientific Reports, 6, 19492. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
 </div>
-
-<div class="card">  
-      <h2><a href="https://www.mdpi.com/1420-3049/23/9/2354">Novel alkylimidazolium ionic liquids as an antibacterial alternative to pathogens of the skin and soft tissue infections</a></h2>
-      <h5>Oscar Forero Doria, Ricardo Castro, Margarita Gutierrez, Diego Gonzalez Valenzuela, Leonardo Santos, David Ramirez, Luis Guzman</h5>
-  <p>Molecules, 2018, doi: 10.3390/molecules23092354</p>
-  <p align="justify">Keeping in mind the concept of green chemistry, this research aims to synthesize and characterize new 
-    ionic liquids (ILs) derived from <i>N</i>-cinnamyl imidazole with different sizes of alkyl chains (1, 6, 8, and 10 carbon atoms), 
-    and evaluate their antibacterial activity against Skin and soft tissue infections (SSTIs) causative bacteria. 
-    The antibacterial screening was carried out by agar well diffusion and the Minimum Inhibitory Concentration (MIC) and Half 
-    Maximum Inhibitory Concentration (IC<sub>50</sub>) of the different ILs were determined by microdilution in broth, also Molecular 
-    dynamics simulations were performed to study the interaction mechanism between ILs and membranes. The MIC value in 
-    Gram-positive bacteria showed that as the hydrocarbon chain increases, the MIC value decreases with a dose-dependent effect. 
-    Furthermore, Gram-negative bacteria showed high MIC values, which were also evidenced in the antibacterial screening. 
-    The molecular dynamics showed an incorporation of the ILs with the longer chain (10 C), corresponding to a passive diffusion 
-    towards the membrane surface, for its part, the ILs with the shorter chain due to its lack of hydrophobicity was not 
-    incorporated into the bilayer. Finally, the new ILs synthesized could be an alternative for the treatment of Gram-positive 
-    bacteria causative of SSTIs.</p>
+<div class="card">
+<h2>2015</h2>
+<p>Kiper A., Rinné S., rolfes C., Ramírez D., Seebohm G., Netter M., González W., Decher N. Kv1.5 blockers preferentially inhibit TASK-1 channels: TASK-1 as a target against atrial fribrillation and obstructive sleep apnea? Pflügers Archiv – European Journal of Physiology, 467:1081-1090. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p> 
+<p>González W., Valdebenito B., Caballero J., Riadi G., Riedelsberger J., Martínez G., Ramírez D., Zuñiga L., Sepúlveda F., Dreyer I., Janta M., Becker D. K<sub>2P</sub> channels in plants and animals. Pflügers Archiv – European Journal of Physiology, 467:1091-1104. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
 </div>
-  
-<div class="card">  
-      <h2><a href="https://www.mdpi.com/1420-3049/23/9/2094">HCN channels: new therapeutic targets for pain treatment</a></h2>
-      <h5>David Ramírez, Rafael Zúñiga, Guierdy Concha, Leandro Zúñiga</h5>
-  <p>Molecules, 2018, doi: 10.3390/molecules23092094</p>
-  <p align="justify">Hyperpolarization-activated cyclic nucleotide-gated (HCN) channels are highly regulated proteins which
-    respond to different cellular stimuli. The HCN currents (Ih) mediated by HCN1 and HCN2 drive the repetitive firing in 
-    nociceptive neurons. The role of HCN channels in pain has been widely investigated as targets for the development of new 
-    therapeutic drugs, but the comprehensive design of HCN channel modulators has been restricted due to the lack of 
-    crystallographic data. The three-dimensional structure of the human HCN1 channel was recently reported, opening new 
-    possibilities for the rational design of highly-selective HCN modulators. In this review, we discuss the structural and 
-    functional properties of HCN channels, their pharmacological inhibitors, and the potential strategies for designing new 
-    drugs to block the HCN channel function associated with pain perception.</p>
-</div>   
-  
-<div class="card">  
-      <h2><a href="https://www.mdpi.com/1420-3049/23/5/1038">Is it reliable to take the molecular docking top scoring position as the best solution without considering available structural data?</a></h2>
-      <h5>David Ramírez, Julio Caballero</h5>
-  <p>Molecules, 2018, doi: 10.3390/molecules23051038</p>
-  <p align="justify">Molecular docking is the most frequently used computational method for studying the interactions between 
-    organic molecules and biological macromolecules. In this context, docking allows predicting the preferred pose of a ligand 
-    inside a receptor binding site. However, the selection of the “best” solution is not a trivial task, despite the widely 
-    accepted selection criterion that the best pose corresponds to the best energy score. Here, several rigid-target docking 
-    methods were evaluated on the same dataset with respect to their ability to reproduce crystallographic binding 
-    orientations, to test if the best energy score is a reliable criterion for selecting the best solution. For this, two 
-    experiments were performed: (A) to reconstruct the ligand-receptor complex by performing docking of the ligand in its own 
-    crystal structure receptor (defined as self-docking), and (B) to reconstruct the ligand-receptor complex by performing
-    docking of the ligand in a crystal structure receptor that contains other ligand (defined as cross-docking). Root-mean 
-    square deviation (RMSD) was used to evaluate how different the obtained docking orientation is from the corresponding 
-    co-crystallized pose of the same ligand molecule. We found that docking score function is capable of predicting 
-    crystallographic binding orientations, but the best ranked solution according to the docking energy is not always the pose 
-    that reproduces the experimental binding orientation. This happened when self-docking was achieved, but it was critical in 
-    cross-docking. Taking into account that docking is typically used with predictive purposes, during cross-docking experiments, 
-    our results indicate that the best energy score is not a reliable criterion to select the best solution in common docking
-    applications. It is strongly recommended to choose the best docking solution according to the scoring function along with
-    additional structural criteria described for analogue ligands to assure the selection of a correct docking solution.</p>
+<div class="card">
+<h2>2014</h2>
+<p>Sabogal-Arango A., Barreto G., Ramírez D., González-Mendoza J., Barreto V., Morales L. & González J.  Computational insights of the interaction among Sea anemones Neurotonxins and Kv<sub>1.3</sub> Channels. Bioinformatics and Biology insights, 8:73-81. <a href=media/CV_2019-1page.pdf download><i class='far fa-file-pdf' style='font-size:20px;color:#294e71'></i></a></p>
 </div>
-  
-<div class="card">  
-      <h2><a href="https://www.mdpi.com/2072-6651/10/1/8">Computational studies of snake venom toxins</a></h2>
-      <h5>Paola Ojeda, David Ramírez, Jans Alzate-Morales, Julio Caballero, Quentin Kaas, Wendy González</h5>
-  <p>Toxins, 2018, doi: 10.3390/toxins10010008</p>
-  <p align="justify">Most snake venom toxins are proteins, and participate to envenomation through a diverse array of 
-    bioactivities, such as bleeding, inflammation, and pain, cytotoxic, cardiotoxic or neurotoxic effects. The venom of a single
-    snake species contains hundreds of toxins, and the venoms of the 725 species of venomous snakes represent a large pool of 
-    potentially bioactive proteins. Despite considerable discovery efforts, most of the snake venom toxins are still 
-    uncharacterized. Modern bioinformatics tools have been recently developed to mine snake venoms, helping focus experimental 
-    research on the most potentially interesting toxins. Some computational techniques predict toxin molecular targets, and the 
-    binding mode to these targets. This review gives an overview of current knowledge on the ~2200 sequences, and more than 400 
-    three-dimensional structures of snake toxins deposited in public repositories, as well as of molecular modeling studies of the 
-    interaction between these toxins and their molecular targets. We also describe how modern bioinformatics have been used to 
-    study the snake venom protein phospholipase A2, the small basic myotoxin Crotamine, and the three-finger peptide Mambalgin.</p>
-</div>
-  
-<div class="card">  
-      <h2><a href="https://www.mdpi.com/1660-3397/15/10/313">Conotoxins as tools to understand the physiological function of voltage-gated calcium (Ca<sub>V</sub>) channels</a></h2>
-      <h5>David Ramírez, Wendy Gonzalez, Rafael Fissore, Ingrid Carvacho</h5>
-  <p>Marine drugs, 2018, doi: 10.3390/md15100313</p>
-  <p align="justify">Voltage-gated calcium (Ca<sub>V</sub>) channels are widely expressed and are essential for the completion of multiple physiological processes. Close regulation 
-    of their activity by specific inhibitors and agonists become fundamental to understand their role in cellular homeostasis as well
-    as in human tissues and organs. Ca<sub>V</sub> channels are divided into two groups depending on the membrane potential required to activate
-    them: High-voltage activated (HVA, Ca<sub>V</sub>1.1–1.4; Ca<sub>V</sub>2.1–2.3) and Low-voltage activated (LVA, Ca<sub>V</sub>3.1–3.3). HVA channels are highly 
-    expressed in brain (neurons), heart, and adrenal medulla (chromaffin cells), among others, and are also classified into subtypes 
-    which can be distinguished using pharmacological approaches. Cone snails are marine gastropods that capture their prey by 
-    injecting venom, “conopeptides”, which cause paralysis in a few seconds. A subset of conopeptides called conotoxins are
-    relatively small polypeptides, rich in disulfide bonds, that target ion channels, transporters and receptors localized at the 
-    neuromuscular system of the animal target. In this review, we describe the structure and properties of conotoxins that 
-    selectively block HVA calcium channels. We compare their potency on several HVA channel subtypes, emphasizing neuronal calcium 
-    channels. Lastly, we analyze recent advances in the therapeutic use of conotoxins for medical treatments.</p>
-</div>  
-
-
-<h2 class="city">2017</h2> 
-<div class="card">  
-      <h2><a href="https://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.7b00005">Side fenestrations provide an “anchor” for a stable binding of A1899 to the pore of TASK-1 potassium channels</a></h2>
-      <h5>David Ramírez, Bárbara Arévalo, Gonzalo Martínez, Susanne Rinné, Francisco V Sepúlveda, Niels Decher, Wendy González</h5>
-  <p>Molecular pharmaceutics, 2017, doi: 10.1021/acs.molpharmaceut.7b00005</p>
-  <p align="justify">A1899 is a potent and selective inhibitor of the two-pore domain potassium (K<sub>2P</sub>) channel TASK-1. It was
-    previously reported that A1899 acts as an open-channel blocker and binds to residues of the P1 and P2 regions, the M2 and M4 
-    segments, and the halothane response element. The recently described crystal structures of K<sub>2P</sub> channels together with the 
-    newly identified side fenestrations indicate that residues relevant for TASK-1 inhibition are not purely facing the central 
-    cavity as initially proposed. Accordingly, the TASK-1 binding site and the mechanism of inhibition might need a re-evaluation. 
-    We have used TASK-1 homology models based on recently crystallized K<sub>2P</sub> channels and molecular dynamics simulation to
-    demonstrate that the highly potent TASK-1 blocker A1899 requires binding to residues located in the side fenestrations. 
-    Unexpectedly, most of the previously described residues that interfere with TASK-1 blockade by A1899 project their side chains
-    toward the fenestration lumina, underlining the relevance of these structures for drug binding in K2P channels. Despite its 
-    hydrophobicity, A1899 does not seem to use the fenestrations to gain access to the central cavity from the lipid bilayer. In 
-    contrast, binding of A1899 to residues of the side fenestrations might provide a physical “anchor”, reflecting an 
-    energetically favorable binding mode that after pore occlusion stabilizes the closed state of the channels.</p>
-</div>  
-
-<div class="card">  
-      <h2><a href="https://cdn.elifesciences.org/articles/19466/elife-19466-v3.pdf">Origin and evolution of transporter substrate specificity within the NPF family</a></h2>
-      <h5>Morten Egevang Jørgensen, Deyang Xu, Christoph Crocoll, Heidi Asschenfeldt Ernst, David Ramírez, Mohammed Saddik Motawia, Carl Erik Olsen, Osman Mirza, Hussam Hassan Nour-Eldin, Barbara Ann Halkier</h5>
-  <p>Elife, 2017, doi: 10.7554/eLife.19466</p>
-  <p align="justify">Despite vast diversity in metabolites and the matching substrate specificity of their transporters, little is
-    known about how evolution of transporter substrate specificities is linked to emergence of substrates via evolution of 
-    biosynthetic pathways. Transporter specificity towards the recently evolved glucosinolates characteristic of <i>Brassicales</i> is 
-    shown to evolve prior to emergence of glucosinolate biosynthesis. Furthermore, we show that glucosinolate transporters 
-    belonging to the ubiquitous NRT1/PTR FAMILY (NPF) likely evolved from transporters of the ancestral cyanogenic glucosides 
-    found across more than 2500 species outside of the <i>Brassicales</i>. Biochemical characterization of orthologs along the
-    phylogenetic lineage from cassava to <i>A. thaliana</i>, suggests that alterations in the electrogenicity of the transporters 
-    accompanied changes in substrate specificity. Linking the evolutionary path of transporter substrate specificities to that of 
-    the biosynthetic pathways, exemplify how transporter substrate specificities originate and evolve as new biosynthesis pathways
-    emerge.</p>
-</div> 
-
-<div class="card">  
-      <h2><a href="https://www.sciencedirect.com/science/article/pii/S004101011730003X">Exploring and understanding the functional
-        role, and biochemical and structural characteristics of an acidic phospholipase A<sub>2</sub>, AplTx-I, purified from <i>Agkistrodon
-        piscivorus leucostoma</i> snake venom</a></h2>
-      <h5>LM Resende, JR Almeida, R Schezaro-Ramos, RCO Collaço, LR Simioni, D Ramirez, W González, AM Soares, LA Calderon, S Marangoni, SL Da Silva</h5>
-  <p>Toxicon, 2017, doi: 10.1016/j.toxicon.2017.01.002</p>
-  <p align="justify">Phospholipases A<sub>2</sub> (PLA<sub>2</sub>s) constitute a class of extensively studied toxins, isolated from snake venoms. 
-    Basic PLA<sub>2</sub> isoforms mediate various toxicological effects, while the acidic isoforms generally have higher enzymatic 
-    activities, but do not promote evident toxic effects. The functions of these acidic isoforms in snake venoms are still not
-    completely understood and more studies are needed to characterize the biological functions and diversification of acidic
-    toxins in order to justify their abundant presence in these secretions. Recently, Lomonte and collaborators demonstrated, 
-    in a proteomic and toxicological study, high concentrations of PLA<sub>2</sub>s in the venom of <i>Agkistrodon piscivorus leucostoma</i>. 
-    We have, herein, purified and characterized an acidic PLA<sub>2</sub> from this snake venom, denominated AplTx-I, in order to better 
-    understand its biochemical and structural characteristics, as well as its biological effects. AplTx-I was purified using two 
-    chromatographic steps, in association with enzymatic and biological assays. The acidic toxin was found to be one of the most 
-    abundant proteins in the venom of <i>A. p. leucostoma</i>; the protein was monomeric with a molecular mass of 13,885.8 Da, as 
-    identified by mass spectrometry ESI-TOF and electrophoresis. The toxin has similar primary and tridimensional structures to 
-    those of other acidic PLA<sub>2</sub>s, a theoretical and experimental isoelectric point of ≈5.12, and a calcium-dependent enzyme 
-    activity of 25.8985 nM/min/mg, with maximum values at 37 °C and pH 8.0. Despite its high enzymatic activity on synthetic 
-    substrate, AplTx-I did not induce high or significant myotoxic, coagulant, anticoagulant, edema, neuromuscular toxicity in 
-    mouse phrenic nerve-diaphragm preparations or antibacterial activities. Interestingly, AplTx-I triggered a high and selective 
-    neuromuscular toxicity in chick <i>biventer cervicis</i> preparations. These findings are relevant to provide a deeper understanding 
-    of the pharmacology, role and diversification of acidic phospholipase A<sub>2</sub> isoforms in snake venoms.</p>
-</div>  
-
-<div class="card">  
-      <h2><a href="https://www.cell.com/biophysj/pdf/S0006-3495(16)33593-7.pdf">Structure-Based Discovery of Potential Two-Pore-Domain Potassium Channel Task-3 (K2P9. 1) Modulators</a></h2>
-      <h5>David Ramírez, Julio Caballero, Leandro Zúñiga, Bárbara Arévalo, Aytug Kiper, Susanne Rinne, Niels Decher, Wendy Gonzalez</h5>
-  <p>Biophysical Journal, 2017, doi:  10.1016/j.bpj.2016.11.2563 </p>
-  <p align="justify">The two-pore domain potassium (K<sub>2P</sub>) channel TASK-3 is a highly expressed in hippocampus, 
-    cerebellum and cortical areas of the brain. Besides regulating neurotransmitter functions, TASK-3 has an oncogenic potential 
-    and it is overexpressed in different types of cancer cells, for this reason the development of new selective TASK-3 modulators
-    could influence the pharmacological treatment of cancer and several neurological disorder. In the present work we have 
-    searched for potential TASK-3 modulators using a virtual screening (VS) protocol that includes pharmacophore modeling,
-    molecular docking, and free energy calculations (MM/GBSA). At the end, 18 hits were identified, these hits were screened
-    against TASK-3 using Fluorometric Imaging Plate Reader-Membrane potential assay (FLIPR-MPA), and two lead ligands showing 
-    IC<sub>50</sub> s of about 40 μM were obtained as potential modulators.</p>
-</div>  
-
-
-<h2 class="city">2016</h2> 
-<div class="card">  
-      <h2><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cbdd.12773">Novel <i>N</i>‐allyl/propargyl tetrahydroquinolines: Synthesis via Three‐component Cationic Imino Diels–Alder Reaction, Binding Prediction, and Evaluation as Cholinesterase Inhibitors </a></h2>
-      <h5>Yeray A Rodríguez, Margarita Gutiérrez, David Ramírez, Jans Alzate‐Morales, Cristian C Bernal, Fausto M Güiza, Arnold R Romero Bohorquez</h5>
-  <p>Chemical biology & drug design, 2016, doi: 10.1111/cbdd.12773</p>
-  <p align="justify">New <i>N</i>‐allyl/propargyl 4‐substituted 1,2,3,4‐tetrahydroquinolines derivatives were efficiently synthesized 
-    using acid‐catalyzed three components cationic imino Diels–Alder reaction (70–95%). All compounds were tested <i>in vitro</i> as dual
-    acetylcholinesterase and butyryl‐cholinesterase inhibitors and their potential binding modes, and affinity, were predicted by 
-    molecular docking and binding free energy calculations (∆G) respectively. The compound 4af (IC<sub>50</sub> = 72 μm) presented the most 
-    effective inhibition against acetylcholinesterase despite its poor selectivity (SI = 2), while the best inhibitory activity on 
-    butyryl‐cholinesterase was exhibited by compound 4ae (IC<sub>50</sub> = 25.58 μm) with considerable selectivity (SI = 0.15). Molecular 
-    docking studies indicated that the most active compounds fit in the reported acetylcholinesterase and butyryl‐cholinesterase 
-    active sites. Moreover, our computational data indicated a high correlation between the calculated ∆G and the experimental 
-    activity values in both targets.</p>
-</div>  
-
-<div class="card">  
-      <h2><a href="https://www.sciencedirect.com/science/article/pii/S0041010116302409">CoaTx-II, a new dimeric Lys49 phospholipase A<sub>2</sub> from Crotalus <i>oreganus abyssus</i> snake venom with bactericidal potential: Insights into its structure and biological roles</a></h2>
-      <h5>JR Almeida, M Lancellotti, AM Soares, LA Calderon, D Ramírez, W González, S Marangoni, SL Da Silva</h5>
-  <p>Toxicon, 2016, doi: 10.1016/j.toxicon.2016.08.007</p>
-  <p align="justify">Snake venoms are rich and intriguing sources of biologically-active molecules that act on target cells, 
-    modulating a diversity of physiological functions and presenting promising pharmacological applications. Lys49 phospholipase 
-    A<sub>2</sub> is one of the multifunctional proteins present in these complex secretions and, although catalytically inactive, has a 
-    variety of biological activities, including cytotoxic, antibacterial, inflammatory, antifungal activities. Herein, a Lys49 
-    phospholipase A<sub>2</sub>, denominated CoaTx-II from <i>Crotalus oreganus abyssus</i>, was purified and structurally and pharmacologically
-    characterized. CoaTx-II was isolated with a high degree of purity by a combination of two chromatographic steps; molecular 
-    exclusion and reversed-phase high performance liquid chromatography. This toxin is dimeric with a mass of 13868.2 Da 
-    (monomeric form), as determined by mass spectrometry. CoaTx-II is rich in Arg and Lys residues and displays high identity with
-    other Lys49 PLA2 homologues, which have high isoelectric points. The structural model of dimeric CoaTx-II shows that the toxin
-    is non-covalently stabilized. Despite its enzymatic inactivity, <i>in vivo</i> CoaTx-II caused local muscular damage, characterized 
-    by increased plasma creatine kinase and confirmed by histological alterations, in addition to an inflammatory activity, as 
-    demonstrated by mice paw edema induction and pro-inflammatory cytokine IL-6 elevation. CoaTx-II also presents antibacterial 
-    activity against gram negative (<i>Pseudomonas aeruginosa</i> 31NM, <i>Escherichia coli</i> ATCC 25922) and positive (<i>Staphyloccocus aureus</i> 
-    BEC9393 and Rib1) bacteria. Therefore, data show that this newly purified toxin plays a central role in mediating the 
-    degenerative events associated with envenomation, in addition to demonstrating antibacterial properties, with potential for
-    use in the development of strategies for antivenom therapy and combating antibiotic-resistant bacteria.</p>
-</div>  
-
-<div class="card">  
-      <h2><a href="https://www.mdpi.com/1422-0067/17/4/525">Is It Reliable to Use Common Molecular Docking Methods for Comparing the Binding Affinities of Enantiomer Pairs for Their Protein Target? <a></h2>
-      <h5>David Ramírez, Julio Caballero</h5>
-  <p>International Journal of Molecular Sciences, 2016, doi: 10.3390/ijms17040525</p>
-  <p align="justify">Molecular docking is a computational chemistry method which has become essential for the rational drug design 
-    process. In this context, it has had great impact as a successful tool for the study of ligand–receptor interaction modes, and 
-    for the exploration of large chemical datasets through virtual screening experiments. Despite their unquestionable merits, 
-    docking methods are not reliable for predicting binding energies due to the simple scoring functions they use. However, 
-    comparisons between two or three complexes using the predicted binding energies as a criterion are commonly found in the 
-    literature. In the present work we tested how wise is it to trust the docking energies when two complexes between a target 
-    protein and enantiomer pairs are compared. For this purpose, a ligand library composed by 141 enantiomeric pairs was used, 
-    including compounds with biological activities reported against seven protein targets. Docking results using the software 
-    Glide (considering extra precision (XP), standard precision (SP), and high-throughput virtual screening (HTVS) modes) and 
-    AutoDock Vina were compared with the reported biological activities using a classification scheme. Our test failed for all 
-    modes and targets, demonstrating that an accurate prediction when binding energies of enantiomers are compared using docking 
-    may be due to chance. We also compared pairs of compounds with different molecular weights and found the same results.</p>
-</div>  
-
-<div class="card">  
-      <h2><a href="https://www.nature.com/articles/srep19492">Functional mutagenesis screens reveal the ‘cap structure’ formation in disulfide-bridge free TASK channels</a></h2>
-      <h5>Matthias Goldstein, Susanne Rinné, Aytug K Kiper, David Ramírez, Michael F Netter, Daniel Bustos, Beatriz Ortiz-Bonnin, Wendy González, Niels Decher</h5>
-  <p>Scientific reports, 2016, doi: 10.1038/srep19492</p>
-  <p align="justify">Two-pore-domain potassium (K<sub>2P</sub>) channels have a large extracellular cap structure formed by two M1-P1 linkers,
-    containing a cysteine for dimerization. However, this cysteine is not present in the TASK-1/3/5 subfamily. The functional role
-    of the cap is poorly understood and it remained unclear whether K2P channels assemble in the domain-swapped orientation or not.
-    Functional alanine-mutagenesis screens of TASK-1 and TRAAK were used to build an <i>in silico model</i> of the TASK-1 cap. According 
-    to our data the cap structure of disulfide-bridge free TASK channels is similar to that of other K2P channels and is most 
-    likely assembled in the domain-swapped orientation. As the conserved cysteine is not essential for functional expression of
-    all K<sub>2P</sub> channels tested, we propose that hydrophobic residues at the inner leaflets of the cap domains can interact with each
-    other and that this way of stabilizing the cap is most likely conserved among K<sub>2P</sub> channels.</p>
-</div> 
-
-<div class="card">  
-      <h2><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5039900/">Computational Methods Applied to Rational Drug Design</a></h2>
-      <h5>David Ramírez</h5>
-  <p>The open medicinal chemistry journal, 2016, doi: 10.2174/1874104501610010007</p>
-  <p align="justify">Due to the synergic relationship between medical chemistry, bioinformatics and molecular simulation, the 
-    development of new accurate computational tools for small molecules drug design has been rising over the last years. The main 
-    result is the increased number of publications where computational techniques such as molecular docking, <i>de novo</i> design as 
-    well as virtual screening have been used to estimate the binding mode, site and energy of novel small molecules. In this work
-    I review some tools, which enable the study of biological systems at the atomistic level, providing relevant information and
-    thereby, enhancing the process of rational drug design.</p>
-</div> 
- 
-        
-<h2 class="city">2015</h2>         
-<div class="card">  
-      <h2><a href="https://link.springer.com/article/10.1007/s00424-014-1638-4">K<sub>2P</sub> channels in plants and animals</a></h2>
-      <h5>Wendy González, Braulio Valdebenito, Julio Caballero, Gonzalo Riadi, Janin Riedelsberger, Gonzalo Martínez, David Ramírez, Leandro Zúñiga, Francisco V Sepúlveda, Ingo Dreyer, Michael Janta, Dirk Becker</h5>
-  <p>Pflügers Archiv-European Journal of Physiology, 2015, doi: 10.1007/s00424-014-1638-4</p>
-  <p align="justify">Two-pore domain potassium (K<sub>2P</sub>) channels are membrane proteins widely identified in mammals, plants, and other
-    organisms. A functional channel is a dimer with each subunit comprising two pore-forming loops and four transmembrane domains.
-    The genome of the model plant <sub>Arabidopsis thaliana</sub> harbors five genes coding for K<sub>2P</sub> channels. Homologs of <i>Arabidopsis</i> K<sub>2P</sub> 
-    channels have been found in all higher plants sequenced so far. As with the K<sub>2P</sub> channels in mammals, plant K<sub>2P</sub> channels are 
-    targets of external and internal stimuli, which fine-tune the electrical properties of the membrane for specialized transport
-    and/or signaling tasks. Plant K2P channels are modulated by signaling molecules such as intracellular H+ and calcium and 
-    physical factors like temperature and pressure. In this review, we ask the following: What are the similarities and differences
-    between K2P channels in plants and animals in terms of their physiology? What is the nature of the last common ancestor (LCA) 
-    of these two groups of proteins? To answer these questions, we present physiological, structural, and phylogenetic evidence
-    that discards the hypothesis proposing that the duplication and fusion that gave rise to the K<sub>2P</sub> channels occurred in a 
-    prokaryote LCA. Conversely, we argue that the K<sub>2P</sub> LCA was most likely a eukaryote organism. Consideration of plant and animal 
-    K2P channels in the same study is novel and likely to stimulate further exchange of ideas between students of these fields.</p>
-</div> 
-
-<div class="card">  
-      <h2><a href="https://link.springer.com/article/10.1007/s00424-014-1665-1">Kv1.5 blockers preferentially inhibit TASK-1 channels: TASK-1 as a target against atrial fibrillation and obstructive sleep apnea?</a></h2>
-      <h5>Aytug K Kiper, Susanne Rinné, Caroline Rolfes, David Ramírez, Guiscard Seebohm, Michael F Netter, Wendy González, Niels Decher</h5>
-  <p>Pflügers Archiv-European Journal of Physiology, 2015, doi: 10.1007/s00424-014-1665-1</p>
-  <p align="justify">Atrial fibrillation and obstructive sleep apnea are responsible for significant morbidity and mortality in 
-    the industrialized world. There is a high medical need for novel drugs against both diseases, and here, Kv1.5 channels have
-    emerged as promising drug targets. In humans, TASK-1 has an atrium-specific expression and TASK-1 is also abundantly expressed
-    in the hypoglossal motor nucleus. We asked whether known Kv1.5 channel blockers, effective against atrial fibrillation and/or 
-    obstructive sleep apnea, modulate TASK-1 channels. Therefore, we tested Kv1.5 blockers with different chemical structures for 
-    their TASK-1 affinity, utilizing two-electrode voltage clamp (TEVC) recordings in <i>Xenopus</i> oocytes. Despite the low structural 
-    conservation of Kv1.5 and TASK-1 channels, we found all Kv1.5 blockers analyzed to be even more effective on TASK-1 than on 
-    Kv1.5. For instance, the half-maximal inhibitory concentration (IC<sub>50</sub>) values of AVE0118 and AVE1231 (A293) were 10- and 
-    43-fold lower on TASK-1. Also for MSD-D, ICAGEN-4, S20951 (A1899), and S9947, the IC<sub>50</sub> values were 1.4- to 70-fold lower than
-    for Kv1.5. To describe this phenomenon on a molecular level, we used in silico models and identified unexpected structural 
-    similarities between the two drug binding sites. Kv1.5 blockers, like AVE0118 and AVE1231, which are promising drugs against 
-    atrial fibrillation or obstructive sleep apnea, are in fact potent TASK-1 blockers. Accordingly, block of TASK-1 channels by 
-    these compounds might contribute to the clinical effectiveness of these drugs. The higher affinity of these blockers for
-    TASK-1 channels suggests that TASK-1 might be an unrecognized molecular target of Kv1.5 blockers effective in atrial
-    fibrillation or obstructive sleep apnea.</p>
-</div> 
-
-<div class="card">  
-      <h2><a href="https://www.frontiersin.org/10.3389/conf.fncel.2015.35.00019/event_abstract">Molecular modeling and structural analysis of two-pore domain potassium channels TASK1 interactions with the blocker A1899</a></h2>
-      <h5>David M Ramirez, Barbara Arévalo, Niels Decher, Wendy Gonzalez</h5>
-  <p>Front. Cell. Neurosci, 2015, doi: 10.3389/conf.fncel.2015.35.00019</p>
-  <p align="justify">A1899 is a potent and highly selective blocker of the Two-pore domain potassium (K<sub>2P</sub>) channel TASK-1, it acts
-    as an antagonist blocking the K<sup>+</sup> flux and binds to TASK-1 in the inner cavity and shows an activity in nanomolar order. This
-    drug travels through the central cavity and finally binds in the bottom of the selectivity filter with some threonines and 
-    waters molecules forming a H-bond network and several hydrophobic interactions. Using alanine mutagenesis screens the binding 
-    site was identify involving residues in the P1 and P2 pore loops, the M2 and M4 transmembrane segments, and the halothane
-    response element; mutations were introduced in the human TASK-1 (KCNK3, NM_002246) expressed in Oocytes from anesthetized 
-    <i>Xenopus laevis</i> frogs. Based in molecular modeling and structural analysis as such as molecular docking and binding free energy 
-    calculations a pose was suggested using a TASK-1 homology models. Recently, various K<sub>2P</sub> crystal structures have been obtained.
-    We want redefined – from a structural point of view – the binding mode of A1899 in TASK-1 homology models using as a template 
-    the K<sub>2P</sub> crystal structures. By computational structural analysis we describe the molecular basis of the A1899 binding mode, 
-    how A1899 travel to its binding site and suggest an interacting pose (Figure 1.) after 100 ns of molecular dynamics simulation
-    (MDs) we found an intra H-Bond (80% of the total MDs), a H-Bond whit Thr93 (42% of the total MDs), a pi-pi stacking interaction 
-    between a ring and Phe125 (88% of the total MDs) and several water bridges. 
-Our experimental and computational results allow the molecular understanding of the structural binding mechanism of the selective 
-    blocker A1899 to TASK-1 channels. We identified the structural common and divergent features of TASK-1 channel through our 
-    theoretical and experimental studies of A1899 drug action.</p>
-</div> 
-
-        
-<h2 class="city">2014</h2>         
-<div class="card">  
-      <h2><a href="https://journals.sagepub.com/doi/abs/10.4137/BBI.S13403">Computational Insights of the Interaction among Sea Anemones Neurotoxins and Kv1.3 Channel</a></h2>
-      <h5>Angélica Sabogal-Arango, George E Barreto, David Ramírez-Sánchez, Juan González-Mendoza, Viviana Barreto, Ludis Morales, Janneth González</h5>
-  <p>Bioinformatics and Biology insights, 2014, doi: 10.4137/BBI.S13403</p>
-  <p align="justify">Sea anemone neurotoxins are peptides that interact with Na<sup>+</sup> and K<sup>+</sup> channels, resulting in specific 
-    alterations on their functions. Some of these neurotoxins (1ROO, 1BGK, 2K9E, 1BEI) are important for the treatment of about 80 
-    autoimmune disorders because of their specificity for Kv1.3 channel. The aim of this study was to identify the common residues 
-    among these neurotoxins by computational methods, and establish whether there is a pattern useful for the future generation of
-    a treatment for autoimmune diseases. Our results showed eight new key common residues between the studied neurotoxins 
-    interacting with a histidine ring and the selectivity filter of the receptor, thus showing a possible pattern of interaction. 
-    This knowledge may serve as an input for the design of more promising drugs for autoimmune treatments.</p>
-</div> 
-
-
 
 </body>
 </html>
