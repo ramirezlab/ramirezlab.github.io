@@ -173,30 +173,16 @@ tr:nth-child(even) {
   <p>Computational Biophysics, Bioinformatics & Drug Design</p>
   </div>
 
-  <div class="card">
-    <div class="tittle">
-    <h2>Welcome to the Ramírez Lab</h2></div><br>
-    <div class="margen">
-       <div class="row">
-         <div class="column left">
-          <p align="justify">We are a multidisciplinary group focusing on the study of biomolecular systems 
+
+<div class="card">
+  <h2>Welcome to the Ramírez Lab</h2>
+  <div class="bg-image"></div>
+  <p align="justify">We are a multidisciplinary group focusing on the study of biomolecular systems 
     by using both, computational and experimental approaches. We aim to use computational methods - broadening 
     the way to describe biology phenomena - to combine and use them together with wet lab analyses for 
     drug design and development processes. Our work involves collaboration with medicinal chemists, 
     biochemists, and biologists, and we are part of the Institute of Biomedical Sciences at Universidad 
     Autónoma de Chile.</p>
-        </div>
-        <div class= "column right">
-        <img class="mySlides2 img-circle center" src="media/DavidR-1.jpg" style="width:80%" border-radius="5%">
-        <img class="mySlides2 img-circle center" src="media/mely.png" style="width:80%" border-radius="5%">
-        <img class="mySlides2 img-circle center" src="media/geordano.jpg" style="width:80%" border-radius="5%">
-        <img class="mySlides2 img-circle center" src="media/Lily_lab.jpeg" style="width:80%" border-radius="5%">
-        <img class="mySlides2 img-circle center" src="media/jordan_avatar.jpg" style="width:80%" border-radius="5%">
-        <img class="mySlides2 img-circle center" src="media/cpena_avatar.jpg" style="width:80%" border-radius="5%">
-        <img class="mySlides2 img-circle center" src="media/Foto_Paola.JPG" style="width:80%" border-radius="5%">	
-      </div>    
-    </div>
-    </div>
 </div>
   
 <div class="card">
@@ -206,8 +192,6 @@ tr:nth-child(even) {
   <li align="justify">Drug design of novel antimicrobial agents</li><br>
   <li align="justify">Understanding the binding mechanisms of endo and phytocannabinoids into the human CB1 receptor</li><br>
 </div>
-</div>
-
 
 <div class="card">
   <h2><a href="/3_publications">Latest publication</a></h2>
@@ -287,23 +271,49 @@ tr:nth-child(even) {
 </table>
 </div>  
 
+ <script>
+    function openTAB(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
 
 <script>
 var myIndex = 0;
+var myIndex2 = 0;
 carousel();
 function carousel() {
   var i;
+  var j;
  
  var x = document.getElementsByClassName("mySlides");
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";    
+    x[i].style.display = "none";  
+  } 
+ var y = document.getElementsByClassName("mySlides2");
+  for (j = 0; j < y.length; j++) {
+    y[j].style.display = "none";  
   } 
   
   myIndex++;
-      
+  myIndex2++;
+    
  if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";
-   setTimeout(carousel, 4000); // Change image every 2 seconds
+ if (myIndex2 > y.length) {myIndex2 = 1}    
+  y[myIndex2-1].style.display = "block";
+  setTimeout(carousel, 4000); // Change image every 2 seconds
    
 }
 </script>
