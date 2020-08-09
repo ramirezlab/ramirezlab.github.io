@@ -465,6 +465,22 @@ margin-top:10px;
         <p>Here we use a tcl script to get the resdiues within a given distance of a ligand during a trajectory. You can use it to study Protein-Protein or Peptide-Protein interaction as well. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Molecular%20dynamics/Getting%20residues.md" target="_blank">here</a>.</p>
       </div>
 		  
+<button class="accordion">Loading Desmond trajectories into VMD</button>
+      <div class="panel">
+       <p>Here we explain how to properly load and visualize Desmond's trajectories in VMD.</p>
+<ol>
+	<li>Open VMD and load a <i>desmond_trajectory-out.cms</i> file as new molecule.</li>
+	<li>Load the <i>clickme.dtr</i> trajectory file (it is located into the <i>desmond_trajectory_trj</i> folder) into the <i>desmond_trajectory-out.cms</i> file.</li>
+	<li>To fix the periodix boundary conditions, you need to center the trajectory to generate a continuous trajectory view with the protein centered in the primary simulation box, to do that use the loaded trajectory and try either of the following commands from VMD’s Tk console (<i>Extensions</i> > <i>Tk Console</i>):</Br>
+	<ul>
+		<li><i>pbc wrap -centersel protein -center com -compound res -all</i></li>
+		<li><i>pbc wrap -center bb -centersel protein -sel “not protein” -compound res -all</i></li>
+	</ul>
+	<li>You may have to superimpose all frames of the trajectory onto a selected frame in order to center the view in the main VMD graphics window. To do so, select <i>VMD</i> > <i>Extensions</i> > <i>Analysis</i> > <i>RMSD Trajectory Tool</i>, and select the <i>Align</i> option. Note that the transformed trajectory can be written to disk for further analysis.</li>
+</ol>
+<p>Thanks!!!</p>
+      </div>
+		  
 		  
 		  
 	</div>
