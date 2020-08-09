@@ -365,155 +365,165 @@ margin-top:10px;
 <div id="WIKI" class="tabcontent">
 
 <div class="card">
-   <button class="accordion"><b style="font-size:18px">Computational polypharmacology</b></button>
-	  <div class="panel">
-	  <button class="accordion">ComPharma 1</button>
-	  <div class="panel">
-		<p>...</p>
-	  </div>
+<button class="accordion"><b style="font-size:18px">Computational polypharmacology</b></button>
+	<div class="panel">
+		
+		<button class="accordion">ComPharma 1</button>
+	 	<div class="panel">
+			<p>...</p>
+	  	</div>
 	  
-	  <button class="accordion">ComPharma 2</button>
-	  <div class="panel">
-		<p>...</p>
-	  </div>
+	  	<button class="accordion">ComPharma 2</button>
+	  	<div class="panel">
+			<p>...</p>
+	  	</div>
 	</div>  
 </div>
 
 <div class="card">
-	<button class="accordion"><b style="font-size:18px">Data Science with KNIME</b></button>
+<button class="accordion"><b style="font-size:18px">Data Science with KNIME</b></button>
 	  <div class="panel">
    
-      <button class="accordion">Surfing databases</button>
-      <div class="panel">
-        <p>ChEMBL</p>
-      </div>
+      		<button class="accordion">Surfing databases</button>
+      		<div class="panel">
+        		<p>DrugBank</p>
+     		</div
+		
+		<button class="accordion">Surfing databases</button>
+      		<div class="panel">
+        		<p>ChEMBL</p>
+     		</div>
       
-      <button class="accordion">Surfing databases</button>
-      <div class="panel">
-        <p>Open Target Platform</p>
-      </div>
+      		<button class="accordion">Surfing databases</button>
+      		<div class="panel">
+        		<p>Open Target Platform</p>
+      		</div>
 	</div>
 </div>
 	
 <div class="card">
-	<button class="accordion"><b style="font-size:18px">Databases</b></button>
-	  <div class="panel">
-      <button class="accordion">Plant Secondary Compounds (PSC-db)</button>
-      <div class="panel">
-        <p>PSC-db is a free accessible database containing the 3D-structures of several Plant Secondary Compounds along with its physicochemical 
+<button class="accordion"><b style="font-size:18px">Databases</b></button>
+	<div class="panel">
+      		<button class="accordion">Plant Secondary Compounds (PSC-db)</button>
+      		<div class="panel">
+        	<p>PSC-db is a free accessible database containing the 3D-structures of several Plant Secondary Compounds along with its physicochemical 
 	and pharmaceutical properties.<br>
-	<p>Link: <a href="http://pscdb.appsbio.utalca.cl/viewIndex/index.php" target="_blank">http://pscdb.appsbio.utalca.cl/viewIndex/index.php</a></p>
-      </div>
-      </div>  
+		<p>Link: <a href="http://pscdb.appsbio.utalca.cl/viewIndex/index.php" target="_blank">http://pscdb.appsbio.utalca.cl/viewIndex/index.php</a></p>
+      		</div>
+      	</div>  
 </div>	
 
 <div class="card">
-	<button class="accordion"><b style="font-size:18px">Docking and Virtual Screening</b></button>
-	  <div class="panel">
-      <button class="accordion">Massive docking with Autodock vina</button>
-      <div class="panel">
-        <p>Here we use AutoDock Vina to perform massive docking of one ligand: 100 runs -> top-10 poses per run -> 1000 poses. The idea is to use a single ligand and do multiple dockings on the same receptor to extend the conformational sampling of that ligand. Then you can use a tool to cluster the conformers and know which are the most visited poses during the molecular docking. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Docking%20and%20Virtual%20Screening/Massive%20docking%20with%20Vina.md" target="_blank">here</a>.</p>
-      </div>
-
-      <button class="accordion">Docking postprocessing: Clustering and interactions analysis</button>
-      <div class="panel">
-        <p>pasos a seguir...</p>
-      </div> 
+<button class="accordion"><b style="font-size:18px">Docking and Virtual Screening</b></button>
+<div class="panel">
       
-      <button class="accordion">Pharmacophore-based virtual screening</button>
-      <div class="panel">
-        <p>Using LigandScout</p>
-      </div>
-      
-      <button class="accordion">Docking of complexes with lantanides elements</button>
-      <div class="panel">
-        <p>Using AutoDock <p>
-      </div>
-	</div>  
-</div>
-
-<div class="card">
-	<button class="accordion"><b style="font-size:18px">Molecular Dynamics simulations</b></button>
-	  <div class="panel">
-      <button class="accordion">Random acceleration molecular dynamics simulations (RAMD)</button>
-      <div class="panel">
-        <p>TASK-1 + A1899</p>
-      </div>
-
-      <button class="accordion">Coarse-Grained Molecular Dynamics (CG-MDs)</button>
-      <div class="panel">
-        <p>Using Gromacs and ff-Martini and Ionic Liquis</p>
-      </div>
-
-      <button class="accordion">MD-Binding</button>
-      <div class="panel">
-        <p>A complete solution for  fast binding protein-ligand based on molecular dynamics using BIKI</p>
-      </div>
-      
-      <button class="accordion">Detecting Pharmacophores in MDs</button>
-      <div class="panel">
-        <p>With Ligand Scout</p>
-      </div>  
+      	<button class="accordion">Docking of complexes with lantanides elements</button>
+      	<div class="panel">
+        	<p>Using AutoDock <p>
+      	</div>
 	
-      <button class="accordion">Counting waters in an ion channel pore (or any pore) during a MDs</button>
-      <div class="panel">
-        <p>Here we use a tcl script to count the water molecules in an ion channel pore (or any pore) along a trajectory from AMBER, Desmond or NAMD. The pore of the ion channel must be aligned along the z-axis. The selection must be a cylinder.. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Molecular%20dynamics/water%20count.md">here</a>.</p>
-      </div>
-
-<button class="accordion">Obtaining residues within a given distance from a ligand</button>
-      <div class="panel">
-        <p>Here we use a tcl script to get the resdiues within a given distance of a ligand during a trajectory. You can use it to study Protein-Protein or Peptide-Protein interaction as well. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Molecular%20dynamics/Getting%20residues.md" target="_blank">here</a>.</p>
-      </div>
-		  
-<button class="accordion">Loading Desmond trajectories into VMD</button>
-      <div class="panel">
-       <p>Here we explain how to properly load and visualize Desmond's trajectories in VMD.</p>
-<ol>
-	<li>Open VMD and load a <i>desmond_trajectory-out.cms</i> file as new molecule.</li>
-	<li>Load the <i>clickme.dtr</i> trajectory file (it is located into the <i>desmond_trajectory_trj</i> folder) into the <i>desmond_trajectory-out.cms</i> file.</li>
-	<li>To fix the periodix boundary conditions, you need to center the trajectory to generate a continuous trajectory view with the protein centered in the primary simulation box, to do that use the loaded trajectory and try either of the following commands from VMD’s Tk console (<i>Extensions</i> > <i>Tk Console</i>):</Br>
-	<ul>
-		<li><i>pbc wrap -centersel protein -center com -compound res -all</i></li>
-		<li><i>pbc wrap -center bb -centersel protein -sel “not protein” -compound res -all</i></li>
-	</ul>
-	<li>You may have to superimpose all frames of the trajectory onto a selected frame in order to center the view in the main VMD graphics window. To do so, select <i>VMD</i> > <i>Extensions</i> > <i>Analysis</i> > <i>RMSD Trajectory Tool</i>, and select the <i>Align</i> option. Note that the transformed trajectory can be written to disk for further analysis.</li>
-</ol>
-<p>Thanks!!!</p>
-      </div>
-		  
-		  
-		  
-	</div>
+	<button class="accordion">Docking postprocessing: Clustering and interactions analysis</button>
+      	<div class="panel">
+        	<p>pasos a seguir...</p>
+      	</div>
+	
+	<button class="accordion">Massive docking with Autodock vina</button>
+      	<div class="panel">
+        	<p>Here we use AutoDock Vina to perform massive docking of one ligand: 100 runs -> top-10 poses per run -> 1000 poses. The idea is to use a single ligand and do multiple dockings on the same receptor to extend the conformational sampling of that ligand. Then you can use a tool to cluster the conformers and know which are the most visited poses during the molecular docking. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Docking%20and%20Virtual%20Screening/Massive%20docking%20with%20Vina.md" target="_blank">here</a>.</p>
+      	</div>
+    
+     	<button class="accordion">Pharmacophore-based virtual screening</button>
+      	<div class="panel">
+        	<p>Using LigandScout</p>
+      	</div>     
+</div>  
 </div>
 
 <div class="card">
-	<button class="accordion"><b style="font-size:18px">Molecular Modeling</b></button>
-	  <div class="panel">
-      <button class="accordion">Repeat-swap homology modeling</button>
-      <div class="panel">
-        <p>pasos a seguir...</p>
-      </div>
+<button class="accordion"><b style="font-size:18px">Molecular Dynamics simulations</b></button>
+<div class="panel">
 
-      <button class="accordion">Homology Modeling</button>
-      <div class="panel">
-        <p>Using Modeller and Rosetta...</p>
-      </div>
-	</div>  
-</div>
+	<button class="accordion">Counting waters in an ion channel pore (or any pore) during a MDs</button>
+      	<div class="panel">
+        	<p>Here we use a tcl script to count the water molecules in an ion channel pore (or any pore) along a trajectory from AMBER, Desmond or NAMD. The pore of the ion channel must be aligned along the z-axis. The selection must be a cylinder.. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Molecular%20dynamics/water%20count.md">here</a>.</p>
+      	</div>
+	
+	<button class="accordion">Coarse-Grained Molecular Dynamics (CG-MDs)</button>
+      	<div class="panel">
+        	<p>Using Gromacs and ff-Martini --> Ionic Liquis</p>
+      	</div>
 
-<div class="card">
-	<button class="accordion"><b style="font-size:18px">Miscellaneous</b></button>
-	  <div class="panel">
-      <button class="accordion">Miscellaneous 1</button>
-      <div class="panel">
-        <p>...</p>
-      </div>
+	<button class="accordion">Detecting Pharmacophores in MDs</button>
+      	<div class="panel">
+        	<p>With Ligand Scout</p>
+      	</div>
+	
+		<button class="accordion">Loading Desmond trajectories into VMD</button>
+      	<div class="panel">
+       		<p>Here we explain how to properly load and visualize Desmond's trajectories in VMD.</p>
+			<ol>
+				<li>Open VMD and load a <i>desmond_trajectory-out.cms</i> file as new molecule.</li>
+				<li>Load the <i>clickme.dtr</i> trajectory file (it is located into the <i>desmond_trajectory_trj</i> folder) into the <i>desmond_trajectory-out.cms</i> file.</li>
+				<li>To fix the periodix boundary conditions, you need to center the trajectory to generate a continuous trajectory view with the protein centered in the primary simulation box, to do that use the loaded trajectory and try either of the following commands from VMD’s Tk console (<i>Extensions</i> > <i>Tk Console</i>):</Br>
+					<ul>
+						<li><i>pbc wrap -centersel protein -center com -compound res -all</i></li>
+						<li><i>pbc wrap -center bb -centersel protein -sel “not protein” -compound res -all</i></li>
+					</ul>
+				<li>You may have to superimpose all frames of the trajectory onto a selected frame in order to center the view in the main VMD graphics window. To do so, select <i>VMD</i> > <i>Extensions</i> > <i>Analysis</i> > <i>RMSD Trajectory Tool</i>, and select the <i>Align</i> option. Note that the transformed trajectory can be written to disk for further analysis.</li>
+			</ol>
+		<p>Thanks!!!</p>
+      	</div>
+
+      	<button class="accordion">MD-Binding</button>
+      	<div class="panel">
+        	<p>A complete solution for  fast binding protein-ligand based on molecular dynamics using BIKI</p>
+      	</div>
       
-      <button class="accordion">Miscellaneous 2</button>
-      <div class="panel">
-        <p>...</p>
-      </div>
-	</div>  
+ 	<button class="accordion">Obtaining residues within a given distance from a ligand</button>
+      	<div class="panel">
+        	<p>Here we use a tcl script to get the resdiues within a given distance of a ligand during a trajectory. You can use it to study Protein-Protein or Peptide-Protein interaction as well. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Molecular%20dynamics/Getting%20residues.md" target="_blank">here</a>.</p>
+      	</div>
+		  
+	<button class="accordion">Random acceleration molecular dynamics simulations (RAMD)</button>
+      	<div class="panel">
+        	<p>TASK-1 + A1899</p>
+      	</div>
+	
+</div>
+</div>
+
+<div class="card">
+<button class="accordion"><b style="font-size:18px">Molecular Modeling</b></button>
+<div class="panel">
+      	
+	<button class="accordion">Homology Modeling</button>
+      	<div class="panel">
+        	<p>Using Modeller and Rosetta...</p>
+      	</div>
+	
+	<button class="accordion">Repeat-swap homology modeling</button>
+      	<div class="panel">
+        	<p>pasos a seguir...</p>
+      	</div>
+
+</div>  
+</div>
+
+<div class="card">
+<button class="accordion"><b style="font-size:18px">Miscellaneous</b></button>
+<div class="panel">
+
+	<button class="accordion">Miscellaneous 1</button>
+      	<div class="panel">
+        	<p>...</p>
+      	</div>
+      
+      	<button class="accordion">Miscellaneous 2</button>
+      	<div class="panel">
+        	<p>...</p>
+      	</div>
+
+</div>  
 </div>      
       
 </div>    
