@@ -88,6 +88,22 @@ div.content {
    margin-bottom: 10px;
    box-shadow: 5px 5px 5px #888888;
 }	
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 </style>
 </head>
 <body>
@@ -121,16 +137,16 @@ div.content {
 <h3><a href="https://europin.univie.ac.at/summerschool/2019/" target="_blank">EUROPIN Summer School on Drug Design – Vienna 2019</a></h3>
  <div class="row">
   <div class="column">
-    <img src="media/Gallery/SSDD19-1.jpeg" alt="poster" style="width:25%">
+    <img src="media/Gallery/SSDD19-1.jpeg" alt="poster" style="width:100%">
   </div>
   <div class="column">
-    <img src="media/Gallery/SSDD19-2.jpeg" alt="Openning talk" style="width:25%">
+    <img src="media/Gallery/SSDD19-2.jpeg" alt="Openning talk" style="width:100%">
   </div>
   <div class="column">
-    <img src="media/Gallery/SSDD19-3.jpeg" alt="paperwork" style="width:25%">
+    <img src="media/Gallery/SSDD19-3.jpeg" alt="paperwork" style="width:100%">
   </div>
   <div class="column">
-    <img src="media/Gallery/SSDD19-4.jpeg" alt="around Vienna" style="width:25%">
+    <img src="media/Gallery/SSDD19-4.jpeg" alt="around Vienna" style="width:100%">
   </div>
  </div>
 </div>
