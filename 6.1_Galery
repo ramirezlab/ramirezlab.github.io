@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  /*agregar color oscuro para el fondo*/
+  background: #f1f1f1;
+}
+/* Header/Logo Title */
+.city {
+  text-align: left;
+  background-color: #cc7000;
+  color: white;
+  padding: 5px;
+  font-size: 22px;
+  margin-left: 230px;
+  margin-right: 30px;
+  box-shadow: 5px 5px 5px #888888;
+}
+.header {
+  padding: 1px;
+  text-align: center;
+  background: linear-gradient(to bottom, 	#254666 30%, #4d667f 100%);
+  color: white;
+  font-size: 20px;
+  margin-left: 200px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} 	
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #FFFFFF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+} 
+.sidebar a.active {
+  background-color: #294e71;
+  color: white;
+}
+.sidebar a:hover:not(.active) {
+  background-color: #4d667f;
+  color: white;
+}
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+@media screen and (max-width: 100px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+@media screen and (max-width: 100px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 10px;
+   margin-left: 230px;
+   margin-right:30px;
+   margin-bottom: 10px;
+   box-shadow: 5px 5px 5px #888888;
+}	
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <br>
+  <img src="/media/Logo-02.jpg" alt="Logo" style="width:90%;max-width:500px" class="center">
+  <a href="/index">About us</a>
+  <a href="/2_research">Research</a>
+  <a href="/3_publications">Publications</a>
+  <a href="/4_members">Members</a>
+  <a href="/5.1_resources">Resources</a>
+  <a href="/5_join_us">Join us</a>
+  <a href="/8_labmood">Lab Mood</a>
+  <a class="active" href="#6_events">Events & News</a>
+  <a href="/6.1_Galery">Galery</a>
+  <a href="/7_contact">Contact</a>
+</div>  
+  
+<div class="header">
+  <h1>Events & News</h1>
+  <p>Pharmacoinformatics & Drug Design</p>
+</div>
+
+<h2 class="city">2020</h2>	
+
+<div class="card">
+<h2>March</h2>
+<p><li align="justify">COVID19 strikes Chile and we get locked down. More soon...</li></p>
+<p><li align="justify">Carlos Peña visited Dra. Janneth González at <a href="https://www.javeriana.edu.co/tercelmol/?page_id=127">Pontificia Universidad Javeriana</a> as part of the international reaserch network to design new multi-target Drugs against neurodegenerative diseases by using system biology and polypharmacology."</p>	
+<p><li align="justify">Lily Arrue started her research with us as part of the Master's Programme in Neuroscience at Universidad Autómoa de Chile. She will be studying the common receptophore between key targets in Alzheimer's disease</p>	
+</div>	
+	
+<div class="card">   
+<h2>February</h2>
+<p><li align="justify">David Ramírez visited Dra. Ana Martinez and Dra. Nuria Campillo at <a href="https://www.cib.csic.es/es/departamentos/biologia-estructural-y-quimica/quimica-medica-y-biologica-traslacional">CIB-CSIC - Madrid</a> within the new international reaserch network through the REDES170094 project "Multi-Target Drug Design Against Neurodegenerative Diseases"</p>
+<p><li align="justify">We welcome Paola Borrero, graduate student from <a href="https://www.umng.edu.co/programas/posgrados/doctorado-en-ciencias-aplicadas">Universidad Militar Nueva Granada</a>, Colombia. Paola will carry out a 6-month research stay funded by the <a href="https://alianzapacifico.net/">Alianza del Pacífico</a>.</li></p>
+</div>	
+	
+	
+<h2 class="city">2019</h2>
+	
+<div class="card">
+  <h2>September</h2>
+  <p><li align="justify">David Ramírez attented the Vienna Summer School Durg Design 2019 <a href="https://www.univie.ac.at/europin/summerschool/2019/">#SSDD19</a>. The summer school especially focuses on students and professionals who have a clear interest in learning the basics as well as latest developments in Pharmacoinformatics.</li></p>
+  <p><li align="justify">David Ramírez visited Rafael Pelaez at <a href="https://quifar.usal.es/Grupo/Miembros.html">Universidad de Salamanca</a></p>
+</div>
+
+<div class="card">
+  <h2>May</h2>
+  <p><li align="justify">We welcome Dorian Acevedo, graduate student from <a href="http://cobo.uniandes.edu.co/">COBO - Universidad de los Andes</a>, Colombia. Dorian will perform a short-term internship in our Lab studying why structurally different compounds such endo and phytocannabinoids interact with the same 
+	  cannabinoid (CB1) receptor apparently at the same binding site.</li></p>
+   <p><li align="justify">David Ramírez was awarded the scholarship for Young Professors and Researchers from Latin American Universities from Coimbra Group.
+	  He will be in September - 2019 visiting the IBSAL (Institute of Biomedical Research of Salamanca) at the University of Salamanca, Spain, where he will work with Dr. Rafael Peláez, leader of the <a href="http://quifar.usal.es/Grupo/Miembros.html/">Design, synthesis and evaluation of antitumor drugs research group</a>. 
+	  The idea is to establish international collaboration networks between Chile and Spain.</li></p>
+   <p><li align="justify">David Ramírez presented his results about "Substrate specificity and transport mechanisms in the plant NPF Family" at the CBSM – Universidad de Talca.</li></p>
+</div>
+	
+<div class="card">
+  <h2>March</h2>
+  <p><li align="justify">David Ramírez was appointed as an assistant professor at the Institute for Biomedical Sciences – Universidad Autónoma de Chile. Great news!!!</li></p>
+</div>
+
+  
+
+</body>
+</html>
