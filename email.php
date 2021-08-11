@@ -6,7 +6,7 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 
 echo $Name. "has said: <br/>".$message;
-if (mail('david.ramirez@uautonoma.cl', $subject, $message)){
+if (mail('damach.david@gmail.com', $subject, $message)){
   echo "email sent";
 }else{
   echo ¨problem with the email";
