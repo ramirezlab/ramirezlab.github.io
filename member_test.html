@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+
+* {box-sizing: border-box;}
+ body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  /*agregar color oscuro para el fondo*/
+  background: #f1f1f1;
+}
+  /* Header/Logo Title */
+.header {
+  padding: 1px;
+  text-align: center;
+  background: linear-gradient(to bottom, 	#254666 30%, #4d667f 100%);
+  color: white;
+  font-size: 20px;
+  margin-left: 200px;
+} 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}   
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #FFFFFF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+} 
+.sidebar a.active {
+  background-color: #294e71;
+  color: white;
+}
+.sidebar a:hover:not(.active) {
+  background-color: #4d667f;
+  color: white;
+}
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+@media screen and (max-width: 100px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+@media screen and (max-width: 100px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+/* Style the counter cards */
+.card {
+   background-color: white;
+   padding: 10px;
+   margin-top: 10px;
+   margin-left: 0px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   box-shadow: 5px 5px 5px #888888;
+ }
+.minicard {
+   background-color: white;
+   box-sizing: content-box;  
+   /*max-weidth:160px;*/
+   height: 330px;
+   padding: 35px;
+   margin-top: 5px;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   box-shadow: 5px 5px 5px #888888;
+   border-radius:5px;
+}
+.img-circle {
+margin-top -50px; 
+border-radius: 50%;
+max-width: 150px;
+}
+.marco{
+margin-left: 210px;
+margin-top:20px;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 0px;
+  padding-top: 20px;
+}
+ .left {
+  width: 60%;
+}
+.right {
+  width: 40%;
+}
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #FFFFFF;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: black;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #4d667f;  
+  color:white;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #254666;
+  color:white;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.tittle {
+  
+  padding: 1px 6px;
+  background-color: #254666;
+  color:white;
+}
+.mySlides {display: none;}
+.img_banner {vertical-align: middle;}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 0px;
+  width: 0px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+  
+.margen {
+  margin-left: 30px;
+}
+.button {
+  position: relative;
+  bottom:-230px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4d667f;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 8px;
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px -5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.btn-group button {
+  background-color: white; /* Green */
+  border: none;
+  color: white;
+  padding: 0px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+  float: center;
+}
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #4d667f;
+  border-radius:6px;
+  }
+ <!-- Style the flip-card -->
+   {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  padding: 15px;
+  width: 90%;
+  height: 340px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+   padding: 15px;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #FDFEFE;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #254666;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+
+  
+	<div class="sidebar">
+		<br>
+		<img src="/media/Logo-02.jpg" alt="Logo" style="width:90%;max-width:500px" class="center">
+		<a href="/index">About us</a>
+		<a href="/2_research">Research</a>
+		<a href="/3_publications">Publications</a>
+		<a class="active" href="#4_members">Members</a>
+		<a href="/5.1_resources">Resources</a> 
+		<a href="/5_join_us">Join us</a>
+		<a href="/8_labmood">Lab Mood</a>
+		<a href="/6_events">Events & News</a>
+		<a href="/6.1_Gallery">Gallery</a>
+		<a href="/7_contact">Contact</a>
+	</div>
+	  
+	<div class="header">
+		<h1>Members</h1>
+		<p>Pharmacoinformatics & Drug Design</p>
+	</div>
+	  
+	<div class="marco">
+		<div class="tab">
+			<button class="tablinks" onclick="openTAB(event, 'Members')" id="defaultOpen">Current</button>
+			<button class="tablinks" onclick="openTAB(event, 'Collaborators')">Collaborators</button>
+			<button class="tablinks" onclick="openTAB(event, 'Alumni')">Alumni</button>
+		</div>
+	 
+	 
+		<div id="Alumni" class="tabcontent">
+			<div class="row">
+				<div class="column">
+					<div class="minicard">
+						<img class="img-circle center" src="media/christa.png" alt="Avatar" style="width:100%" border-radius="5%">
+						<h3 align=center><font color="#254666"><b>Christa Kanstrup</b></font></h3> 
+						<p align=center><font color="#4d667f"><b>Visiting PhD student – University of Copenhagen (Denmark)</b></font></p>
+						<hr>
+						<div class="btn-group" align=center>
+							<a href=mailto:cka@plen.ku.dk><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:44px;color:#C01D22 "></i></button></a>
+						</div>
+					</div>
+				</div>
+		 
+				<div class ="column">
+					<div class="minicard">
+						<img class="img-circle center" src="media/Foto_Paola.JPG" alt="Avatar" style="width:100%" border-radius="5%">
+						<h3 align=center><font color="#254666">Paola Borrego</font></h3>     
+						<p align=center><font color="#4d667f"><b>Visiting Ph.D. Student (Fellowship: Alianza del Pacifico)</b></font></p>
+						<hr>
+						<div class="btn-group" align=center>
+							<a href=media/CV-PaolaBM.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+							<a href="https://www.researchgate.net/profile/Paola_Borrego-Munoz"target="_blank"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>  
+							<a href="https://scholar.google.com/citations?hl=es&user=azIFvbMAAAAJ"target="_blank"><button style='color:#4285F4;font-size:42px'><i class='ai ai-google-scholar-square'></i></button></a>
+							<a href=mailto:u7700101@unimilitar.edu.co><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+						</div>     
+					</div>
+				</div>
+		 
+		 
+				<div class ="column">
+					<div class="minicard">
+						<img class="img-circle center" src="media/mely.png" alt="Avatar" style="width:100%" border-radius="5%">
+						<h3 align=center><font color="#254666">Melissa Alegr&iacutea</font></h3>     
+						<p align=center><font color="#4d667f"><b>Research Associate</b></font></p>
+						<hr>
+						<div class="btn-group" align=center>
+							<a href=media/CV_Melissa_Alegria_1pag.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+							<a href="https://www.researchgate.net/profile/Melissa_Alegria-Arcos"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>  
+							<a href="https://scholar.google.com/citations?hl=es&user=J-0jHFsAAAAJ&view_op=list_works&sortby=pubdate"><button style='color:#4285F4;font-size:42px'><i class='ai ai-google-scholar-square'></i></button></a>
+							<a href=mailto:ibi.malegria@gmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a> 
+						</div>     
+					</div>
+				</div>
+		 
+				<div class ="column">
+					<div class="minicard">
+						<img class="img-circle center" src="media/geordano.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+						<h3 align=center><font color="#254666">Geordano Rop&oacuten</font></h3>     
+						<p align=center><font color="#4d667f"><b>Research Associate</b></font></p>
+						<hr>
+						<div class="btn-group" align=center>
+							<a href=mailto:groponpal@gmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+						</div>
+					</div>
+				</div>
+		
+				<div class ="column">
+					<div class="minicard">
+						<img class="img-circle center" src="media/maziel.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+						<h3 align=center><font color="#254666">Maziel Cusi</font></h3>     
+						<p align=center><font color="#4d667f"><b>Undergraduate student</b></font></p>
+						<hr>
+						<div class="btn-group" align=center>
+							<a href=mailto:cusicasanovamaziel@gmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+						</div>
+					</div>     
+				</div>
+			</div> 
+		</div>
+
+		<div id="Members" class="tabcontent">
+			<div class="row">
+				<div class="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="img-circle center" src="media/Foto-DavidR.png" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666"><b>David Ramírez PhD</b></font></h3> 
+								<p align=center><font color="#4d667f"><b>Group Leader</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<h3>Traveling and meeting new people/cultures is something I really enjoy (that's why I chose science as a lifestyle). Also, I enjoy playing poker, futbol, and hanging out in the outdoors with friends</h3> 
+								<div class="btn-group" align=center>
+									<a href=media/CV_2021-DR.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+									<a href="https://www.researchgate.net/profile/David_Ramirez16"target="_blank"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>
+									<a href="https://scholar.google.es/citations?user=KGfUQsYAAAAJ&hl=es"target="_blank"><button style='color:#4285F4;font-size:42px'><i class='ai ai-google-scholar-square'></i></button></a>
+									<a href=mailto:david.ramirez@uautonoma.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:44px;color:#C01D22 "></i></button></a>
+									<a href="https://twitter.com/theramirezlab?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @theramirezlab</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			 
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="img-circle center" src="media/avatar_Jonathan.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Jonathan Hurtado</font></h3>     
+								<p align=center><font color="#4d667f"><b>Ph.D. student - Universidad Aut&oacutenoma de Chile</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<!--<h3>Texto corto</h3> -->
+								<div class="btn-group" align=center>
+									<a href=media/cv_Jonathan.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>       
+									<a href=mailto:jonathan.hurtado.p@cloud.uautonoma.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a> 
+								</div>     
+							</div>
+						</div>
+					</div>
+				</div>
+	   
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="img-circle center" src="media/estanislao.png" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Estanislao M&aacuterquez </font></h3>     
+								<p align=center><font color="#4d667f"><b>Ph.D. student - Universidad de Talca</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<!--<h3>Texto corto</h3> -->
+								<div class="btn-group" align=center>
+									<a href=media/CV_RL.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+									<a href="https://www.researchgate.net/profile/Jose-Marquez-27"target="_blank"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>
+									<a href=mailto:jose.marquez@utalca.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a> 
+								</div>     
+							</div>
+						</div>
+					</div>     
+				</div>
+		  
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="media/Lily_lab.jpeg" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Lily Arru&eacute</font></h3>     
+								<p align=center><font color="#4d667f"><b>M.Sc. Student – Universidad Aut&oacutenoma de Chile</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<!--<h3>Texto corto</h3> -->
+								<div class="btn-group" align=center>
+								   <a href=media/CV_LARRUE.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+								   <a href="https://www.researchgate.net/profile/Lily_Arrue"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>   
+								   <a href=mailto:larrueayala@gmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>          
+								</div>     
+							</div>
+						</div>
+					</div>     
+				</div>
+	   
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="media/alexis_avatar.png" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Alexis Sep&uacutelveda</font></h3>     
+								<p align=center><font color="#4d667f"><b>M.Sc. Student – Universidad Aut&oacutenoma de Chile</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<!--<h3>Texto corto</h3> -->
+								<div class="btn-group" align=center> 
+									<a href=media/Alexis_Curriculum.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+									<a href=mailto:alexis.sepulveda@cloud.uautonoma.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a> 
+								</div>     
+						   </div>
+						</div>
+					</div>
+				</div> 
+		
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="media/cpena_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Carlos Peña</font></h3>     
+								<p align=center><font color="#4d667f"><b>Research Assistant</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<h3>Bioinformatics engineer with knowledge in molecular dynamics simulations, databases, knime and programming languages like python, tcl and html. I enjoy tv series, movies, music, video games, barbecues and beer</h3>
+								<div class="btn-group" align=center> 
+									<a href=media/CV_cpena_2019.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+									<a href="https://www.researchgate.net/profile/Carlos_Alejandro5"target="_blank"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>  
+									<a href=mailto:carlospena.v@gmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+								</div>     
+							</div>
+						</div>
+					</div>
+				</div>
+		  
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="media/jordan_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Jordan Alegria</font></h3>     
+								<p align=center><font color="#4d667f"><b>Undergraduate Student – Universidad Aut&oacutenoma de Chile</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<!--<h3>Texto corto</h3> -->
+								<div class="btn-group" align=center>
+									<a href=mailto:jordanalegriaa@gmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+								</div>     
+							</div>
+						</div>
+					</div>     
+				</div>
+	   
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="media/VictoriaOviedo.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Victoria Paz Oviedo</font></h3>     
+								<p align=center><font color="#4d667f"><b>Undergraduate student – Universidad Aut&oacutenoma de Chile</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<!--<h3>Texto corto</h3> -->
+								<div class="btn-group" align=center>
+									<!---
+									<a href=media/VictoriaOviedo_CURRICULUM.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+									--->
+									<a href=mailto:victoria.oviedo@cloud.uautonoma.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+								</div>     
+							</div>
+						</div>
+					</div>     
+				</div>
+	   
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="member_profiles/Alexandra.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Alexandra Cigna</font></h3>     
+								<p align=center><font color="#4d667f"><b>Undergraduate student – Universidad Aut&oacutenoma de Chile</b></font></p> 
+							</div>
+							<div class="flip-card-back">
+								<h3>I like reading and theater very much. In my free time I practice outdoor sports, the one I like the most is tennis</h3>
+								<div class="btn-group" align=center>
+									<!---
+									<a href=media/Alexandra_Cigna_CURRICULUM.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+									--->
+									<a href=mailto:alexandra.cigna@cloud.uautonoma.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+								</div>     
+							</div>
+						</div>
+					</div>     
+				</div>
+	   
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="media/tabata_avatar.png" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Tabata Barbosa</font></h3>     
+								<p align=center><font color="#4d667f"><b>Visiting undergraduate student – Pontificia Universidad Javeriana - Colombia</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<!--<h3>Texto corto</h3> -->
+								<div class="btn-group" align=center>           
+									<a href=media/CV_TabataBarbosa.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>          
+									<a href=mailto:t.barbosa@javeriana.edu.co><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a> 
+								</div>     
+							</div>
+						</div>
+					</div>     
+				</div>
+				
+		
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="media/avatar_alejandro_amaya.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Alejandro Amaya</font></h3>     
+								<p align=center><font color="#4d667f"><b>M.Sc. Student – Pontificia Universidad Javeriana - Colombia</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<!--<h3>Texto corto</h3> -->
+								<div class="btn-group" align=center>
+									<a href=media/cv_alejandro_amaya.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>           
+									<a href=mailto:nelsona.amayao@gmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a> 
+								</div>     
+							</div>
+						</div>
+					</div>     
+				</div>
+	   
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="media/avatar_Claudia_Martinez.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Claudia Martinez</font></h3>     
+								<p align=center><font color="#4d667f"><b>Undergraduate student - Universidad Nacional de Colombia - Colombia</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<h3>I really enjoy hanging out with friends and family. Also, I enjoy watching movies or series, I like makeup and futbol and I am passionate about science as a problem-solving tool</h3>
+								<div class="btn-group" align=center>
+									<a href=media/CV_Claudia_Martinez.pdf  download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>           
+									<a href=mailto:camartinezga@unal.edu.co><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a> 
+								</div>     
+							</div>
+						</div>
+					</div>     
+				</div>
+
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="media/avatar_Juana_Muñoz.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Juana Muñoz</font></h3>     
+								<p align=center><font color="#4d667f"><b>Undergraduate student - Pontificia Universidad Javeriana - Colombia</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<!--<h3>Texto corto</h3> -->
+								<div class="btn-group" align=center>       
+									<a href=media/CV_Juana_Muñoz.pdf  download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>           
+									<a href=mailto:juanamunoz@javeriana.edu.co><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a> 
+								</div>     
+							</div>
+						</div>
+					</div>     
+				</div>
+	   
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front"> 
+								<img class="img-circle center" src="media/Avatar_Laura_rodriguez.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+								<h3 align=center><font color="#254666">Laura Rodriguez</font></h3> 
+								<p align=center><font color="#4d667f"><b>Undergraduate student - Pontificia Universidad Javeriana - Colombia</b></font></p>
+							</div>
+							<div class="flip-card-back">
+								<h3>I enjoy watching movies and reading horror books, I like to hang out with my family and friends. Also, I love math puzzles, board games and solve logic puzles</h3>
+								<div class="btn-group" align=center>
+									<a href=media/CV-Laura_Rodriguez.pdf  download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+									<a href=mailto:rodriguezmlauran@javeriana.edu.co><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:44px;color:#C01D22 "></i></button></a>
+								</div>     
+							</div>
+						</div>
+					</div>     
+				</div>   
+		 
+		 
+			</div>      
+		</div> 
+		  
+		<div id="Collaborators" class="tabcontent">
+			<div class="card">
+				<div class="tittle"><h3>National</h3></div><br>
+				<div class="margen">
+					<div class= "row">
+						<div class= "column left"> 
+							<li>Ximena Zarate (<a href="http://scivisionltda.wix.com/zarategroup" target="_blank">Universidad Autónoma de Chile</a>)</li><br> 
+							<li>Fernando Ortiz (<a href="https://myelin-lab.cl/" target="_blank">Universidad Autónoma de Chile</a>)</li><br> 
+							<li>Wendy González (<a href="https://cbsm.utalca.cl/?page_id=27" target="_blank">Universidad de Talca</a>)</li><br>
+							<li>Julio Caballero (<a href="https://cbsm.utalca.cl/?page_id=27" target="_blank">Universidad de Talca</a>)</li><br>
+							<li>Ingo Dreyer (<a href="https://cbsm.utalca.cl/?page_id=27" target="_blank">Universidad de Talca</a>)</li><br>
+							<li>Ariela Vergara (<a href="https://cbsm.utalca.cl/?page_id=27" target="_blank">Universidad de Talca</a>)</li><br>
+							<li>Miguel Reyes (<a href="https://www.cibap.usach.cl/miguel-reyes-parada" target="_blank">Universidad de Santiago de Chile</a>)</li><br> 
+							<li>Eduardo Schott (<a href="http://quimica.uc.cl/es/academicos/54-schott-verdugo-eduardo" target="_blank">Pontificia Universidad Católica de Chile</a>)</li><br>
+						</div>
+						<div class= "column right">
+							<img class="mySlides fade center" src="media/ua.png" style="width:80%">
+							<img class="mySlides fade center" src="media/utalca.png" style="width:35%">
+							<img class="mySlides fade center" src="media/ucato.png" style="width:60%">
+							<img class="mySlides fade center" src="media/USach.png" style="width:25%">
+						</div>
+					</div>  
+				</div>  
+			 
+			</div>
+			  
+			<div class="card">
+				<div class="tittle"><h3>International</h3></div><br>
+				<div class="margen">
+				   <div class="row">
+						<div class="column left">
+							<li>Niels Decher (<a href="https://www.uni-marburg.de/fb20/physiologie/ags/decher" target="_blank">Philipps-Universität Marburg</a>, Germany)</li><br> 
+							<li>Hussam Nour-Eldin (<a href="https://dynamo.ku.dk/people/nour-eldin/" target="_blank">University of Copenhagen</a>, Denmark)</li><br>
+							<li>José Argüello (<a href="http://arguellolab.net/" target="_blank">Worcester polytechnic Institute</a>, USA)</li><br>
+							<li>Janneth González (<a href="https://www.javeriana.edu.co/tercelmol/?page_id=127" target="_blank">Pontificia Universdad Javeriana</a>, Colombia)</li><br>
+							<li>Karina Vargas (<a href="http://www.uan.edu.co/" target="_blank">Universidad Antonio Nariño</a>, Colombia)</li><br>
+							<li>Cristian Buendia (<a href="http://www.uan.edu.co/" target="_blank">Universidad Antonio Nariño</a>, Colombia)</li><br>
+							<li>Gian Pietro (<a href="http://cobo.uniandes.edu.co/" target="_blank">Universidad de los Andes</a>, Colombia)</li><br>
+						</div>
+						<div class= "column right">
+							<img class="mySlides2 fade center" src="media/uphil.png" style="width:80%">
+							<img class="mySlides2 fade center" src="media/ucopen.png" style="width:30%">
+							<img class="mySlides2 fade center" src="media/wpi.png" style="width:40%">
+							<img class="mySlides2 fade center" src="media/puj.png" style="width:40%">
+							<img class="mySlides2 fade center" src="media/uan.png" style="width:60%">
+							<img class="mySlides2 fade center" src="media/udla.jpg" style="width:60%">
+						</div>    
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+ 
+<script>
+  function openTAB(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+var myIndex = 0;
+var myIndex2 = 0;
+carousel();
+function carousel() {
+  var i;
+  var j;
+ 
+ var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  } 
+ var y = document.getElementsByClassName("mySlides2");
+  for (j = 0; j < y.length; j++) {
+    y[j].style.display = "none";  
+  } 
+  
+  myIndex++;
+  myIndex2++;
+    
+ if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";
+ if (myIndex2 > y.length) {myIndex2 = 1}    
+  y[myIndex2-1].style.display = "block";
+  setTimeout(carousel, 4000); // Change image every 2 seconds
+   
+}
+</script>
+    
+
+</html>
+ 
+  
