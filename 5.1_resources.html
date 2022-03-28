@@ -1,34 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-* {box-sizing: border-box;}
- body {
+* {
+  box-sizing: border-box;
+}
+body {
   margin: 0;
   font-family: "Lato", sans-serif;
   /*agregar color oscuro para el fondo*/
   background: #f1f1f1;
 }
   /* Header/Logo Title */
+.bg-image {
+  /* The image used */
+  background-image:url('bg.jpg');
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
 .header {
   padding: 1px;
   text-align: center;
-  background: linear-gradient(to bottom, 	#254666 30%, #4d667f 100%);
   color: white;
   font-size: 20px;
   margin-left: 200px;
+  margin-top: -150px;
+  height: 150px;
+  
 } 
+
+#particles-js {
+	padding: 1px;
+    height: 150px;
+   	background-color: #294e71;
+	background-image: url("");
+	color: white;
+	font-size: 20px;
+	padding: 1px;
+	z-index: -1;
+}	
+
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}   
-.sidebar {
-  margin: 0;
+}
+  .sidebar {
+  margin: 0;  
   padding: 0;
   width: 200px;
   background-color: #FFFFFF;
@@ -70,52 +116,49 @@ div.content {
     float: none;
   }
 }
-/* Style the counter cards */
   .card {
    background-color: white;
-   padding: 10px;
+   padding: 20px;
    margin-top: 10px;
-   margin-left: 10px;
+   margin-left: 230px;
    margin-right:30px;
    margin-bottom: 10px;
    box-shadow: 5px 5px 5px #888888;
+   
 }
-.minicard {
-   background-color: white;
-   box-sizing: content-box;  
-   /*max-weidth:160px;*/
-   height: 330px;
-   padding: 15px;
-   margin-top: 5px;
-   margin-left: 10px;
-   margin-right: 10px;
-   margin-bottom: 10px;
-   box-shadow: 5px 5px 5px #888888;
-   border-radius:5px;
+  .table {
+  font-family: "lato", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
-.img-circle {
-margin-top -50px; 
-border-radius: 50%;
-max-width: 150px;
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
-.marco{
-margin-left: 210px;
-margin-top:10px;
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
-/* Float four columns side by side */
+  
 .column {
   float: left;
-  width: 33.33%;
+  width: 20%;
   padding: 0 10px;
 }
- .left {
+.left {
   width: 80%;
 }
 .right {
   width: 20%;
 }
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;
+.row {margin: -5px -5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 /* Clear floats after the columns */
 .row:after {
@@ -123,220 +166,97 @@ margin-top:10px;
   display: table;
   clear: both;
 }
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #FFFFFF;
+ {
+  box-sizing: border-box;
 }
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-  color: black;
-}
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #4d667f;  
-  color:white;
-}
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #254666;
-  color:white;
-}
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  -webkit-animation: fadeEffect 1s;
-  animation: fadeEffect 1s;
-}
-/* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-.tittle {
-  
-  padding: 1px 6px;
-  background-color: #254666;
-  color:white;
-}
-.mySlides {display: none;}
-.img_banner {vertical-align: middle;}
-/* Slideshow container */
-.slideshow-container {
-  max-width: 400px;
-  position: relative;
+form{
+  width: 300px;
   margin: auto;
+  }
+.imagen {
+  float: right;
+  width: 25%;
+  padding: 1px;
 }
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-/* The dots/bullets/indicators */
-.dot {
-  height: 0px;
-  width: 0px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
+fieldset{
   display: inline-block;
-  transition: background-color 0.6s ease;
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0 0 0 40px;
+  }
+input, button{
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 50px;
+  margin:auto;
+  padding: 0;
+  font-size: 20px;
 }
-.active {
-  background-color: #717171;
+input{
+  color: #666;
+  border: none;
+  z-index: 2;
+  font-size: 20px;
 }
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+button{
+  font-size: 20px;
+  width: 50px;
+  border: none;
+  background: #4d667f;
+  transform: translate(-50px,0px);
+  transition-duration: .3s;
 }
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
+.fa-search{
+  color: #bbb;
+  transform: translate(-190px,0);
+  transition: all .1s ease-in-out;
   
-.margen {
-  margin-left: 10px;
 }
-.button {
-  position: relative;
-  bottom:-230px;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #4d667f;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 8px;
-  width: 70px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px -5px;
-}
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-.button:hover span {
-  padding-right: 15px;
-}
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-.btn-group button {
-  background-color: white; /* Green */
-  border: none;
-  color: white;
-  padding: 0px 2px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
-  cursor: pointer;
-  float: center;
-}
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 20px;
-}
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #4d667f;
-  border-radius:6px;
-}
-/* seleccion desplegable */
-.accordion {
-  background-color: white;
-  color: #444;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: left;
+input:focus{
   outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  margin-bottom: 10px;
 }
-
-.active, .accordion:hover {
-  background-color: #254666; 
-  color: white;
+input:focus + button{
+  transform: translate(0,0);
+  transition-duration: .3s;
 }
+input:focus + button .fa{
+  transform: translate(0,0);
+  transition-duration: 0.5s;
+}
+  #myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 1px;
+    margin-right: 20px;
+  }
+  
+  #myUL li a {
+    /***
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: white; /* Grey background color */
+    padding: 0px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 20px; /* Increase the font-size */
+    color: #294e71; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+  
+  #myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
+  
+  #myUL li a .highlighted {
+    background-color: yellow;
+  }
 
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-} 
 </style>
 </head>
 <body>
-
-  
 <div class="sidebar">
   <br>
   <img src="/media/Logo-02.jpg" alt="Logo" style="width:90%;max-width:500px" class="center">
@@ -344,290 +264,196 @@ margin-top:10px;
   <a href="/2_research">What we do</a>
   <a href="/3_publications">Publications</a>
   <a href="/4_members">Meet the team</a>
-  <a class="active" href="/#5.1_resources">Resources</a> 
-  <a href="/5_join_us">Join us</a>
+  <a class="active" href="/5.1_resources">Resources</a>
+  <a href="#5_join_us">Join us</a>
   <a href="/8_labmood">Lab Mood</a>
   <a href="/6.1_Gallery">Gallery</a>
   <a href="/7_contact">Contact</a>
-</div>
-  
-<div class="header">
-  <h1>Resources</h1>
-  <p>Pharmacoinformatics & Drug Design</p>
-</div>
-  
-<div class="marco">
-  <div class="tab">
-  <button class="tablinks" onclick="openTAB(event, 'WIKI')" id="defaultOpen">Wiki</button>
-  <button class="tablinks" onclick="openTAB(event, 'Resources')">Resources</button>
-  </div>
- 
- 
-<div id="WIKI" class="tabcontent">
+</div> 
+
+
+<div id="particles-js"></div>
+    <div class="header">      
+      <h1>Resources</h1>
+      <p>Pharmacoinformatics & Drug Design</p>
+      <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    </div>
+
 
 <div class="card">
-<button class="accordion"><b style="font-size:18px">Computational polypharmacology</b></button>
-	<div class="panel">
-		
-		<button class="accordion">Approved drugs from Drugbank</button>
-	 	<div class="panel">
-			<p>DrugBank is a pharmaceutical knowledge database and a key pharmacoinformatics resource with comprehensive drug/target/disease information. In this <a href="https://github.com/ramirezlab/WIKI/blob/master/Computational_Polypharmacology/DrugBank/Approved_drugs_from_Drugbank.ipynb" target="_blank">Jupyter notebook</a>, we will download approved drugs information for Alzheimer´s Disease from <a href="https://www.drugbank.ca" target="_blank">DrugBank</a>. More information <a href="https://github.com/ramirezlab/WIKI/tree/master/Computational_Polypharmacology/DrugBank" target="_blank">here</a>.</p>
-			<p>Have fun!!!</p>
-	  	</div>
-	  
-	  	<button class="accordion">ComPharma 2</button>
-	  	<div class="panel">
-			<p>...</p>
-	  	</div>
-	</div>  
-</div>
-
-<div class="card">
-<button class="accordion"><b style="font-size:18px">Data Science with KNIME</b></button>
-	  <div class="panel">
+  <h2><center>Here you could find Tutorials, script library, gallery, FAQ, and a little bit more for pharmacoinformatics and drug design</center></h2>
+   <hr size="2px" color="black"/>
    
-      		<button class="accordion">Pharmacohpore matrix</button>
-      		<div class="panel">
-        		<p>Here we use a KNIME workflow to post-process the output file *CSV* from a multiple pharmacophore-based virtual screening calculation done with Phase. We screening a dataset of ~1000 compounds against multiple pharmacophores (~100), then the results were exported as a *CSV* file (see [*/Files/screening_phase_default-otro.csv*](https://github.com/ramirezlab/WIKI/blob/master/KNIME/Files/screening_phase_default-otro.csv)) with all the results with the corresponding phase screen score (0 to 1). This workflow organizes all the results and creates a matrix (compounds vs. pharmacophores) as well as a heatmap figure. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/KNIME/Pharmacophores_matrix.md" target="_blank">here</a>.</p> 
-			<p>The workflow was programed with KNIME v 4.1.0, and can be found <a href="https://github.com/ramirezlab/WIKI/blob/master/KNIME/Files/Pharmacophores_matrix.knwf" target="_blank">here</a>.</p>
-			<img src="/media/Pharmacofore-1.png" style="width:45%">
-		</div>
-		
-		<button class="accordion">Surfing databases</button>
-      		<div class="panel">
-        		<p>ChEMBL</p>
-     		</div>
+   	<div class="imagen"><a href="https://github.com/ramirezlab"><img src="imagenes/logo2.jpg"  width= "90px" height= "70px"></a></div>
+	
+  <section class="search">
+
+	<form>
+     <fieldset>
+       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="search">
+	   <button type="submit">
+       <i class="fa fa-search"></i>
+       </button>
+     </fieldset>
+    </form>
+
+
+<ul id="myUL">
+    <li><a href="https://github.com/ramirezlab/WIKI/blob/master/Computational_Polypharmacology"><h2>Computational polypharmacology</h2></a></li>
+    <li><a href="https://github.com/ramirezlab/WIKI/tree/master/Computational_Polypharmacology/DrugBank"><h3>Approved drugs from Drugbank</h3></a><p>DrugBank is a pharmaceutical knowledge database and a key pharmacoinformatics resource with comprehensive drug/target/disease information. In this notebook, we will download approved drugs information for Alzheimer´s Disease from DrugBank.</p></li>
+    <li><a href="https://github.com/ramirezlab/WIKI/tree/master/Computational_Polypharmacology/PPI-networks"><h3>Protein-protein interactions networks</h3></a><p>Here we use a KNIME workflow to capture relevant information related to an indication of interest involving a complete list of targets, drug names, and their respective study phase, and key protein-protein interactions. This workflow is fed with different databases such as CHEMBL, TTD, DRUGBANK, STRING and OPEN TARGETS, which contributes to the selection and prioritization of targets mapped and the identification of a new set of proteins as drug target candidates.</p></li>
+    <li><a href="https://github.com/ramirezlab/WIKI/tree/master/Computational_Polypharmacology/PPI-network-R-TopologyAnalysis"><h3>Topological Protein-protein interactions networks analysis</h3></a><p>Here we present a R-Studio pipeline to compute some topological parameters that will help us understand the "importancy" of each protein in a PPI network in terms of its connections. Here we will use the PPI network for the Alzheimer's disease (PPI-AD) obteined in our group using KNIME.</p></li>
+  
+ <li><a href="#"><hr size="2px" color="black"/></a></li>
+  
+   <li><a href="https://github.com/ramirezlab/WIKI/blob/master/KNIME"><h2>Data Science with KNIME</h2></a></li>
+   <li><a href="https://github.com/ramirezlab/WIKI/tree/master/KNIME/Knime_tutorial"><h3>Knime_tutorial</h3></a><p>In this tutorial, we will work a Knime introduction working with CHEMBL data using basic nodes.</p></li>
+   <li><a href="https://github.com/ramirezlab/WIKI/tree/master/KNIME/Chemoinformatics-Analysis-Tutorial-with-Knime-master"><h3>Chemoinformatics Analysis Tutorial with Knime master</h3></a><p>In this tutorial, we will work with the CHEMBL database and the open-source software KNIME, which will allow us to acquire the data of interest of the compounds that have been tested against a given target.</p></li>
+   <li><a href="https://github.com/ramirezlab/WIKI/tree/master/KNIME/Active%20compounds%20for%20a%20given%20target%20from%20ChEMBL"><h3>Active compounds for a given target from ChEMBL</h3></a><p>This workflow use a local CHEMBL database to search one or a list of targets and return information of compounds and activity reported to the input targets.</p></li>
+   <li><a href="https://github.com/ramirezlab/WIKI/tree/master/KNIME/Chemoinformatics"><h3>Chemoinformatics</h3></a><p>This workflow consists of 5 interconnected work blocks, each containing a central theme in computer-aided drug design (CADD). The workflow is presented using Acetylcholinesterase (AChE) as an example, including its respective active compounds and their respective associated IC50 values, which where obtained from CHEMBL database.</p></li>
+   <li><a href="https://github.com/ramirezlab/WIKI/tree/master/KNIME/Processing-Pharmacophores-from-Phase"><h3>Processing Pharmacophores from Phase</h3></a><p>Here we use a KNIME workflow to post-process the output file CSV from a multiple pharmacophore-based virtual screening calculation done with Phase. We screening a dataset of ~1000 compounds against multiple pharmacophores (~100), then the results were exported as a CSV file with all the results with the corresponding phase screen score (0 to 1).</p></li>
       
-      		<button class="accordion">Surfing databases</button>
-      		<div class="panel">
-        		<p>Open Target Platform</p>
-      		</div>
-	</div>
-</div>
-	
-<div class="card">
-<button class="accordion"><b style="font-size:18px">Databases</b></button>
-	<div class="panel">
-      		<button class="accordion">Plant Secondary Compounds (PSC-db)</button>
-      		<div class="panel">
-        	<p>PSC-db is a free accessible database containing the 3D-structures of several Plant Secondary Compounds along with its physicochemical 
-	and pharmaceutical properties.<br>
-		<p>Link: <a href="http://pscdb.appsbio.utalca.cl/viewIndex/index.php" target="_blank">http://pscdb.appsbio.utalca.cl/viewIndex/index.php</a></p>
-      		</div>
-      	</div>  
-</div>	
-
-<div class="card">
-<button class="accordion"><b style="font-size:18px">Docking and Virtual Screening</b></button>
-<div class="panel">
-      
-      	<button class="accordion">Docking of complexes with lantanides elements</button>
-      	<div class="panel">
-        	<p>Using AutoDock <p>
-      	</div>
-	
-	<button class="accordion">Docking postprocessing: Clustering and interactions analysis</button>
-      	<div class="panel">
-        	<p>We have designed a pipeline to analyze in detail all interactions of one or several lioagnd-receptor complexes. For this we use native scripts from the <a href="https://www.schrodinger.com/" target="_blank">Schöridnger Suite</a> and the data science software <a href="https://www.knime.com/" target="_blank">KNIME</a>. In this way we calculate an interaction profile of a complexes cluster that migth come, i. e., from massive docking simulations or a trajectory from molecular dynamics simulactions. More information <a href="https://github.com/ramirezlab/WIKI/tree/master/Docking_and_Virtual_Screening/ligand-receptor_interactions_frequency" target="_blank">here</a></p>
-      	</div>
-	
-	<button class="accordion">Massive docking with Autodock vina</button>
-      	<div class="panel">
-        	<p>Here we use AutoDock Vina to perform massive docking of one ligand: 100 runs -> top-10 poses per run -> 1000 poses. The idea is to use a single ligand and do multiple dockings on the same receptor to extend the conformational sampling of that ligand. Then you can use a tool to cluster the conformers and know which are the most visited poses during the molecular docking. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Docking_and_Virtual_Screening/Massive_docking_with_Vina.md" target="_blank">here</a>.</p>
-      	</div>
-	
-	<button class="accordion">Massive docking with Glide</button>
-      	<div class="panel">
-        	<p>Here we use Glide (Schrödinger Suite) to perform massive docking of one ligand into several conformations of the same receptor extracted from a molecular dynamics simulation. The idea is to include the flexibility of the receptor binding site (side chains) into a large conformational sampling. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Docking_and_Virtual_Screening/Massive_docking_with_Glide.md" target="_blank">here</a>.</p>
-      	</div>
-    
-     	<button class="accordion">Pharmacophore-based virtual screening</button>
-      	<div class="panel">
-        	<p>Using LigandScout</p>
-      	</div>     
-</div>  
-</div>
-
-<div class="card">
-<button class="accordion"><b style="font-size:18px">Molecular Dynamics simulations</b></button>
-<div class="panel">
-
-	<button class="accordion">Counting waters in an ion channel pore (or any pore) during a MDs</button>
-      	<div class="panel">
-        	<p>Here we use a tcl script to count the water molecules in an ion channel pore (or any pore) along a trajectory from AMBER, Desmond or NAMD. The pore of the ion channel must be aligned along the z-axis. The selection must be a cylinder.. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Molecular_dynamics/water_count.md" target="_blank">here</a>.</p>
-      	</div>
-	
-	<button class="accordion">Coarse-Grained Molecular Dynamics (CG-MDs)</button>
-      	<div class="panel">
-        	<p>Using Gromacs and ff-Martini --> Ionic Liquis</p>
-      	</div>
-
-	<button class="accordion">Detecting Pharmacophores in MDs</button>
-      	<div class="panel">
-        	<p>With Ligand Scout</p>
-      	</div>
-	
-		<button class="accordion">Loading Desmond trajectories into VMD</button>
-      	<div class="panel">
-       		<p>Here we explain how to properly load and visualize Desmond's trajectories in VMD.</p>
-			<ol>
-				<li>Open VMD and load a <i>desmond_trajectory-out.cms</i> file as new molecule.</li>
-				<li>Load the <i>clickme.dtr</i> trajectory file (it is located into the <i>desmond_trajectory_trj</i> folder) into the <i>desmond_trajectory-out.cms</i> file.</li>
-				<li>To fix the periodix boundary conditions, you need to center the trajectory to generate a continuous trajectory view with the protein centered in the primary simulation box, to do that use the loaded trajectory and try either of the following commands from VMD’s Tk console (<i>Extensions</i> > <i>Tk Console</i>):</Br>
-					<ul>
-						<li><i>pbc wrap -centersel protein -center com -compound res -all</i></li>
-						<li><i>pbc wrap -center bb -centersel protein -sel “not protein” -compound res -all</i></li>
-					</ul>
-				<li>You may have to superimpose all frames of the trajectory onto a selected frame in order to center the view in the main VMD graphics window. To do so, select <i>VMD</i> > <i>Extensions</i> > <i>Analysis</i> > <i>RMSD Trajectory Tool</i>, and select the <i>Align</i> option. Note that the transformed trajectory can be written to disk for further analysis.</li>
-			</ol>
-		<p>Have fun!!!</p>
-      	</div>
-
-      	<button class="accordion">MD-Binding</button>
-      	<div class="panel">
-        	<p>A complete solution for fast binding protein-ligand based on molecular dynamics using BIKI</p>
-      	</div>
-      
- 	<button class="accordion">Obtaining residues within a given distance from a ligand</button>
-      	<div class="panel">
-        	<p>Here we use a tcl script to get the resdiues within a given distance of a ligand during a trajectory. You can use it to study Protein-Protein or Peptide-Protein interaction as well. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Molecular_dynamics/Getting_residues.md" target="_blank">here</a>.</p>
-      	</div>
-		  
-	<button class="accordion">Random acceleration molecular dynamics simulations (RAMD)</button>
-      	<div class="panel">
-        	<p>TASK-1 + A1899</p>
-      	</div>
-	
-</div>
-</div>
-
-<div class="card">
-<button class="accordion"><b style="font-size:18px">Molecular Modeling</b></button>
-<div class="panel">
-      	
-	<button class="accordion">Homology Modeling</button>
-      	<div class="panel">
-        	<p>Using Modeller and Rosetta...</p>
-      	</div>
-	
-	<button class="accordion">Repeat-swap homology modeling</button>
-      	<div class="panel">
-        	<p>pasos a seguir...</p>
-      	</div>
-
-</div>  
-</div>
-
-<div class="card">
-<button class="accordion"><b style="font-size:18px">Miscellaneous</b></button>
-<div class="panel">
-
-	<button class="accordion">HOLE - To analyze and visualize pores in ions channles</button>
-      	<div class="panel">
-        	<p>HOLE is a program that allows the analysis and visualisation of pore dimensions of the holes through molecular structures of different proteins such as ion channels. Here we will use HOLE suite of programs to study pores in ion channels. More information <a href="https://github.com/ramirezlab/WIKI/blob/master/Miscellaneous/HOLE/README.md" target="_blank">here</a>.</p>
-	<p>Some examples:</p>
-	<img src="/media/Fig1-A1899-paper.png" style="width:95%">
-	<img src="/media/Fig5-A1899.png" style="width:45%">	
-      	</div>
-      
-      	<button class="accordion">Miscellaneous 2</button>
-      	<div class="panel">
-        	<p>...</p>
-      	</div>
-
-</div>  
-</div>      
-      
-</div>    
-	
-<div id="Resources" class="tabcontent"> 
+   <li><a href="#"><hr size="2px" color="black"/></a></li>
+   
+  <li><a href="https://github.com/ramirezlab/WIKI/blob/master/Docking_and_Virtual_Screening"><h2>Docking and Virtual Screening</h2></a></li>
+  <li><a href="https://github.com/ramirezlab/WIKI/tree/master/Docking_and_Virtual_Screening/Ensemble_Docking_Glide><h3>Ensemble_Docking_Glide"><h3>Ensemble Docking Glide</h3></a><p>Here we use present a pipeline to perform ensemble docking to find the most probable binding mode of a given ligand in a given set (ensemble) of protein structures.</p></li>
+  <li><a href="https://github.com/ramirezlab/WIKI/tree/master/Docking_and_Virtual_Screening/ligand-receptor_interactions_frequency"><h3>Ligand-receptor interactions frequency</h3></a><p>To analyze the frequency of receptor-ligand interactions on a set of poses from a given cluster, we use scripts included on Schrödinger Suit (v.2020-1) and in-house functional workflow built on Knime.</p></li>
+  <li><a href="https://github.com/ramirezlab/WIKI/tree/master/Docking_and_Virtual_Screening/ligand-receptor_interactions_frequency_multiple_clusters"><h3>Ligand-receptor interactions frequency multiple clusters</h3></a><p>To analyze the frequency of receptor-ligand interactions on a set of poses from different clusters, we use scripts included on Schrödinger Suit (v.2020-3) to calculate the interactions on every pose and a in-house functional workflow built on Knime to get the frequency of interactions on each cluster and then sum the total.</p></li>
+  
+  <li><a href="#"><hr size="2px" color="black"/></a></li>
+  
+  <li><a href="https://github.com/ramirezlab/WIKI/blob/master/Molecular_dynamics"><h2>Molecular Dynamics simulations</h2></a><p></p></li>
+  <li><a href="https://github.com/ramirezlab/WIKI/tree/master/Molecular_dynamics/Desmond"><h3>Desmond</h3></a><p></p></li>
+  <li><a href="https://github.com/ramirezlab/WIKI/tree/master/Molecular_dynamics/VMD"><h3>VMD</h3></a><p></p></li>
+  
+  <li><a href="#"><hr size="2px" color="black"/></a></li>
+  
+  <li><a href="https://github.com/ramirezlab/WIKI/blob/master/Molecular_Modeling"><h2>Molecular Modeling</h2></a><p></p></li>
+  
+  <li><a href="#"><hr size="2px" color="black"/></a></li>
+  
+  <li><a href="#"><h2>Miscellaneous</h2></a><p></p></li>
+  <li><a href="https://github.com/ramirezlab/WIKI/tree/master/Miscellaneous/HOLE"><h3>HOLE</h3></a><p>HOLE is a program that allows the analysis and visualisation of the pore dimensions of the holes through molecular structures of different proteins such as ion channels. Here we will use HOLE suite of programs to study pores in ion channels. Several HOLE programs have been used in the hole_over_time.tcl script to produce surface representations of pore cavities. You should have the HOLE programs in your computer prior to run this script.</p></li>
+  <li><a href="https://github.com/ramirezlab/WIKI/tree/master/Miscellaneous/RMSD%20calculation"><h3>RMSD calculation</h3></a><p>The Root Mean Square Deviation (RMSD) is a common metric used to evaluate the distance between the predicted pose and the native pose, given a superposition of proteins or ligands.</p></li>
+</ul>
+  </section>
+  </div>
+ <div id="Resources" class="tabcontent"> 
   <div class="card">
-  <h2>Hardware</h2>
+  
+  <h2 style="color:#294e71";>Hardware</h2>
   <p>1 small GPU cluster (Tensor TWS-1686525-AMB: 2x Intel Xeon Silver 4110 Processor, 8 Core, 16 Threads, 2.1Ghz, 11M Cache, 85W. 12x 8GB DDR4 ECC/REG 2666MHZ (96GB System memory). 1x 256GB 2.5 SATA III Internal Solid State Drive (SSD). 1x 8TB SATA 6Gb/s 7200RPM 3.5" 256MB Cache Hard Drive. 3x GPU Nvidia Quadro P5000 16GB. CentOS 7)</p> 
   <p>4 workstations for visualization and data analysis (1x Intel CPU Core i7-7700 3.6GHz. 1x Toshiba Disco Duro 2TB Sata3 7200 rpm 64MB P300. 1x SSD 480GB Sata3 2.5". 2x MSI Video Nvidia Gaming GeForce GTX1660 6GB. 2x Kingston DDR4 16GB 2400MHz HyperX FURY Black).</p> 
   <p>We have access to the CPU- GPU-clusters at the <a href="https://cbsm.utalca.cl/?page_id=18" target="_blank">Center for Bioinformatics and Molecular Simulations</a> at Universidad de Talca, Chile</p>
-  </div>
   
-  <div class="card">
-  <h2>Software</h2>
+  <hr size="2px" color="black"/>
+  
+  <h2 style="color:#294e71";>Software</h2>
   <p>Software for molecular simulation, modeling and Visualization: Schrödinger Drug Design Suite, Modeller, AMBER, GROMACS, PyMol, VMD, KNIME, AutoDock, AutoDock vina, LigandScout, BIKI.</p>
-  </div>
-
-  <div class="card">
-  <h2>Facilities</h2>
+  
+  <hr size="2px" color="black"/>
+  
+  <h2 style="color:#294e71";>Facilities</h2>
   <p>The <a href="https://cienciasbiologicasudec.cl/" target="_blank">Facultad de Ciencias Biológicas</a> at the <a href="https://www.udec.cl/pexterno/" target="_blank">Universidad de Concepción</a> is integrated by the departments of cell biology, biochemistry, ergonomics, pharmacology, physiology, physiopathology, and microbiology. Each department has different equipment and facilities that allow them to do cutting-edge research in their area of expertise. </p>
   </div>
-  
-</div>
- 
- 
- 
-
-  
- 
-  <script>
-    function openTAB(evt, tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-  </script>
-
+  </div>
 <script>
-var myIndex = 0;
-var myIndex2 = 0;
-carousel();
-function carousel() {
-  var i;
-  var j;
- 
- var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  } 
- var y = document.getElementsByClassName("mySlides2");
-  for (j = 0; j < y.length; j++) {
-    y[j].style.display = "none";  
-  } 
-  
-  myIndex++;
-  myIndex2++;
-    
- if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";
- if (myIndex2 > y.length) {myIndex2 = 1}    
-  y[myIndex2-1].style.display = "block";
-  setTimeout(carousel, 4000); // Change image every 2 seconds
-   
-}
-</script>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80, density: { enable: true, value_area: 800 } },
+    color: { value: "#ffffff" },
+    shape: {
+      type: "circle",
+      stroke: { width: 0, color: "#000000" },
+      polygon: { nb_sides: 5 },
+      image: { src: "img/github.svg", width: 100, height: 100 }
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+      anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 6,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: { enable: false, rotateX: 600, rotateY: 1200 }
     }
-  });
-}
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: false, mode: "repulse" },
+      onclick: { enable: false, mode: "push" },
+      resize: true
+    },
+    modes: {
+      grab: { distance: 400, line_linked: { opacity: 1 } },
+      bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+      repulse: { distance: 200, duration: 0.4 },
+      push: { particles_nb: 4 },
+      remove: { particles_nb: 2 }
+    }
+  },
+  retina_detect: true
+});
+var count_particles, stats, update;
+stats = new Stats();
+stats.setMode(0);
+stats.domElement.style.position = "absolute";
+stats.domElement.style.left = "0px";
+stats.domElement.style.top = "0px";
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector(".js-count-particles");
+update = function () {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+
 </script>
-    
+<script>
+    function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      let matchStart;
+      if ((matchStart = txtValue.toUpperCase().indexOf(filter)) > -1) {  
+        li[i].style.display = "";
+        li[i].style.color = 'black';
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+</script>
 </body>
 </html>
