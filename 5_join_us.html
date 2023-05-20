@@ -201,8 +201,45 @@ Researchers are encouraged to apply for their own funding to the <a href="https:
   <p align="justify">Students wishing to do undergraduate research in the Ramirez Lab are encouraged to talk to current members of the lab to find out more. People with interest in molecular modeling and drug design are especially encouraged to join.</p>
 
 <hr size="2px" color="black"/>
-<h2>Colab Jupyter Notebook</h2>
-<iframe src="https://colab.research.google.com/github/ramirezlab/Farmacoinformatica-2022/blob/main/02_Sesiones-practicas/01_Sesion-I/01_CHEMBL_Colab.ipynb" width="100%" height="800px"></iframe>
+<div class="jupyter-notebook-container">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+  <script>
+    require.config({
+      paths: {
+        "nbextensions/jupyter-js-widgets/extension": "https://cdn.jupyter.org/notebook/5.3.1/nbextensions/jupyter-js-widgets/extension",
+      },
+    });
+  </script>
+  <style>
+    @media screen and (min-width: 641px) and (max-width: 1007px) {
+      .jupyter-notebook-container iframe {
+        width: 600px !important;
+        height: 800px !important;
+      }
+    }
+    @media screen and (max-width: 640px) {
+      .jupyter-notebook-container iframe {
+        width: 320px !important;
+        height: 400px !important;
+      }
+    }
+    .jupyter-notebook-container {
+      margin-bottom: 30px;
+    }
+    .jupyter-notebook-container iframe {
+      width: 100%;
+      height: 1200px;
+      border: none;
+      background-color: #f7f7f7;
+    }
+  </style>
+  <iframe
+    src="https://colab.research.google.com/github/ramirezlab/Farmacoinformatica-2022/blob/main/02_Sesiones-practicas/01_Sesion-I/01_CHEMBL_Colab.ipynb"
+    frameborder="0"
+    allowfullscreen="true"
+    scrolling="no"
+  ></iframe>
+</div>
 	
 	</div>
   
