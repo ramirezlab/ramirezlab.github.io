@@ -118,7 +118,8 @@ div.content {
     float: none;
   }
 }
-  .card {
+
+.card {
    background-color: white;
    padding: 20px;
    margin-top: 10px;
@@ -127,20 +128,7 @@ div.content {
    margin-bottom: 10px;
    box-shadow: 5px 5px 5px #888888;
 }
-  .table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 .column0 {
   float: left;
   width: 100%;
@@ -166,7 +154,6 @@ tr:nth-child(even) {
   width: 20%;
   padding: 10px;
 }
-
 
 .left {
   width: 80%;
@@ -247,11 +234,33 @@ margin-top -50px;
 border-radius: 50%;
 max-width: 150px;
 }
+
+.tableFixHead {
+        overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+        height: 200px; /* gives an initial height of 200px to the table */
+      }
+      .tableFixHead thead th {
+        position: sticky; /* make the table heads sticky */
+        top: 0px; /* table head will be placed from the top of the table and sticks to it */
+      }
+      table {
+        border-collapse: collapse; /* make the table borders collapse to each other */
+        width: 100%;
+      }
+      th,
+      td {
+        padding: 8px 16px;
+        border: 1px solid #ccc;
+      }
+      th {
+        background: #eee;
+      }
 </style>
 </head>
-<body>
 
-  
+
+<body>
+ 
 <div class="sidebar">
   <br>
   <img src="/media/Logo-02.jpg" alt="Logo" style="width:90%;max-width:500px" class="center">
@@ -348,25 +357,31 @@ max-width: 150px;
   
  
 <div class="card">
-  <h2>Funding</h2>
-  <table>
-  <tr>
+<h2>Funding</h2>
+<div class="tableFixHead">
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
     <th>Grant</th>
     <th>Funded by</th>
     <th>Role</th>
     <th>Date</th>
   </tr>
+  </thead>
+  <tbody>
     <tr>
   <td>Open Chemoinformatics.</td>
     <td>Chile - Universidad de Concepción No. 2023014</td>
     <td>Principal Investigator</td>
     <td>2023 – 2024</td>
   </tr>
+  <tr>
   <td>Uso de un Escape Room como recurso docente en las asignaturas de Faramcología.</td>
     <td>Chile - Universidad de Concepción No. 2023015</td>
     <td>Co-investigator</td>
     <td>2023 – 2024</td>
-  </tr>	  
+  </tr>
+  <tr>
   <td>Ori-tanpakushitsu: creación de modelos tridimensionales para la comprensión de las fuerzas intermoleculares involucradas en la acción farmacológica.</td>
     <td>Chile - Universidad de Concepción No. 2023023</td>
     <td>Co-investigator</td>
@@ -409,7 +424,7 @@ max-width: 150px;
     <td>2022</td>
   </tr>
   <tr>
-  <td>Identificación de moduladores del canal iónico TMC1 como alternativa terapéutica para el tratamiento de la sordera.</td>
+    <td>Identificación de moduladores del canal iónico TMC1 como alternativa terapéutica para el tratamiento de la sordera.</td>
     <td>Chile - ANID No. FOVI210027</td>
     <td>Principal Investigator</td>
     <td>2022 - 2023</td>
@@ -480,8 +495,10 @@ max-width: 150px;
     <td>International Advisor</td>
     <td>2017 - 2020</td>
   </tr>
+  </tbody>
 </table>
-</div>  
+</div> 
+</div> 
 
  <script>
     function openTAB(evt, tabName) {
