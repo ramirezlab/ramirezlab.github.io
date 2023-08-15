@@ -118,7 +118,8 @@ div.content {
     float: none;
   }
 }
-  .card {
+
+.card {
    background-color: white;
    padding: 20px;
    margin-top: 10px;
@@ -127,20 +128,7 @@ div.content {
    margin-bottom: 10px;
    box-shadow: 5px 5px 5px #888888;
 }
-  .table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 .column0 {
   float: left;
   width: 100%;
@@ -166,7 +154,6 @@ tr:nth-child(even) {
   width: 20%;
   padding: 10px;
 }
-
 
 .left {
   width: 80%;
@@ -247,11 +234,33 @@ margin-top -50px;
 border-radius: 50%;
 max-width: 150px;
 }
+
+.tableFixHead {
+        overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+        height: 200px; /* gives an initial height of 200px to the table */
+      }
+      .tableFixHead thead th {
+        position: sticky; /* make the table heads sticky */
+        top: 0px; /* table head will be placed from the top of the table and sticks to it */
+      }
+      table {
+        border-collapse: collapse; /* make the table borders collapse to each other */
+        width: 100%;
+      }
+      th,
+      td {
+        padding: 8px 16px;
+        border: 1px solid #ccc;
+      }
+      th {
+        background: #eee;
+      }
 </style>
 </head>
-<body>
 
-  
+
+<body>
+ 
 <div class="sidebar">
   <br>
   <img src="/media/Logo-02.jpg" alt="Logo" style="width:90%;max-width:500px" class="center">
@@ -289,23 +298,25 @@ max-width: 150px;
 			<img class="mySlides fade center img-circle" src="media/Foto-DavidR.png" style="width:100%">
 			<img class="mySlides fade center img-circle" src="media/estanislao.png" style="width:100%">
 			<img class="mySlides fade center img-circle" src="media/cpena_avatar.jpg" style="width:100%">
-			<img class="mySlides fade center img-circle" src="media/Avatar_Laura_rodriguez.jpg" style="width:100%">
-			<img class="mySlides fade center img-circle" src="media/alexis_avatar.png" style="width:100%">
+			<img class="mySlides fade center img-circle" src="media/pvalenzuela.jpg" style="width:100%">
 			<img class="mySlides fade center img-circle" src="media/avatar_Claudia_Martinez.jpg" style="width:100%">
-			<img class="mySlides fade center img-circle" src="media/avatar_Juana_Muñoz.jpg" style="width:100%">
+			<img class="mySlides fade center img-circle" src="media/ivalenzuela.jpeg" style="width:100%">
 			<img class="mySlides fade center img-circle" src="media/avatar_alejandro_amaya.jpg" style="width:100%">
-			<img class="mySlides fade center img-circle" src="media/tabata_avatar.png" style="width:100%">						
-		    </div>
+			<img class="mySlides fade center img-circle" src="media/Javiera_Armijo_avatar.jpeg" style="width:100%">
+			<img class="mySlides fade center img-circle" src="media/Jessica_Valero_avatar.jpg" style="width:100%">
+			<img class="mySlides fade center img-circle" src="media/Francisca_Estuardo_avatar.png" style="width:100%">
+			<img class="mySlides fade center img-circle" src="media/Sebastian_Fuentes_avatar.png" style="width:100%">
+			</div>
                    
 <div class="column0">          
 <hr size="2px" color="black"/> 
 </div>  
   
-<div class="column1">
+<div class="column0">
   <h2><a href="/2_research">Active research areas</a></h2>
-  <li align="justify">Pharmacoinformatics & network pharmacology: Multi-target drug design against complex diseases.</li><br> 
-  <li align="justify">Drug design by machine learning, artificial intelligence, and data science.</li><br>
-  <li align="justify">Molecular simulations and modeling</li><br>
+  <li align="justify"><b>Systems and network pharmacology:</b> We integrate biological data across various levels of organization, such as genomics, proteomics, and metabolomics. By doing so, we gain a better understanding of the intricate interactions between drugs and biological pathways in the body. This knowledge strengthens our ability to design drugs that target multiple targets/pathways simultaneously, achieving better and more comprehensive therapeutic outcomes. Our approach offers a promising direction toward developing more effective treatments for a range of complex diseases.</li><br> 
+  <li align="justify"><b>Structural bioinformatics:</b> We use of computational methods such as molecular dynamics simulations, to predict and analyze the structure of protein-ligand complexes, which can be used to identify potential therapeutic targets and design new drugs. Furthermore, we validate our findings through experimental testing to ensure their accuracy and reliability. Our approach in structural bioinformatics offers a promising avenue for discovering novel treatments for a range of diseases.</li><br>
+  <li align="justify"><b>Multitarget drug design aimed at complex diseases:</b> We employed machine learning and artificial intelligence to analyze large datasets and identify novel targets. We then designed new molecules using this information to create multitarget-directed ligands. The designed molecules are tested and optimized through medicinal chemistry campaigns.</li><br>
 </div>
 
 <div class="column0">          
@@ -314,15 +325,15 @@ max-width: 150px;
 
 <div class="column1">
   <h2><a href="/3_publications">Latest publication</a></h2>
-       <h3><a href="https://www.frontiersin.org/articles/10.3389/fphar.2022.952192/full" target="_blank">Network pharmacology reveals multitarget mechanism of action of drugs to be repurposed for COVID-19</a></h3>
-       <h5>Alegría-Arcos, M.; Barbosa, T.; Sepúlveda, F.; Combariza, G.; González, J.; Gil, C.; Martínez, A.; and Ramírez, D.</h5>
-   <p>Frontiers in Pharmacology. 13:952192. DOI: 10.3389/fphar.2022.952192</p>
+       <h3><a href="https://www.sciencedirect.com/science/article/pii/S2667318523000211?via%3Dihub" target="_blank">Trends and challenges in chemoinformatics research in Latin America</a></h3>
+       <h5>Miranda-Salasa, J.; Peña-Varasb, C.; Valenzuela, I.; Olmedod, D.; Zamorae, W.; Chávez-Fumagallig, M.; Azevedoh, D.; Oliveira R.; Maltarolloh, V.; Ramírez, D.; and Medina-Franco, L.</h5>
+   <p>Artificial Intelligence in the Life Sciences. 3 (2023) 100077. DOI: 10.1016/j.ailsci.2023.100077</p>
       <div class="row">
       <div class="column2">
-      <p align="justify">The coronavirus disease 2019 pandemic accelerated drug/vaccine development processes, integrating scientists all over the globe to create therapeutic alternatives against this virus. In this work, we have collected information regarding proteins from SARS-CoV-2 and humans and how these proteins interact. We have also collected information from public databases on protein–drug interactions. We represent this data as networks that allow us to gain insights into protein–protein interactions between both organisms. With the collected data, we have obtained statistical metrics of the networks. This data analysis has allowed us to find relevant information on which proteins and drugs are the most relevant from the network pharmacology perspective. This method not only allows us to focus on viral proteins as the main targets for COVID-19 but also reveals that some human proteins could be also important in drug repurposing campaigns. As a result of the analysis of the SARS-CoV-2–human interactome, we have identified some old drugs, such as disulfiram, auranofin, gefitinib, suloctidil, and bromhexine as potential therapies for the treatment of COVID-19 deciphering their potential complex mechanism of action.</p>
+      <p align="justify">Chemoinformatics is an independent inter-discipline with a broad impact in drug design and discovery, medicinal chemistry, biochemistry, analytical and organic chemistry, natural products, and several other areas in chemistry. Through collaborations, scientific exchanges, and participation in international research networks, Latin American scientists have contributed to the development of this subject. The aim of this perspective is to discuss the status and progress of the chemoinformatic discipline in Latin America. We team up to provide an author ́s perspective on the topics that have been investigated and published over the past twelve years, collaborations between Latin America researchers and others worldwide, contributions to open-access chemoinformatic tools such as web servers, and educational-related resources and events, such as scientific conferences. We conclude that linking and fostering collaboration within each nation as well as among other Latin American nations and globally is made possible by open science and the democratization of science. We also outline strategic actions that can boost the development and practice of chemoinformatics in the region and enhance the interaction between Latin American countries and the rest of the world.</p>
       </div>
       <div class ="column3">
-      <img src="/media/Paper-TOCs/TOC-Frontiers-REDES-COVID.jpg" style="width:200%">
+      <img src="/media/Paper-TOCs/2023-3-Chemoinforatics-LATAM-TOC.jpg" style="width:200%">
       </div>
       </div>
       </div>
@@ -331,7 +342,7 @@ max-width: 150px;
     
       
 <div class="column4">
-<a class="twitter-timeline" data-height="1000" data-theme="light" href="https://twitter.com/theramirezlab?ref_src=twsrc%5Etfw">Tweets by theramirezlab</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-height="1000" data-theme="light" href="https://twitter.com/theramirezlab?ref_src=twsrc%5Etfw">Tweets by TheRamirezLab</a> <script async src="media/scripts/widgets-modify.js" charset="utf-8"></script>
 </div>
      
       </div>
@@ -343,13 +354,59 @@ max-width: 150px;
   
  
 <div class="card">
-  <h2>Funding</h2>
-  <table>
-  <tr>
+<h2>Funding</h2>
+<div class="tableFixHead">
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
     <th>Grant</th>
     <th>Funded by</th>
     <th>Role</th>
     <th>Date</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+  <td>Open Chemoinformatics.</td>
+    <td>Chile - Universidad de Concepción No. 2023014</td>
+    <td>Principal Investigator</td>
+    <td>2023 – 2024</td>
+  </tr>
+  <tr>
+  <td>Uso de un Escape Room como recurso docente en las asignaturas de Faramcología.</td>
+    <td>Chile - Universidad de Concepción No. 2023015</td>
+    <td>Co-investigator</td>
+    <td>2023 – 2024</td>
+  </tr>
+  <tr>
+  <td>Ori-tanpakushitsu: creación de modelos tridimensionales para la comprensión de las fuerzas intermoleculares involucradas en la acción farmacológica.</td>
+    <td>Chile - Universidad de Concepción No. 2023023</td>
+    <td>Co-investigator</td>
+    <td>2023 – 2024</td>
+  </tr>	  
+  <tr>
+    <td>Ligand and structure-based polypharmacology of K+ channels from the nociceptive primary sensory neurons: an alternative in pain treatment.</td>
+    <td>Chile - Fondecyt Regular No. 1230446</td>
+    <td>Co-investigator</td>
+    <td>2023 – 2027</td>
+  </tr>	  
+  <tr>
+    <td>Development of an infectious process-activated protide with therapeutic potential for control of fish farming diseases.</td>
+    <td>Chile - Fondecyt Regular No. 1231088</td>
+    <td>Co-investigator</td>
+    <td>2023 – 2027</td>
+  </tr>		  
+  <tr>
+    <td>Interdisciplinary generation of highly specific peptidic blockers of TASK-3 channel with antitumoral effect and targeting moiety for nanotherapeutics.</td>
+    <td>Chile - Fondecyt Regular No. 1230996</td>
+    <td>Co-investigator</td>
+    <td>2023 – 2027</td>
+  </tr>		  
+  <tr>
+    <td>Multidisplinary Center for Biotechnology and Molecular Biology for Climate Change Adaptation in Forest Resources (CeBioCliF).</td>
+    <td>Chile - ANID No. ATE220043</td>
+    <td>Principal Investigator</td>
+    <td>2022 – 2025</td>
   </tr>
   <tr>
     <td>Towards systems pharmacology to design multi-target directed ligands as therapeutic alternatives for Alzheimer’s disease.</td>
@@ -364,7 +421,7 @@ max-width: 150px;
     <td>2022</td>
   </tr>
   <tr>
-  <td>Identificación de moduladores del canal iónico TMC1 como alternativa terapéutica para el tratamiento de la sordera.</td>
+    <td>Identificación de moduladores del canal iónico TMC1 como alternativa terapéutica para el tratamiento de la sordera.</td>
     <td>Chile - ANID No. FOVI210027</td>
     <td>Principal Investigator</td>
     <td>2022 - 2023</td>
@@ -435,8 +492,10 @@ max-width: 150px;
     <td>International Advisor</td>
     <td>2017 - 2020</td>
   </tr>
+  </tbody>
 </table>
-</div>  
+</div> 
+</div> 
 
  <script>
     function openTAB(evt, tabName) {
