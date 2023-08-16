@@ -119,6 +119,18 @@ div.content {
   display: table;
 }
 p {text-align: center;}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.img-item {
+  width:  100px;
+  height: 100px;
+  object-fit: contain;
+}
 </style>
 </head>
 <body>
@@ -138,72 +150,69 @@ p {text-align: center;}
 </div>  
 
 <div id="particles-js"></div>
+
 <div class="header">
   <h1>Gallery</h1>
   <p>Pharmacoinformatics & Drug Design</p>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </div>
 
+
 <div class="card">
+
+<h3>SOFARCHI-2022 – Punta Arenas, Chile</h3>
+<div class="row">
+  <div class="column">
+    <img src="/media/Gallery/Sofarchi-2022/5.jpg" alt="Photo 5" style="width:100%" class="center">
+  </div>
+  <div class="column">
+    <img src="/media/Gallery/Sofarchi-2022/2.jpg" alt="Photo 2" style="width:100%" class="center">
+  </div>
+  <div class="column">
+    <img src="/media/Gallery/Sofarchi-2022/1.jpg" alt="Photo 1" style="width:100%" class="center">
+  </div>
+</div>
+<div class="row"> 
+  <div class="column">
+    <img src="/media/Gallery/Sofarchi-2022/4.jpg" alt="Photo 4" style="width:100%" class="center">
+  </div>
+  <div class="column">
+    <img src="/media/Gallery/Sofarchi-2022/3.jpg" alt="Photo 3" style="width:100%" class="center">
+  </div>
+  <div class="column">
+    <img src="/media/Gallery/Sofarchi-2022/6.jpg" alt="Photo 6" style="width:100%" class="center">
+  </div>
+</div>
+<hr size="2px" color="black"/>
+
+
 <h3>Chilean newspaper article open science in Latin America -> <a href="https://www.diarioconcepcion.cl/ciencia-y-sociedad/2022/03/17/david-ramirez-cientifico-udec-con-mas-politicas-de-ciencia-abierta-se-podria-avanzar-mucho-mas.html">Diario Concepción</a></h3>
 <img src="media/Gallery/Nota-Ciencias-Abierta-diario-con.jpg" style="width:60%" class="center">	
-</div> 
-	
-<div class="card">
+<hr size="2px" color="black"/>
+
 <h3>Webinar (2021/06/25): Reposicionamiento de medicamentos para el tratamiento de la pandemia COVID19 (Spanish)</h3>
 <iframe width="425" height="350" src="https://www.youtube.com/embed/NMapW_bGc9o">
 </iframe>
+<hr size="2px" color="black"/>
 
-<!-- Todo lo que tenia de antes lo deje como comentario-->	
-<!--object width="425" height="350"-->
-  <!--param name="movie" value="https://www.youtube.com/embed/NMapW_bGc9o"/-->
-  <!--param name="wmode" value="transparent" /-->
-  <!--embed src="https://www.youtube.com/embed/NMapW_bGc9o"
-         type="application/x-shockwave-flash"
-         wmode="transparent" width="425" height="350" /-->
-<!--/object-->
-</div>
-  
-<div class="card">
-<!-- To post a YouTube video, the original link https://www.youtube.com/watch?v=2OnhXcNNRvY must be changed by https://www.youtube.com/embed/2OnhXcNNRvY: "watch?v=" for "embed/" -->
 <h3>News 2021/05/25: Clinical trial for drug repositioning against COVID19 coming soon in Chile (Spanish)</h3>
 <iframe width="425" height="350" src="https://www.youtube.com/embed/2OnhXcNNRvY">
 </iframe>
-	
-<!--object width="425" height="350"-->
-  <!--param name="movie" value="https://www.youtube.com/embed/2OnhXcNNRvY"/-->
-  <!--param name="wmode" value="transparent" /-->
-  <!--embed src="https://www.youtube.com/embed/2OnhXcNNRvY"
-         type="application/x-shockwave-flash"
-         wmode="transparent" width="425" height="350" /-->
-<!--/object-->
-</div>
-  
-<div class="card">
+<hr size="2px" color="black"/>
+
 <h3>Chilean newspaper article about clinical trials to investigate alternative therapies for early treatment of COVID19 -> <a href="https://digital.elmercurio.com/2021/05/19/A">El Mercurio</a></h3>
-<img src="media/Gallery/Nota-mercurio-2021-05-19-ok.jpg" style="width:60%" class="center">	
-</div>  
-   
-<div class="card">
+<img src="media/Gallery/Nota-mercurio-2021-05-19-ok.jpg" style="width:60%" class="center">
+<hr size="2px" color="black"/>
+
 <h3>While COVID strikes our lives we keep working at home. Unconventional times deserve an extraordinary team!!!</h3>
 <img src="media/Group-Pics/RamirezLab-group.png" style="width:60%" class="center">	
-</div>
+<hr size="2px" color="black"/>
 
-<div class="card">
-<h3>Webinar: Pharmacoinformatics: New challenges in drug design (Spanish)</h3>
+<h3>Webinar (2021/03/17): Pharmacoinformatics: New challenges in drug design (Spanish)</h3>
 <iframe width="425" height="350" src="https://www.youtube.com/embed/qVqI0av1WGc">
 </iframe>
-	
-<!--object width="425" height="350"-->
-  <!--param name="movie" value="https://www.youtube.com/embed/qVqI0av1WGc"/-->
-  <!--param name="wmode" value="transparent" /-->
-  <!--embed src="https://www.youtube.com/embed/qVqI0av1WGc"
-         type="application/x-shockwave-flash"
-         wmode="transparent" width="425" height="350" /-->
-<!--/object-->
-</div>
+<hr size="2px" color="black"/>
 
-<div class="card">
 <h3><a href="https://europin.univie.ac.at/summerschool/2019/" target="_blank">EUROPIN Summer School on Drug Design – Vienna 2019</a></h3>
  <div class="row">
   <div class="column">
@@ -220,9 +229,9 @@ p {text-align: center;}
     <p>Walinkg around Vienna</p>
   </div>
  </div>
-</div>
-  
-<div class="card">
+<hr size="2px" color="black"/>
+
+
 <h3>This is how it all started back in 2019</h3>
  <div class="row">
   <div class="column">
@@ -232,8 +241,11 @@ p {text-align: center;}
     <img src="media/Gallery/Lab2.jpeg" alt="Lab2" style="width:100%" class="center">
   </div>
  </div>
-</div>
-  
+</div> 
+	
+    
+
+ 
 <script>
 particlesJS("particles-js", {
   particles: {
