@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -108,13 +107,40 @@ div.content {
    border-radius:5px;
 }
 .img-circle {
-margin-top -50px;
+margin-top :50px;
 border-radius: 50%;
 max-width: 150px;
 }
 .marco{
 margin-left: 210px;
 margin-top:20px;
+}
+/*Alumni long cards*/
+.card{
+	width:100%;
+}
+.alumni-category{
+	border:1px solid #ccc;
+	padding: 15px;
+	background-color: #f0f0f0;
+	font-size: 16px;
+	margin-bottom: 20px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease;
+}
+.alumni-category:hover {
+	background-color: #e0e0e0;
+}
+.alumni-list {
+	list-style-type: disc;
+	padding: 0;
+	margin: 10px;
+	padding-left: 20px;
+}
+.alumni-item{
+	margin:10px 0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
 }
 /* Float four columns side by side */
 .column {
@@ -321,7 +347,7 @@ margin-top:20px;
   background-color: #4d667f;
   border-radius:6px;
   }
- <!-- Style the flip-card -->
+ <!-- Style the flip-card-->
    {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -422,38 +448,43 @@ margin-top:20px;
 
 
 		<div id="Alumni" class="tabcontent">
-			<div class="card">
+			<div class="row">
+				<div class="card">
+					<div class="alumni-category">
+						<h2>Graduate Students</h2>
+						<ul class="alumni-list">
+							<li class="alumni-item">Silvia Struve, Universidad Autónoma de Chile – Chile</li>
+							<li class="alumni-item">Alexis Sepúlveda, Universidad Autónoma de Chile – Chile</li>
+							<li class="alumni-item">Lily Arrué, Universidad Autónoma de Chile – Chile</li>
+							<li class="alumni-item">Jonathan Hurtado, Universidad Autónoma de Chile – Chile</li>
+							<li class="alumni-item">Javiera Armijo, Universidad de Santiago de Chile – Chile</li>
+							<li class="alumni-item">Paola Borrego, Universdiad Militar Nueva Granada (Visiting PhD student, Fellowship: Alianza del Pacifico) – Colombia</li>
+							<li class="alumni-item">Christa Kanstrup, University of Copenhagen (Visiting PhD student) – Denmark</li>
+							<li class="alumni-item">Enrique Madruga Mayordomo, CSIC (Visiting PhD student) – Spain </li>
+						</ul>
+					</div>
+					<div class="alumni-category">
+						<h2>Undergraduate Students</h2>
+						<ul class="alumni-list">
+							<li class="alumni-item">Laura Rodriguez, Pontificia Universidad Javeriana - Colombia</li>
+							<li class="alumni-item">Juana Muñoz, Pontificia Universidad Javeriana - Colombia</li>
+							<li class="alumni-item">Alexandra Cigna, Universidad Autónoma de Chile – Chile</li>
+							<li class="alumni-item">Jordan Alegría, Universidad Autónoma de Chile – Chile</li>
+							<li class="alumni-item">Brian Fell, Universidad de Concepción – Chile</li>
+							<li class="alumni-item">Maziel Cusi, Perú</li>
+							<li class="alumni-item">Geordano Ropón, Perú</li>						
+						</ul>
+					</div>
+					<div class="alumni-category">
+						<h2>Research Associate</h2>
+						<ul class="alumni-lis">
+							<li class="alumni-item">Melissa Alegria, Universidad de las Américas – Chile</li>
+						</ul>
+					</div>
 
-
-<h3>Graduate students</h3> 
-<li>Silvia Struve, Universidad Autónoma de Chile – Chile</li><br>
-<li>Alexis Sepúlveda, Universidad Autónoma de Chile – Chile</li><br>
-<li>Lily Arrué, Universidad Autónoma de Chile – Chile</li><br>
-<li>Jonathan Hurtado, Universidad Autónoma de Chile – Chile</li><br>
-<li>Paola Borrego, Universdiad Militar Nueva Granada (Visiting PhD student, Fellowship: Alianza del Pacifico) – Colombia</li><br>
-<li>Christa Kanstrup, University of Copenhagen (Visiting PhD student) – Denmark</li><br>
-<hr size="2px" color="black"/>
-
-
-<h3>Undergraduate student</h3> 
-<li>Laura Rodriguez, Pontificia Universidad Javeriana - Colombia</li><br>
-<li>Juana Muñoz, Pontificia Universidad Javeriana - Colombia</li><br>
-<li>Alexandra Cigna, Universidad Autónoma de Chile – Chile</li><br>
-<li>Jordan Alegría, Universidad Autónoma de Chile – Chile</li><br>
-<li>Brian Fell, Universidad de Concepción – Chile</li><br>
-<li>Maziel Cusi, Perú</li><br>
-<li>Geordano Ropón, Perú</li><br>
-<hr size="2px" color="black"/>
-
-<h3>Researh Associate</h3> 
-<li>Melissa Alegria, Universidad de las Américas – Chile</li><br>
-  
-       </div>  
-       </div>
-
-
-
- 
+				</div>
+			</div>
+</div>
 
 <div id="Members" class="tabcontent">
  <div class="row">
@@ -466,7 +497,7 @@ margin-top:20px;
       <p align=center><font color="#4d667f"><b>Group Leader</b></font></p>
      </div>
     <div class="flip-card-back">
-     <h3>Traveling and meeting new people/cultures is something I really enjoy (that's why I chose science as a lifestyle). Also, I enjoy playing poker, futbol, and hanging out in the outdoors with my dog friends</h3>
+     <h3>Traveling and meeting new people/cultures is something I really enjoy (that's why I chose science as a lifestyle). Also, I enjoy playing poker, futbol, and hanging out in the outdoors with friends</h3>
      <div class="bottom_tags">
       <div class="btn-group" align=center>
        <a href="https://www.researchgate.net/profile/David_Ramirez16"target="_blank"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>
@@ -483,11 +514,11 @@ margin-top:20px;
 
 <!--- Ph.D's-->
 
-	<div class ="column">
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img class="img-circle center" src="media/jvalero_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+				<div class ="column">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="img-circle center" src="media/jvalero_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
 								<h3 align=center><font color="#254666">Jessica Valero</font></h3>
 								<p align=center><font color="#4d667f"><b>Ph.D Student - Universidad de Concepción - Chile</b></font></p>
 							</div>
@@ -496,12 +527,13 @@ margin-top:20px;
 								<div class="bottom_tags">
 									<div class="btn-group" align=center>
                     					<a href=media/CV_Jessica_Valero.pdf  download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
-										<a href=mailto:jvalero2023@udec.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:44px;color:#C01D22 "></i></button></a>									</div>
+										<a href=mailto:jessik_2894@hotmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:44px;color:#C01D22 "></i></button></a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-			</div>
-		</div>
-	</div>
+				</div>
 
 				<div class ="column">
 					<div class="flip-card">
@@ -517,7 +549,6 @@ margin-top:20px;
 								<div class="bottom_tags">
 									<div class="btn-group" align=center>
 										<a href=mailto:k.cobosmontes@uandresbello.edu><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:44px;color:#C01D22 "></i></button></a>
-								
 									</div>
 								</div>
 							</div>
@@ -530,45 +561,22 @@ margin-top:20px;
 						<div class="flip-card-inner">
 							<div class="flip-card-front">
 								<img class="img-circle center" src="media/estanislao.png" alt="Avatar" style="width:100%" border-radius="5%">
-					<h3 align=center><font color="#254666">Estanislao M&aacuterquez </font></h3>
-					<p align=center><font color="#4d667f"><b>Ph.D. Student - Universidad de Talca</b></font></p>
-				</div>
-					<div class="flip-card-back">
-						<h3>I am Peruvian hedonist who enjoy learning about other cultures. Also, reading and writing poetry and tales are my passion. Contact sports and videogames relax me when weeks are rough. Finally, complex flavor cuisine and alcoholic beverages complete my weeks</h3>
-						<div class="bottom_tags">
-							<div class="btn-group" align=center>
-								<a href=media/CV_RL.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
-								<a href="https://www.researchgate.net/profile/Jose-Marquez-27"target="_blank"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>
-								<a href=mailto:jose.marquez@utalca.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+								<h3 align=center><font color="#254666">Estanislao M&aacuterquez </font></h3>
+								<p align=center><font color="#4d667f"><b>Ph.D. Student - Universidad de Talca</b></font></p>
+							</div>
+								<div class="flip-card-back">
+									<h3>I am Peruvian hedonist who enjoy learning about other cultures. Also, reading and writing poetry and tales are my passion. Contact sports and videogames relax me when weeks are rough. Finally, complex flavor cuisine and alcoholic beverages complete my weeks</h3>
+									<div class="bottom_tags">
+										<div class="btn-group" align=center>
+											<a href=media/CV_RL.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+											<a href="https://www.researchgate.net/profile/Jose-Marquez-27"target="_blank"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>
+											<a href=mailto:jose.marquez@utalca.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+										</div>
 									</div>
 								</div>
-							</div>
 						</div>
 					</div>
 				</div>
-
-				<div class ="column">
-					<div class="flip-card">
-						<div class="flip-card-inner">
-							<div class="flip-card-front">
-								<img class="img-circle center" src="media/EMM_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
-								<h3 align=center><font color="#254666">Enrique Madruga</font></h3>
-								<p align=center><font color="#4d667f"><b>Visiting PhD student - CSIC, Spain</b></font></p>
-							</div>
-							<div class="flip-card-back">
-								<h3>Pharmacist doing medicinal chemistry. Passionate about molecular dynamics simulations. Videogames, films and political science (if they are mixed, even better).</h3>
-								<div class="bottom_tags">
-								<div class="btn-group" align=center>
-									<a href=media/CV_EMM.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
-									<a href=mailto:enrique.madruga@cib.csic.es><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
-								</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-									
 <!-- Masters-->
 
 				<div class ="column">
@@ -592,7 +600,7 @@ margin-top:20px;
 					</div>
 				</div>	
 				
-				<div class ="column">
+				<!--<div class ="column">
 					<div class="flip-card">
 						<div class="flip-card-inner">
 							<div class="flip-card-front">
@@ -611,7 +619,7 @@ margin-top:20px;
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class ="column">
 					<div class="flip-card">
@@ -717,128 +725,144 @@ margin-top:20px;
 					</div>
 				</div>
 
-</div>
-</div>
-
+				
 <!-- RESEARCH ASSISTANTS-->
-
-				<div class ="column">
-					<div class="flip-card">
-						<div class="flip-card-inner">
-							<div class="flip-card-front">
-								<img class="img-circle center" src="media/cpena_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
-								<h3 align=center><font color="#254666">Carlos Peña</font></h3>
-								<p align=center><font color="#4d667f"><b>Research Assistant</b></font></p>
-							</div>
-							<div class="flip-card-back">
-								<h3>Bioinformatics engineer with knowledge in molecular dynamics simulations, databases, knime and programming languages like python, tcl and html. I enjoy tv series, movies, music, video games, cooking, barbecues and beer</h3>
-								<div class="bottom_tags">
-									<div class="btn-group" align=center>
-										<!-- <a href=media/CV_cpena_2022_E.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/> -->
-										<a href="https://scholar.google.com/citations?user=3W33yo0AAAAJ&hl=es"target="_blank"><button style='color:#4285F4;font-size:42px'><i class='ai ai-google-scholar-square'></i></button></a>
-										<a href="https://www.researchgate.net/profile/Carlos-Pena-Varas"target="_blank"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>
-										<a href=mailto:carlosalepena@udec.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
-									</div>
-								</div>
-							</div>
-						</div>
+				
+		<div class ="column">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img class="img-circle center" src="media/cpena_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+						<h3 align=center><font color="#254666">Carlos Peña</font></h3>
+						<p align=center><font color="#4d667f"><b>Research Assistant</b></font></p>
 					</div>
-				</div>
-
-											
-				<div class ="column">
-					<div class="flip-card">
-						<div class="flip-card-inner">
-							<div class="flip-card-front">
-								<img class="img-circle center" src="media/cmartinez_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
-								<h3 align=center><font color="#254666">Claudia Martinez</font></h3>
-								<p align=center><font color="#4d667f"><b>Research Assistant</b></font></p>
-							</div>
-							<div class="flip-card-back">
-								<h3>I really enjoy hanging out with friends and family. Also, I enjoy watching movies or series, I like makeup and futbol and I am passionate about science as a problem-solving tool</h3>
-								<div class="bottom_tags">
-									<div class="btn-group" align=center>
-										<a href=media/CV_Claudia_Martinez.pdf  download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
-										<a href=mailto:camartinezga@unal.edu.co><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
-									</div>
-								</div>
+					<div class="flip-card-back">
+						<h3>Bioinformatics engineer with knowledge in molecular dynamics simulations, databases, knime and programming languages like python, tcl and html. I enjoy tv series, movies, music, video games, cooking, barbecues and beer</h3>
+						<div class="bottom_tags">
+							<div class="btn-group" align=center>
+								<!-- <a href=media/CV_cpena_2022_E.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/> -->
+								<a href="https://scholar.google.com/citations?user=3W33yo0AAAAJ&hl=es"target="_blank"><button style='color:#4285F4;font-size:42px'><i class='ai ai-google-scholar-square'></i></button></a>
+								<a href="https://www.researchgate.net/profile/Carlos-Pena-Varas"target="_blank"><button style='font-size:24px;color:#00D0AF;font-size:42px'><i class='fab fa-researchgate'></i></button></a>
+								<a href=mailto:carlospena.v@gmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
 							</div>
 						</div>
-					</div>
-				</div>
-
-				<div class ="column">
-					<div class="flip-card">
-						<div class="flip-card-inner">
-							<div class="flip-card-front">
-								<img class="img-circle center" src="media/ivalenzuela.jpeg" alt="Avatar" style="width:100%" border-radius="5%">
-								<h3 align=center><font color="#254666">Ignacio Valenzuela</font></h3>
-								<p align=center><font color="#4d667f"><b>Research Assistant</b></font></p>
-							</div>
-							<div class="flip-card-back">
-								<h3>Bioengineer, with experience in biochemistry, molecular biology and bioinformatics. I try to enjoy and be aware of every moment. I am discovering and increasing every day the knowledge of my ignorance.</h3>
-								<div class="bottom_tags">
-								<div class="btn-group" align=center>
-									<a href=mailto:ignmartinez@udec.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
-								</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class ="column">
-					<div class="flip-card">
-						<div class="flip-card-inner">
-							<div class="flip-card-front">
-								<img class="img-circle center" src="media/nmedina_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
-								<h3 align=center><font color="#254666">Nicolás Medina</font></h3>
-								<p align=center><font color="#4d667f"><b>Research Assistant</b></font></p>
-							</div>
-							<div class="flip-card-back">
-								<h3>I am a research assistant. I specialize in the analysis of transcriptomic data, but I like to learn new things. I like to drink coffee, watch series and play soccer.</h3>
-								<div class="bottom_tags">
-								<div class="btn-group" align=center>
-									<a href=mailto:josenmedinam@gmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
-								</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-											
-
-		<div id="Collaborators" class="tabcontent">
-			<div class="card">
-            <h3>National</h3>
-<li>Wendy González (<a href="https://cbsm.utalca.cl/wendylab/" target="_blank">Universidad de Talca</a>)</li><br>
-<li>Paula Santana (<a href="https://cl.linkedin.com/in/paula-santana-sep%C3%BAlveda-850b82164" target="_blank">Universidad autónoma de Chile</a>)</li><br>
-<li>Estibaliz Ampuero (<a href="https://scholar.google.com/citations?hl=es&user=fRmF1boAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Universidad de Santiago de Chile</a>)</li><br>
-<li>Ingo Dreyer (<a href="https://cbsm.utalca.cl/?page_id=27" target="_blank">Universidad de Talca</a>)</li><br>
-<li>Ariela Vergara (<a href="https://cbsm.utalca.cl/?page_id=27" target="_blank">Universidad de Talca</a>)</li><br>
-<li>Miguel Reyes (<a href="https://www.cibap.usach.cl/miguel-reyes-parada" target="_blank">Universidad de Santiago de Chile</a>)</li><br>
-
-
-
-<hr size="2px" color="black"/>
-            
-    
-<h3>International</h3>          
-<li>Ana Martínez (<a href="https://www.cib.csic.es/es/departamentos/biologia-estructural-y-quimica/quimica-medica-y-biologica-traslacional" target="_blank">Consejo Superior de Investigaciones Científicas</a>, Spain)</li><br>
-<li>Hussam Nour-Eldin (<a href="https://dynamo.ku.dk/people/nour-eldin/" target="_blank">University of Copenhagen</a>, Denmark)</li><br>
-<li>Janneth González (<a href="https://www.javeriana.edu.co/tercelmol/?page_id=127" target="_blank">Pontificia Universdad Javeriana</a>, Colombia)</li><br>
-<li>George Barreto (<a href="https://www.ul.ie/hri/person/hri-member/dr-george-e-barreto" target="_blank">University of Limerick</a>, Irland)</li><br>
-<li>Camilo Ramírez (<a href="https://co.linkedin.com/in/caramirezs" target="_blank">Institución Universitaria Politécnico Grancolombiano,</a>, Colombia)</li><br>
-							
-						</div>
-						
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</body>
+		<div class ="column">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img class="img-circle center" src="media/cmartinez_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+						<h3 align=center><font color="#254666">Claudia Martinez</font></h3>
+						<p align=center><font color="#4d667f"><b>Research Assistant</b></font></p>
+					</div>
+					<div class="flip-card-back">
+						<h3>I really enjoy hanging out with friends and family. Also, I enjoy watching movies or series, I like makeup and futbol and I am passionate about science as a problem-solving tool</h3>
+						<div class="bottom_tags">
+							<div class="btn-group" align=center>
+								<a href=media/CV_Claudia_Martinez.pdf  download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+								<a href=mailto:camartinezga@unal.edu.co><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
+<!--		<div class ="column">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img class="img-circle center" src="media/EMM_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+						<h3 align=center><font color="#254666">Enrique Mayordomo</font></h3>
+						<p align=center><font color="#4d667f"><b>Research Assistant</b></font></p>
+					</div>
+					<div class="flip-card-back">
+						<h3>Pharmacist doing medicinal chemistry. Passionate about molecular dynamics simulations. Videogames, films and political science (if they are mixed, even better).</h3>
+						<div class="bottom_tags">
+						<div class="btn-group" align=center>
+							<a href=media/CV_EMM.pdf download><button style='color:#cc7000;font-size:42px'><img src="/media/CV.jpg" width="34"/>
+							<a href=mailto:enrique.madruga@cib.csic.es><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>-->
+
+		<div class ="column">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img class="img-circle center" src="media/ivalenzuela.jpeg" alt="Avatar" style="width:100%" border-radius="5%">
+						<h3 align=center><font color="#254666">Ignacio Valenzuela</font></h3>
+						<p align=center><font color="#4d667f"><b>Research Assistant</b></font></p>
+					</div>
+					<div class="flip-card-back">
+						<h3>Bioengineer, with experience in biochemistry, molecular biology and bioinformatics. I try to enjoy and be aware of every moment. I am discovering and increasing every day the knowledge of my ignorance.</h3>
+						<div class="bottom_tags">
+						<div class="btn-group" align=center>
+							<a href=mailto:ignmartinez@udec.cl><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class ="column">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img class="img-circle center" src="media/nmedina_avatar.jpg" alt="Avatar" style="width:100%" border-radius="5%">
+						<h3 align=center><font color="#254666">Nicolás Medina</font></h3>
+						<p align=center><font color="#4d667f"><b>Research Assistant</b></font></p>
+					</div>
+					<div class="flip-card-back">
+						<h3>I am a research assistant. I specialize in the analysis of transcriptomic data, but I like to learn new things. I like to drink coffee, watch series and play soccer.</h3>
+						<div class="bottom_tags">
+						<div class="btn-group" align=center>
+							<a href=mailto:josenmedinam@gmail.com><button style="font-size:24px"><i class="fas fa-envelope" style="font-size:42px;color:#C01D22 "></i></button></a>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+	</div>
+
+<!-- COLLABORATORS -->
+
+			<div id="Collaborators" class="tabcontent">
+				<div class="row">
+					<div class="card">
+						<div class="alumni-category">
+						<h2>National</h2>
+							<li>Wendy González (<a href="https://cbsm.utalca.cl/wendylab/" target="_blank">Universidad de Talca</a>)</li><br>
+							<li>Paula Santana (<a href="https://cl.linkedin.com/in/paula-santana-sep%C3%BAlveda-850b82164" target="_blank">Universidad autónoma de Chile</a>)</li><br>
+							<li>Estibaliz Ampuero (<a href="https://scholar.google.com/citations?hl=es&user=fRmF1boAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Universidad de Santiago de Chile</a>)</li><br>
+							<li>Ingo Dreyer (<a href="https://cbsm.utalca.cl/?page_id=27" target="_blank">Universidad de Talca</a>)</li><br>
+							<li>Ariela Vergara (<a href="https://cbsm.utalca.cl/?page_id=27" target="_blank">Universidad de Talca</a>)</li><br>
+							<li>Miguel Reyes (<a href="https://www.cibap.usach.cl/miguel-reyes-parada" target="_blank">Universidad de Santiago de Chile</a>)</li><br>
+						</div>
+					</div>
+				</div>
+			<div class="row">
+				<div class="card">
+					<div class="alumni-category">
+						<h2>International</h2>
+							<li>Ana Martínez (<a href="https://www.cib.csic.es/es/departamentos/biologia-estructural-y-quimica/quimica-medica-y-biologica-traslacional" target="_blank">Consejo Superior de Investigaciones Científicas</a>, Spain)</li><br>
+							<li>Hussam Nour-Eldin (<a href="https://dynamo.ku.dk/people/nour-eldin/" target="_blank">University of Copenhagen</a>, Denmark)</li><br>
+							<li>Janneth González (<a href="https://www.javeriana.edu.co/tercelmol/?page_id=127" target="_blank">Pontificia Universdad Javeriana</a>, Colombia)</li><br>
+							<li>George Barreto (<a href="https://www.ul.ie/hri/person/hri-member/dr-george-e-barreto" target="_blank">University of Limerick</a>, Irland)</li><br>
+					</div>
+				</div>
+			</div>
+</body>
 
 <script>
   function openTAB(evt, tabName) {
@@ -964,6 +988,3 @@ requestAnimationFrame(update);
 
 
 </html>
-
-</html>
-
