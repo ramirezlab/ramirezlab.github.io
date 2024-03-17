@@ -129,6 +129,43 @@ div.content {
    box-shadow: 5px 5px 5px #888888;
 }
 
+h3 {
+	color: #294e71;
+	text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  flex: 33.333%;
+  max-width: 33.333%;
+  padding: 0 4px;
+}
+.column li {
+  margin-top: 8px;
+  background-color: #ddd;
+  padding: 20px;
+  text-align: justify;
+}
+/* Estilos adicionales para mejorar la visualización */
+.column:not(:last-child) {
+  border-right: 2px solid #f1f1f1; /* Separador entre columnas */
+}
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Estilos adicionales para mejorar la visualización */
+.column:not(:last-child) {
+  border-right: 2px solid #f1f1f1; /* Separador entre columnas */
+}
+
 .column0 {
   float: left;
   width: 100%;
@@ -317,9 +354,20 @@ max-width: 150px;
 <div class="column0">
   <h2><a href="/2_research">Active research areas</a></h2>
 <p align="justify">Our laboratory spearheads innovative research across three key areas:</p>
-<li align="justify"><b>Systems and network pharmacology:</b> We pioneer the integration of multi-omic data (genomics, proteomics, metabolomics, ...) to unravel the complex network of drug-biological pathway interactions. Our cutting-edge approach (based in graph theory) illuminates the multifaceted mechanisms of action of drugs within the human body, enabling the strategic design of therapeutics that concurrently target multiple biological pathways. This holistic strategy not only amplifies the efficacy of treatments but also opens new horizons for combating complex diseases, marking a significant leap toward advanced therapeutic alternatives.</li><br> 
-<li align="justify"><b>Structural bioinformatics:</b> Our lab uses cutting edge computational techniques, notably molecular dynamics simulations (as computational microscope), to predict and elucidate complex process of protein-ligand binding. This critical insight facilitates the identification of viable therapeutic targets and the conception of novel drug candidates. Validation through experimental testing underpins the reliability and applicability of our discoveries. By bridging computational predictions with empirical evidence, we move forward to innovative therapies in a variety of diseases.</li><br> 
-<li align="justify"><b>Multitarget drug design aimed at complex diseases:</b>  Harnessing the power of machine learning and artificial intelligence, we navigate the vast chemical space to uncover new drug candidates for disease intervention. Utilizing these insights, we design innovative multitarget-directed ligands, subsequently refined through medicinal chemistry programs to optimize efficacy and safety profiles. This approach not only accelerates the discovery of new drugs but also enhances our ability to tackle complex diseases through tailored, multitarget therapeutic agents.</li><be> 
+<div class="row">
+  <div class="column">
+    <h3>Systems and network pharmacology</h3>
+    <p>.</p>
+  </div>
+  <div class="column">
+    <h3>Structural bioinformatics</h3>
+    <p></p>
+  </div>
+  <div class="column">
+    <h3>Multitarget drug design</h3>
+    
+  </div>
+</div>
 
 <p align="justify">Together, these research avenues underscore our commitment to transcending traditional drug discovery paradigms, employing a synergistic blend of computational and experimental methodologies to pursue new avenues in the treatment of complex diseases.</p>
 	
@@ -331,7 +379,7 @@ max-width: 150px;
 
 <div class="column1">
   <h2><a href="/3_publications">Latest publication</a></h2>
-       <h3><a href="https://https://www.tandfonline.com/doi/full/10.1080/14756366.2024.2301767" target="_blank">Druggable cavities and allosteric modulators of the cell division cycle 7 (CDC7) kinase</a></h3>
+       <h4><a href="https://https://www.tandfonline.com/doi/full/10.1080/14756366.2024.2301767" target="_blank">Druggable cavities and allosteric modulators of the cell division cycle 7 (CDC7) kinase</a></h4>
        <h5>Elisa Rojas-Prats, Loreto Martinez-Gonzalez, Carmen Gil, David Ramírez & Ana Martinez.</h5>
    <p>Journal of Enzyme Inhibition and Medicinal Chemistry. 39 (2024) 1, 2301767. DOI: 10.1080/14756366.2024.2301767</p>
       <div class="row">
