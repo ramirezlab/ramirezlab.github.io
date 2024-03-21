@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
   box-sizing: border-box;
@@ -292,6 +293,20 @@ max-width: 150px;
       th {
         background: #eee;
       }
+.gif-container {
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* Proporción 16:9 */
+      position: relative;
+}
+.gif-container img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+}
+
 </style>
 
 </head>
@@ -361,7 +376,9 @@ max-width: 150px;
   </div>
   <div class="column">
     <h3>Structural bioinformatics</h3>
-    <p></p>
+    <div class="gif-container">
+       <img src="/media/Gallery/A1899_RAMD.gif" alt="GIF Animado">
+    </div>
   </div>
   <div class="column">
     <h3>Multitarget drug design</h3>
